@@ -1,0 +1,4 @@
+interface:
+  display_name: "❤️ Wallet Activity Feed"
+  short_description: "Fetch a wallet's latest indexed trading activity over a pract..."
+  default_prompt: "Use $birdeye-wallet-activity-feed to answer: What did this wallet trade in the last 24 hours?"

@@ -1,0 +1,4 @@
+interface:
+  display_name: "📝 Wallet Trade History"
+  short_description: "Query a wallet's indexed trade history for a bounded period w..."
+  default_prompt: "Use $birdeye-wallet-trade-history to answer: What has this wallet traded recently?"

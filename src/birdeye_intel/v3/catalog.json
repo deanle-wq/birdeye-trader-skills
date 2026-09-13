@@ -1,0 +1,249 @@
+{
+  "schema_version": "3.0.0",
+  "release": "3.0.0-rc.1",
+  "surface": "Question-oriented domain skills backed by the approved Birdeye x402 catalog",
+  "runtime_boundary": "read-only Solana Birdeye Data",
+  "skills": [
+    {
+      "name": "birdeye-market",
+      "title": "Birdeye Market",
+      "description": "Discover active, new, trending, launch-stage, smart-money and top-performing tokens, or fetch OHLCV and recent market activity with Birdeye Data. Use for market discovery and chart-data requests; use birdeye-market-radar when the user wants a ranked multi-signal shortlist.",
+      "default_prompt": "Use $birdeye-market to show the most relevant current Solana market data for my request.",
+      "playbook": [
+        "Choose the narrowest command that answers the request; do not run every discovery feed by default.",
+        "Apply user-supplied filters before optional enrichment and preserve the selected window and sort order.",
+        "Treat trending, smart-money and gainers lists as discovery evidence, not buy signals."
+      ],
+      "commands": [
+        {"name": "trending-5m", "question": "Which tokens are trading most actively in the last five minutes?", "mode": "direct", "leaves": [], "endpoint_ids": ["EP-002"], "entity": "none", "requires": [], "defaults": {"limit": 20}, "params": {"sort_by": "volume_5m_usd", "sort_type": "desc", "min_liquidity": 10000}, "answer_contract": "ranked-token-list-v1", "max_calls": 1},
+        {"name": "launchpad-trending", "question": "Which tokens are trending on this launchpad right now?", "mode": "direct", "leaves": [], "endpoint_ids": ["EP-006"], "entity": "none", "requires": [], "defaults": {"limit": 20, "source": "all"}, "params": {"sort_by": "volume_1h_usd", "sort_type": "desc", "min_liquidity": 5000}, "answer_contract": "ranked-launchpad-token-list-v1", "max_calls": 1},
+        {"name": "launchpad-new", "question": "Which tokens were created on this launchpad in the last 24 hours?", "mode": "direct", "leaves": [], "endpoint_ids": ["EP-006"], "entity": "none", "requires": [], "default_lookback_seconds": 86400, "window_fields": {"from": "min_creation_time", "to": "max_creation_time"}, "defaults": {"limit": 20, "source": "all"}, "params": {"sort_by": "creation_time", "sort_type": "desc"}, "answer_contract": "ranked-launchpad-token-list-v1", "max_calls": 1},
+        {"name": "pumpfun-trending", "question": "Which Pump.fun tokens are hottest over the last hour?", "mode": "direct", "leaves": [], "endpoint_ids": ["EP-006"], "entity": "none", "requires": [], "defaults": {"limit": 20}, "params": {"source": "pump_dot_fun", "sort_by": "volume_1h_usd", "sort_type": "desc", "min_liquidity": 5000}, "locked_params": {"source": "pump_dot_fun"}, "answer_contract": "ranked-launchpad-token-list-v1", "max_calls": 1},
+        {"name": "pumpfun-new", "question": "Which Pump.fun tokens were created in the last 24 hours?", "mode": "direct", "leaves": [], "endpoint_ids": ["EP-006"], "entity": "none", "requires": [], "default_lookback_seconds": 86400, "window_fields": {"from": "min_creation_time", "to": "max_creation_time"}, "defaults": {"limit": 20}, "params": {"source": "pump_dot_fun", "sort_by": "creation_time", "sort_type": "desc"}, "locked_params": {"source": "pump_dot_fun"}, "answer_contract": "ranked-launchpad-token-list-v1", "max_calls": 1},
+        {"name": "near-graduation", "question": "Which launchpad tokens are closest to graduating?", "mode": "direct", "leaves": [], "endpoint_ids": ["EP-006"], "entity": "none", "requires": [], "defaults": {"limit": 20}, "params": {"sort_by": "progress_percent", "sort_type": "desc", "graduated": false, "min_progress_percent": 80, "max_progress_percent": 99.9999}, "locked_params": {"graduated": false}, "answer_contract": "ranked-launchpad-token-list-v1", "max_calls": 1},
+        {"name": "migrated", "question": "Which launchpad tokens graduated to a DEX in the last 24 hours?", "mode": "direct", "leaves": [], "endpoint_ids": ["EP-006"], "entity": "none", "requires": [], "default_lookback_seconds": 86400, "window_fields": {"from": "min_graduated_time", "to": "max_graduated_time"}, "defaults": {"limit": 20}, "params": {"sort_by": "graduated_time", "sort_type": "desc", "graduated": true}, "locked_params": {"graduated": true}, "answer_contract": "ranked-launchpad-token-list-v1", "max_calls": 1},
+        {"name": "migrated-quality", "question": "Which recently migrated tokens pass practical liquidity and market-cap filters?", "mode": "direct", "leaves": [], "endpoint_ids": ["EP-006"], "entity": "none", "requires": [], "default_lookback_seconds": 86400, "window_fields": {"from": "min_graduated_time", "to": "max_graduated_time"}, "defaults": {"limit": 20}, "params": {"sort_by": "volume_1h_usd", "sort_type": "desc", "graduated": true}, "locked_params": {"graduated": true}, "client_filters": {"min_market_cap": 50000, "max_market_cap": 200000, "min_liquidity": 10000}, "fetch_limit": 100, "answer_contract": "ranked-launchpad-token-list-v1", "max_calls": 1},
+        {"name": "volume-surge-5m", "question": "Which tokens have the strongest five-minute volume acceleration?", "mode": "direct", "leaves": [], "endpoint_ids": ["EP-002"], "entity": "none", "requires": [], "defaults": {"limit": 20}, "params": {"sort_by": "volume_5m_change_percent", "sort_type": "desc", "min_liquidity": 10000, "min_volume_5m_usd": 5000}, "answer_contract": "ranked-token-list-v1", "max_calls": 1},
+        {"name": "price-surge-5m", "question": "Which liquid tokens are surging most over five minutes?", "mode": "direct", "leaves": [], "endpoint_ids": ["EP-002"], "entity": "none", "requires": [], "defaults": {"limit": 20}, "params": {"sort_by": "price_change_5m_percent", "sort_type": "desc", "min_liquidity": 10000, "min_volume_5m_usd": 5000}, "answer_contract": "ranked-token-list-v1", "max_calls": 1},
+        {"name": "most-traded-5m", "question": "Which tokens have the most trades in the last five minutes?", "mode": "direct", "leaves": [], "endpoint_ids": ["EP-002"], "entity": "none", "requires": [], "defaults": {"limit": 20}, "params": {"sort_by": "trade_5m_count", "sort_type": "desc", "min_liquidity": 10000}, "answer_contract": "ranked-token-list-v1", "max_calls": 1},
+        {"name": "trending", "question": "Which tokens are trending right now?", "mode": "leaf", "leaves": ["trending-tokens"], "entity": "none", "requires": [], "defaults": {"interval": "1h", "limit": 20}, "max_calls": 1},
+        {"name": "new-listings", "question": "Which tokens were listed recently?", "mode": "leaf", "leaves": ["newly-listed-tokens"], "entity": "none", "requires": [], "defaults": {"limit": 20}, "max_calls": 1},
+        {"name": "launch-stages", "question": "Which launchpad tokens are near or past graduation?", "mode": "leaf", "leaves": ["bonding-curve-token-stages"], "entity": "none", "requires": [], "defaults": {"limit": 20}, "max_calls": 2},
+        {"name": "screen", "question": "Which tokens match my numeric market filters?", "mode": "leaf", "leaves": ["configurable-token-filter"], "entity": "none", "requires": [], "defaults": {"limit": 20}, "max_calls": 1},
+        {"name": "smart-money", "question": "Which tokens appear in Birdeye smart-money data?", "mode": "leaf", "leaves": ["smart-money-token-feed"], "entity": "none", "requires": [], "defaults": {"interval": "1d", "limit": 20}, "max_calls": 1},
+        {"name": "gainers", "question": "Which indexed traders are gaining or losing the most?", "mode": "leaf", "leaves": ["trader-gainers-losers"], "entity": "none", "requires": [], "defaults": {"limit": 20}, "max_calls": 1},
+        {"name": "kline", "question": "Show this token's candles for the selected window.", "mode": "leaf", "leaves": ["token-kline-data"], "entity": "token", "requires": ["token_address"], "default_lookback_seconds": 86400, "defaults": {"resolution": "1H"}, "max_calls": 1},
+        {"name": "activity", "question": "What trades are happening across the market now?", "mode": "leaf", "leaves": ["recent-market-activity"], "entity": "none", "requires": [], "defaults": {"limit": 50}, "max_calls": 2}
+      ]
+    },
+    {
+      "name": "birdeye-token",
+      "title": "Birdeye Token",
+      "description": "Query one token's identity, price, valuation, security fields, liquidity, pools, holders, traders, trades, creation, mint/burn activity and transfers through Birdeye Data. Use for direct token facts; use birdeye-token-dd for a consolidated due-diligence report.",
+      "default_prompt": "Use $birdeye-token to inspect the requested facts for this Solana token address.",
+      "playbook": [
+        "Require an exact Solana token address and reject symbols when identity is ambiguous.",
+        "Use a single command for a single fact; use info only when the user requests a basic token card.",
+        "Keep provider tags, security fields and holder observations separate from conclusions."
+      ],
+      "commands": [
+        {"name": "info", "question": "Give me the token's basic identity, price and valuation.", "mode": "composite", "leaves": ["token-metadata", "current-token-price", "token-valuation-snapshot"], "entity": "token", "requires": ["token_address"], "defaults": {}, "max_calls": 3},
+        {"name": "price", "question": "What is this token's current price?", "mode": "leaf", "leaves": ["current-token-price"], "entity": "token", "requires": ["token_address"], "defaults": {}, "max_calls": 1},
+        {"name": "security", "question": "Which observable authority and security fields are present?", "mode": "leaf", "leaves": ["token-security-check"], "entity": "token", "requires": ["token_address"], "defaults": {}, "max_calls": 1},
+        {"name": "liquidity", "question": "How much indexed liquidity does this token have now?", "mode": "leaf", "leaves": ["token-liquidity-snapshot"], "entity": "token", "requires": ["token_address"], "defaults": {}, "max_calls": 1},
+        {"name": "pools", "question": "Where is this token traded and which pools are indexed?", "mode": "leaf", "leaves": ["token-markets-and-pools"], "entity": "token", "requires": ["token_address"], "defaults": {"limit": 20}, "max_calls": 1},
+        {"name": "holders", "question": "How is this token distributed across holders?", "mode": "leaf", "leaves": ["holder-distribution"], "entity": "token", "requires": ["token_address"], "defaults": {"limit": 50}, "max_calls": 1},
+        {"name": "holder-ranking", "question": "Who are the largest indexed holders?", "mode": "leaf", "leaves": ["holder-positions"], "entity": "token", "requires": ["token_address"], "defaults": {"limit": 50}, "max_calls": 1},
+        {"name": "traders", "question": "Who are the top indexed traders for this token?", "mode": "leaf", "leaves": ["top-token-traders"], "entity": "token", "requires": ["token_address"], "defaults": {"time_frame": "24h", "limit": 20}, "max_calls": 1},
+        {"name": "trades", "question": "Show this token's indexed trades for the selected window.", "mode": "leaf", "leaves": ["token-trade-feed"], "entity": "token", "requires": ["token_address"], "default_lookback_seconds": 86400, "defaults": {"limit": 100}, "max_calls": 1},
+        {"name": "large-trades", "question": "Were there unusually large indexed token trades?", "mode": "leaf", "leaves": ["large-token-trades"], "entity": "token", "requires": ["token_address"], "default_lookback_seconds": 86400, "defaults": {"limit": 100}, "max_calls": 1},
+        {"name": "creation", "question": "Who created this token and when?", "mode": "leaf", "leaves": ["token-creation-evidence"], "entity": "token", "requires": ["token_address"], "defaults": {}, "max_calls": 1},
+        {"name": "mint-burn", "question": "Has this token been minted or burned recently?", "mode": "leaf", "leaves": ["mint-burn-activity"], "entity": "token", "requires": ["token_address"], "default_lookback_seconds": 604800, "defaults": {"limit": 100}, "max_calls": 1},
+        {"name": "transfers", "question": "What token transfers occurred in the selected window?", "mode": "leaf", "leaves": ["token-transfers"], "entity": "token", "requires": ["token_address"], "default_lookback_seconds": 86400, "defaults": {"limit": 100}, "max_calls": 2}
+      ]
+    },
+    {
+      "name": "birdeye-wallet",
+      "title": "Birdeye Wallet",
+      "description": "Query a Solana wallet's indexed trade history, traded tokens, sells, net flow, reconstructed PnL evidence, transfers, developer launches and comparisons with Birdeye Data. Use for wallet facts; use birdeye-wallet-analysis or birdeye-wallet-score for a decision-oriented report.",
+      "default_prompt": "Use $birdeye-wallet to inspect this Solana wallet's relevant trading activity.",
+      "playbook": [
+        "State that Birdeye x402 does not currently expose a complete current-holdings observable; traded tokens are not holdings.",
+        "Name the time window and reconstruction method whenever reporting PnL-like metrics.",
+        "Do not expand one wallet request into multi-wallet comparison unless the user asks."
+      ],
+      "commands": [
+        {"name": "activity", "question": "What has this wallet traded in the selected window?", "mode": "leaf", "leaves": ["wallet-trade-history"], "entity": "wallet", "requires": ["wallet_address"], "default_lookback_seconds": 604800, "defaults": {"limit": 100}, "max_calls": 1},
+        {"name": "traded-tokens", "question": "Which tokens has this wallet traded?", "mode": "leaf", "leaves": ["wallet-current-holdings"], "entity": "wallet", "requires": ["wallet_address"], "default_lookback_seconds": 2592000, "defaults": {"limit": 100}, "max_calls": 1},
+        {"name": "sells", "question": "What has this wallet sold recently?", "mode": "leaf", "leaves": ["wallet-sell-feed"], "entity": "wallet", "requires": ["wallet_address"], "default_lookback_seconds": 604800, "defaults": {"limit": 100}, "max_calls": 1},
+        {"name": "net-flow", "question": "Which tokens is this wallet buying more than selling?", "mode": "leaf", "leaves": ["wallet-balance-changes"], "entity": "wallet", "requires": ["wallet_address"], "default_lookback_seconds": 604800, "defaults": {"limit": 100}, "max_calls": 1},
+        {"name": "pnl", "question": "What PnL can be reconstructed from indexed wallet trades?", "mode": "leaf", "leaves": ["wallet-pnl-stats"], "entity": "wallet", "requires": ["wallet_address"], "default_lookback_seconds": 2592000, "defaults": {}, "max_calls": 2},
+        {"name": "token-pnl", "question": "Which covered tokens made or lost this wallet money?", "mode": "leaf", "leaves": ["wallet-token-pnl"], "entity": "wallet", "requires": ["wallet_address"], "default_lookback_seconds": 2592000, "defaults": {}, "max_calls": 2},
+        {"name": "outcomes", "question": "How are this wallet's covered trade outcomes distributed?", "mode": "leaf", "leaves": ["wallet-outcome-distribution"], "entity": "wallet", "requires": ["wallet_address"], "default_lookback_seconds": 2592000, "defaults": {}, "max_calls": 2},
+        {"name": "transfers", "question": "Which indexed token transfers involved this wallet?", "mode": "leaf", "leaves": ["wallet-transfers"], "entity": "wallet", "requires": ["wallet_address", "token_address"], "default_lookback_seconds": 604800, "defaults": {"limit": 100}, "max_calls": 2},
+        {"name": "created-tokens", "question": "Which Birdeye-indexed launchpad tokens did this developer create?", "mode": "leaf", "leaves": ["developer-created-tokens"], "entity": "developer", "requires": ["developer_wallet_address"], "defaults": {"limit": 100}, "max_calls": 1},
+        {"name": "compare", "question": "How do these wallets compare on the same observed metrics?", "mode": "leaf", "leaves": ["wallet-comparison"], "entity": "wallets", "requires": ["wallet_addresses"], "default_lookback_seconds": 2592000, "defaults": {}, "max_calls": 20}
+      ]
+    },
+    {
+      "name": "birdeye-track",
+      "title": "Birdeye Track",
+      "description": "Inspect current smart-money token activity, token-specific smart-money evidence, selected KOL wallet trades, wallet activity, exits and post-exit rotation through Birdeye Data. Use for current activity and tracking questions, not unattended alerts or automatic copy trading.",
+      "default_prompt": "Use $birdeye-track to show the relevant current smart-money or wallet activity.",
+      "playbook": [
+        "Use the broad smart-money feed for discovery and token-specific evidence only after a token is named.",
+        "Require explicit wallet addresses for KOL activity because Birdeye x402 does not provide a complete KOL directory.",
+        "Separate current feeds from monitoring: a feed has no prior baseline and makes no change claim."
+      ],
+      "commands": [
+        {"name": "smart-money", "question": "Which tokens are visible in Birdeye's smart-money feed?", "mode": "leaf", "leaves": ["smart-money-token-feed"], "entity": "none", "requires": [], "defaults": {"interval": "1d", "limit": 20}, "max_calls": 1},
+        {"name": "smart-money-token", "question": "What smart-money evidence is visible for this token?", "mode": "leaf", "leaves": ["smart-money-trades"], "entity": "token", "requires": ["token_address"], "default_lookback_seconds": 86400, "defaults": {"limit": 100}, "max_calls": 3},
+        {"name": "kol", "question": "What did these selected KOL wallets trade?", "mode": "leaf", "leaves": ["kol-trades"], "entity": "wallets", "requires": ["wallet_addresses"], "default_lookback_seconds": 86400, "defaults": {"limit": 100}, "max_calls": 5},
+        {"name": "wallet", "question": "What did this wallet trade recently?", "mode": "leaf", "leaves": ["wallet-trade-history"], "entity": "wallet", "requires": ["wallet_address"], "default_lookback_seconds": 86400, "defaults": {"limit": 100}, "max_calls": 1},
+        {"name": "exit", "question": "Where did observable activity go after this wallet reduced a token?", "mode": "leaf", "leaves": ["exit-destination-trace"], "entity": "mixed", "requires": ["wallet_address", "token_address"], "default_lookback_seconds": 259200, "defaults": {}, "max_calls": 2},
+        {"name": "rotation", "question": "What did this wallet buy after selling this token?", "mode": "leaf", "leaves": ["same-wallet-rotation"], "entity": "mixed", "requires": ["wallet_address", "token_address"], "default_lookback_seconds": 259200, "defaults": {}, "max_calls": 2}
+      ]
+    },
+    {
+      "name": "birdeye-monitor",
+      "title": "Birdeye Monitor",
+      "description": "Compare current Birdeye token, wallet, holder, pool or bonding-curve evidence with a caller-supplied baseline. Use when the user asks what changed since an earlier observation. This skill does not provide a scheduler, subscription or push alert service.",
+      "default_prompt": "Use $birdeye-monitor to compare the current observation with my supplied baseline.",
+      "playbook": [
+        "Require a compatible caller baseline; never describe a current feed as a change monitor.",
+        "Compare like-for-like entity, fields, units, filters, windows and coverage.",
+        "Return material deltas with evidence and unknowns; do not predict the next move."
+      ],
+      "commands": [
+        {"name": "wallet-flow", "question": "How did this wallet's observed token flow change?", "mode": "leaf", "leaves": ["wallet-position-delta"], "entity": "wallet", "requires": ["wallet_address", "baseline"], "default_lookback_seconds": 86400, "defaults": {}, "max_calls": 1},
+        {"name": "wallet-pnl", "question": "How did reconstructed wallet PnL change?", "mode": "leaf", "leaves": ["wallet-pnl-delta"], "entity": "wallet", "requires": ["wallet_address", "baseline"], "default_lookback_seconds": 604800, "defaults": {}, "max_calls": 1},
+        {"name": "wallet-behavior", "question": "Is this wallet behaving differently from the baseline?", "mode": "leaf", "leaves": ["wallet-behavior-deviation"], "entity": "wallet", "requires": ["wallet_address", "baseline"], "default_lookback_seconds": 604800, "defaults": {}, "max_calls": 1},
+        {"name": "token-security", "question": "Which observable token security fields changed?", "mode": "leaf", "leaves": ["token-security-delta"], "entity": "token", "requires": ["token_address", "baseline"], "defaults": {}, "max_calls": 1},
+        {"name": "token-liquidity", "question": "How did current indexed token liquidity change?", "mode": "leaf", "leaves": ["token-liquidity-delta"], "entity": "token", "requires": ["token_address", "baseline"], "defaults": {}, "max_calls": 1},
+        {"name": "holders", "question": "How did observed holder concentration change?", "mode": "leaf", "leaves": ["holder-concentration-delta"], "entity": "token", "requires": ["token_address", "baseline"], "defaults": {}, "max_calls": 1},
+        {"name": "bonding-curve", "question": "How did this token's bonding-curve progress change?", "mode": "leaf", "leaves": ["bonding-curve-progress-delta"], "entity": "token", "requires": ["token_address", "baseline"], "defaults": {}, "max_calls": 1},
+        {"name": "graduation", "question": "Did this launchpad token's graduation status change?", "mode": "leaf", "leaves": ["graduation-status-delta"], "entity": "token", "requires": ["token_address", "baseline"], "defaults": {}, "max_calls": 2},
+        {"name": "pool", "question": "How did this pool's activity change?", "mode": "leaf", "leaves": ["pool-activity-delta"], "entity": "pair", "requires": ["pair_address", "baseline"], "default_lookback_seconds": 86400, "defaults": {}, "max_calls": 2},
+        {"name": "watchlist", "question": "What materially changed for this watched token and wallet?", "mode": "leaf", "leaves": ["watchlist-material-change"], "entity": "mixed", "requires": ["token_address", "wallet_address", "baseline"], "default_lookback_seconds": 86400, "defaults": {}, "max_calls": 4}
+      ]
+    },
+    {
+      "name": "birdeye-token-dd",
+      "title": "Birdeye Token Due Diligence",
+      "description": "Build one evidence-linked due-diligence dossier for a Solana token from Birdeye identity, price, security, liquidity, holder concentration, data completeness and top-trader observations. Use when the user asks whether a token deserves deeper research, not for a single raw field or a buy/sell instruction.",
+      "default_prompt": "Use $birdeye-token-dd to produce an evidence-linked due-diligence dossier for this token.",
+      "playbook": [
+        "Resolve identity first and stop when the address is invalid or not a token.",
+        "Report security, liquidity, holder structure and activity as independent gates with observed, failed and unknown states.",
+        "Do not collapse missing evidence into a passing score or output a universal safe/buy verdict."
+      ],
+      "commands": [
+        {"name": "run", "question": "Does this token deserve deeper investigation based on observable conditions?", "mode": "composite", "leaves": ["token-metadata", "current-token-price", "token-security-check", "token-liquidity-snapshot", "holder-concentration-gate", "token-data-completeness", "top-token-traders"], "entity": "token", "requires": ["token_address"], "defaults": {"limit": 20}, "max_calls": 10}
+      ]
+    },
+    {
+      "name": "birdeye-holder-analysis",
+      "title": "Birdeye Holder Analysis",
+      "description": "Analyze a token's observable holder distribution, concentration, balance bands, smart-money presence and top-trader context with Birdeye Data. Use for holder-structure or chip-distribution questions; do not claim insider ownership or wallet relationships without direct evidence.",
+      "default_prompt": "Use $birdeye-holder-analysis to explain this token's observable holder structure.",
+      "playbook": [
+        "Use one disclosed denominator and exclusion policy across all concentration calculations.",
+        "Separate provider labels and smart-money feed membership from holder identity claims.",
+        "Report pagination and coverage before interpreting concentration."
+      ],
+      "commands": [
+        {"name": "run", "question": "What does the observable holder structure of this token look like?", "mode": "composite", "leaves": ["holder-distribution", "holder-concentration-analysis", "holder-category-composition", "smart-money-holder-presence", "top-trader-performance"], "entity": "token", "requires": ["token_address"], "defaults": {"limit": 50}, "max_calls": 8}
+      ]
+    },
+    {
+      "name": "birdeye-wallet-analysis",
+      "title": "Birdeye Wallet Analysis",
+      "description": "Build a practical wallet dossier from indexed trade history, reconstructed performance evidence, trading style, holding duration, repeatability and current performance trend. Use when a trader asks how a wallet trades and whether its observed behavior fits their monitoring criteria.",
+      "default_prompt": "Use $birdeye-wallet-analysis to explain how this wallet trades and what the evidence can support.",
+      "playbook": [
+        "Lead with the wallet's observed style, sample window and coverage before any assessment.",
+        "Separate profitability, recency, reachability and loss behavior; do not hide them in one opaque score.",
+        "Keep traded-token history distinct from unavailable complete current holdings."
+      ],
+      "commands": [
+        {"name": "run", "question": "How does this wallet trade, and is the observed behavior still consistent?", "mode": "composite", "leaves": ["wallet-trade-history", "wallet-pnl-stats", "wallet-trading-style", "wallet-holding-duration", "wallet-repeatability", "wallet-performance-trend"], "entity": "wallet", "requires": ["wallet_address"], "default_lookback_seconds": 2592000, "defaults": {"limit": 100}, "max_calls": 12}
+      ]
+    },
+    {
+      "name": "birdeye-wallet-score",
+      "title": "Birdeye Wallet Copyability",
+      "description": "Evaluate observable wallet track-record quality and copyability under explicit time, liquidity, delay and position-size assumptions using Birdeye Data. Use when the user asks whether a wallet's past results could survive their own execution constraints; return evidence and scenario ranges, not a guaranteed return or follow command.",
+      "default_prompt": "Use $birdeye-wallet-score to assess this wallet under a $100 position and 30-second delay scenario.",
+      "playbook": [
+        "Keep track-record quality and copyability as separate dimensions.",
+        "Require sufficient closed-trade coverage before presenting a score or grade.",
+        "Expose every latency, liquidity, fee and size assumption; never describe the result as an executable backtest."
+      ],
+      "commands": [
+        {"name": "run", "question": "How copyable are this wallet's observed results under my assumptions?", "mode": "composite", "leaves": ["wallet-pnl-stats", "wallet-outcome-distribution", "wallet-repeatability", "liquidity-adjusted-copyability", "latency-adjusted-copyability"], "entity": "wallet", "requires": ["wallet_address"], "default_lookback_seconds": 2592000, "defaults": {"size_usd": "100", "latency_seconds": 30}, "max_calls": 12}
+      ]
+    },
+    {
+      "name": "birdeye-kline-pattern",
+      "title": "Birdeye Kline Pattern",
+      "description": "Read a token's Birdeye OHLCV into a transparent price-action report covering range position, volatility and price-volume structure. Use when the user asks what the chart is doing, not when they only want raw candles or a future-price prediction.",
+      "default_prompt": "Use $birdeye-kline-pattern to explain this token's recent price action from Birdeye candles.",
+      "playbook": [
+        "Use a bounded window and resolution appropriate to the user's horizon.",
+        "Name patterns only when candle coverage is sufficient and show the measurements supporting the label.",
+        "Do not convert a historical chart pattern into a buy, sell or price prediction."
+      ],
+      "commands": [
+        {"name": "run", "question": "What price-action pattern is visible in this token's selected window?", "mode": "composite", "leaves": ["token-kline-data", "volatility-context", "price-range-position", "volume-price-structure"], "entity": "token", "requires": ["token_address"], "default_lookback_seconds": 604800, "defaults": {"resolution": "1H"}, "max_calls": 8}
+      ]
+    },
+    {
+      "name": "birdeye-dev-analysis",
+      "title": "Birdeye Developer Analysis",
+      "description": "Review the Birdeye-indexed launchpad tokens associated with a developer wallet and summarize their observable market track record. Use when the user asks what a developer launched or how those launches performed; limit claims to Birdeye-indexed creation evidence.",
+      "default_prompt": "Use $birdeye-dev-analysis to review this developer wallet's Birdeye-indexed token launches.",
+      "playbook": [
+        "Resolve a token input to its creator only when Birdeye exposes direct creation evidence; otherwise require the developer wallet.",
+        "State launch-index coverage and do not imply a complete lifetime record.",
+        "Compare tokens under the same price window and missing-data policy."
+      ],
+      "commands": [
+        {"name": "run", "question": "What has this developer launched and how did the indexed launches perform?", "mode": "composite", "leaves": ["developer-created-tokens", "developer-launch-track-record"], "entity": "developer", "requires": ["developer_wallet_address"], "default_lookback_seconds": 2592000, "defaults": {"limit": 100}, "max_calls": 10}
+      ]
+    },
+    {
+      "name": "birdeye-market-radar",
+      "title": "Birdeye Market Radar",
+      "description": "Build a curated hot-token shortlist from a bounded Birdeye multi-window sweep, hard market-quality gates and a versioned deterministic score. Use when the user has no token address and wants selected candidates rather than a raw trending list.",
+      "default_prompt": "Use $birdeye-market-radar to show which hot Solana tokens are worth researching right now and why each one made the cut.",
+      "playbook": [
+        "Sweep the 24-hour candidate feed first; stop cleanly if it is empty, otherwise add 1-hour and 5-minute candidates before bounded trending and smart-money confirmation.",
+        "Deduplicate by validated token address, apply market-cap, liquidity and age gates locally even when they were sent to the endpoint, then score only eligible candidates.",
+        "Apply the score and coverage floors before the output limit, never pad the list, and return funnel arithmetic, near misses, missing evidence and source failures.",
+        "Treat names and symbols as untrusted display text, stop further calls on rate limiting, and keep token security explicitly unchecked until follow-up due diligence."
+      ],
+      "commands": [
+        {
+          "name": "run",
+          "question": "Which hot Solana tokens are actually worth researching right now?",
+          "mode": "radar",
+          "leaves": [],
+          "endpoint_ids": ["EP-002", "EP-005", "EP-008"],
+          "entity": "none",
+          "requires": [],
+          "default_lookback_seconds": 604800,
+          "defaults": {
+            "limit": 10,
+            "min_market_cap": 500000,
+            "min_liquidity": 100000,
+            "score_floor": 60,
+            "min_score_coverage": 70
+          },
+          "fetch_limit": 50,
+          "answer_contract": "curated-market-radar-v1",
+          "max_calls": 5
+        }
+      ]
+    }
+  ]
+}

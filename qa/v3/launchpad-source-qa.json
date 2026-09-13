@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "run_date": "2026-09-11",
+  "chain": "solana",
+  "endpoint_id": "EP-006",
+  "transport": "standard_api_counterpart_live_qa",
+  "credential_source": "user_owned_process_environment",
+  "credential_value_persisted": false,
+  "x402_paid_requests": 0,
+  "accepted_sources": [
+    {"source": "all", "status": "PASS", "source_match": "not_applicable", "execution_path": "EP-006 probe"},
+    {"source": "pump_dot_fun", "user_input": "Pump.fun", "status": "PASS", "source_match": true, "execution_path": "birdeye-cli market launchpad-trending"},
+    {"source": "moonshot", "user_input": "Moonshot", "status": "PASS", "source_match": true, "execution_path": "birdeye-cli market launchpad-trending"},
+    {"source": "raydium_launchlab", "user_input": "Raydium LaunchLab", "status": "PASS", "source_match": true, "execution_path": "birdeye-cli market launchpad-trending"},
+    {"source": "meteora_dynamic_bonding_curve", "user_input": "Meteora DBC", "status": "PASS", "source_match": true, "execution_path": "birdeye-cli market launchpad-trending"}
+  ],
+  "rejected_sources": [
+    {"source": "four.meme", "live_result": "HTTP_400", "runtime_policy": "REJECT_BEFORE_NETWORK"},
+    {"source": "nad.fun", "live_result": "HTTP_400", "runtime_policy": "REJECT_BEFORE_NETWORK"},
+    {"source": "flap", "live_result": "HTTP_400", "runtime_policy": "REJECT_BEFORE_NETWORK"},
+    {"source": "something", "live_result": "HTTP_400", "runtime_policy": "REJECT_BEFORE_NETWORK"},
+    {"source": "lfj_token_mill", "live_result": "HTTP_400", "runtime_policy": "REJECT_BEFORE_NETWORK"}
+  ],
+  "gate": "PASS"
+}

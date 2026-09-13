@@ -1,0 +1,199 @@
+{
+  "schema_version": "1.0.0",
+  "benchmark": {
+    "source": "Public agentic-skill marketplace detail-page research",
+    "observed_on": "2026-09-10",
+    "scope": "27 Data Analytics and 11 Monitor cards",
+    "required_sections": ["installation", "core_capabilities", "inputs_and_filters", "output_fields", "example_prompts", "boundaries"]
+  },
+  "skills": {
+    "birdeye-5-minute-trending-tokens": {
+      "capabilities": ["Rank Solana tokens by five-minute on-chain volume.", "Show price, market cap, liquidity, holder count, five-minute volume and five-minute trade count for each result.", "Filter by market cap, liquidity, holder count, five-minute volume, price change, volume change or trade count before ranking."],
+      "examples": ["Show me the most active Solana tokens in the last 5 minutes.", "Find 5-minute trending tokens with at least $25K liquidity and $10K volume."]
+    },
+    "birdeye-launchpad-trending-tokens": {
+      "capabilities": ["Rank launchpad tokens by one-hour trading volume across all live-tested Solana launchpad sources.", "Filter to Pump.fun, Moonshot, Raydium LaunchLab or Meteora DBC using natural launchpad names or canonical source values.", "Show launchpad identity, creation time, bonding-curve progress, graduation state and available market fields for each result."],
+      "examples": ["What tokens are trending on Moonshot right now?", "Compare trending tokens across all supported Solana launchpads with at least $10K liquidity."]
+    },
+    "birdeye-launchpad-new-tokens": {
+      "capabilities": ["Find tokens created during the last 24 hours across all live-tested Solana launchpad sources.", "Filter to Pump.fun, Moonshot, Raydium LaunchLab or Meteora DBC and sort launches newest first.", "Show source, creation time, bonding-curve progress, graduation state and available market fields without creating separate packages for every platform."],
+      "examples": ["Show me new Raydium LaunchLab tokens from the last 24 hours.", "What new tokens launched across all supported Solana launchpads today?"]
+    },
+    "birdeye-pumpfun-trending-tokens": {
+      "capabilities": ["Rank Pump.fun tokens by one-hour trading volume.", "Keep the launchpad fixed to Pump.fun while allowing liquidity, market-cap, holder and activity filters.", "Show launchpad identity, bonding-curve status and the market fields available for each result."],
+      "examples": ["What Pump.fun tokens are hottest right now?", "Show Pump.fun tokens with at least $10K liquidity, ranked by 1-hour volume."]
+    },
+    "birdeye-pumpfun-new-tokens": {
+      "capabilities": ["Find Pump.fun tokens created during the last 24 hours.", "Sort fresh launches newest first and show creation time, progress and current market context.", "Filter the list by liquidity, market cap, holders and observed trading activity."],
+      "examples": ["Show me new Pump.fun tokens from the last 24 hours.", "Find new Pump.fun tokens that already have at least $5K liquidity."]
+    },
+    "birdeye-newly-listed-tokens": {
+      "capabilities": ["Return the latest Solana tokens indexed by Birdeye.", "Show listing time and the available token identity and market fields.", "Keep result count, pagination and the provider's listing coverage visible."],
+      "examples": ["What tokens were listed most recently on Solana?", "Show me the latest 10 Birdeye token listings."]
+    },
+    "birdeye-near-graduation-tokens": {
+      "capabilities": ["Find ungraduated launchpad tokens between 80% and 99.9999% bonding-curve progress by default.", "Rank candidates closest to graduation and show launchpad, creator, creation time and progress.", "Let the trader change the progress band and apply market or activity filters."],
+      "examples": ["Which launchpad tokens are closest to graduating?", "Show ungraduated tokens between 90% and 99% bonding-curve progress."]
+    },
+    "birdeye-recently-migrated-tokens": {
+      "capabilities": ["Find launchpad tokens recorded as graduated during the last 24 hours.", "Sort migrations newest first and show launchpad, graduation time and current market context.", "Filter by liquidity, market cap, holders or observed activity without changing the graduation requirement."],
+      "examples": ["What tokens migrated to a DEX in the last 24 hours?", "Show recently graduated tokens with at least $10K liquidity."]
+    },
+    "birdeye-migrated-token-screener": {
+      "capabilities": ["Fetch recently graduated tokens and apply a default $50K–$200K market-cap band.", "Require at least $10K indexed liquidity by default, then rank the survivors by one-hour volume.", "Let the trader override the market-cap and liquidity thresholds while disclosing that unavailable bundle, fresh-wallet and top-10 filters are not applied."],
+      "examples": ["Screen newly migrated tokens between $50K and $200K market cap with at least $10K liquidity.", "Find recently graduated tokens above $25K liquidity and tell me exactly which filters were applied."]
+    },
+    "birdeye-5-minute-volume-surge": {
+      "capabilities": ["Rank liquid Solana tokens by five-minute volume acceleration.", "Require at least $10K liquidity and $5K five-minute volume by default to reduce thin-market noise.", "Show volume change beside price, liquidity, market cap and activity context."],
+      "examples": ["Which Solana tokens have the biggest 5-minute volume surge?", "Show 5-minute volume surges with at least $50K liquidity."]
+    },
+    "birdeye-5-minute-price-surge": {
+      "capabilities": ["Rank liquid Solana tokens by five-minute price change.", "Require at least $10K liquidity and $5K five-minute volume by default.", "Show the move together with volume, trade count, holders, market cap and liquidity so the spike can be checked."],
+      "examples": ["Which liquid Solana tokens are pumping hardest over 5 minutes?", "Show 5-minute price surges with at least $25K liquidity and $10K volume."]
+    },
+    "birdeye-5-minute-most-traded": {
+      "capabilities": ["Rank Solana tokens by five-minute trade count.", "Filter out tokens below $10K liquidity by default.", "Show trade count together with five-minute volume, price change, holders, liquidity and market cap."],
+      "examples": ["What tokens had the most trades in the last 5 minutes?", "Show the 10 most-traded tokens with at least $50K liquidity."]
+    },
+    "birdeye-smart-money-token-radar": {
+      "capabilities": ["Query Birdeye's smart-money token feed for 1-day, 7-day or 30-day windows.", "Rank by smart-trader count, net flow or market cap and preserve the selected trader-style filter.", "Return provider-labeled smart-money observations without presenting them as a buy signal."],
+      "examples": ["What tokens are attracting the most smart-money wallets today?", "Show 7-day smart-money tokens ranked by net flow."]
+    },
+    "birdeye-market-radar": {
+      "capabilities": ["Sweep eligible Solana tokens across 24-hour, 1-hour and 5-minute activity windows, then add Birdeye trending and smart-money confirmation within a five-call cap.", "Require observable market cap, liquidity and listing age before scoring, and reapply every hard gate locally so provider filtering is never trusted blindly.", "Score candidates with a versioned 100-point method, enforce score and evidence-coverage floors before limiting the output, and never pad a weak market.", "Show the complete candidate funnel, component scores, source ranks, near misses, source failures and unperformed token-security checks."],
+      "examples": ["Which hot Solana tokens are actually worth researching right now?", "Build me a top-10 hot-token research list, but return fewer if the evidence is weak.", "Show a curated Solana radar with at least $250K liquidity and explain why every token made the cut."]
+    },
+    "birdeye-token-basic-info": {
+      "capabilities": ["Resolve a Solana token address to its name, symbol, decimals and metadata.", "Return its current indexed price, market cap, FDV, supply, liquidity and holder count when present.", "Keep missing fields explicit instead of substituting unsupported bundle, sniper, rat-wallet or KOL counts."],
+      "examples": ["Give me the basic info for this Solana token: <token address>.", "What are the price, market cap, liquidity and holder count for <token address>?"]
+    },
+    "birdeye-token-security-check": {
+      "capabilities": ["Inspect the token-security response for authority, ownership and other provider-observed risk fields.", "Separate affirmative observations, negative observations and missing values.", "Return the raw field names needed to verify the conclusion and never turn missing data into a safe verdict."],
+      "examples": ["Check the observable security risks for <token address>.", "Are mint or freeze authority risks visible for this Solana token?"]
+    },
+    "birdeye-liquidity-pool-analysis": {
+      "capabilities": ["Show the token's current indexed liquidity and valuation context.", "List the Birdeye-indexed markets or pools where the token trades.", "Report pool address, exchange identity and available reserve or activity fields with pagination coverage."],
+      "examples": ["Where is the liquidity for <token address>, and how deep is it?", "List the main pools for this token and show the liquidity Birdeye currently indexes."]
+    },
+    "birdeye-holder-distribution-analysis": {
+      "capabilities": ["Analyze the indexed holder ranking and holder-stat snapshots under a disclosed denominator policy.", "Calculate observable concentration bands and distinguish holder balance from trader performance.", "Add smart-money and top-trader context only where the underlying endpoints provide it."],
+      "examples": ["How concentrated are the holders of <token address>?", "Do the top holders control too much of this token, based on Birdeye's indexed coverage?"]
+    },
+    "birdeye-top-holders": {
+      "capabilities": ["Return the largest indexed holders for a Solana token.", "Show wallet address, indexed balance or share fields and requested ordering when available.", "Disclose pagination and denominator limits; do not claim cost basis, P&L, labels or funding source when x402 does not provide them."],
+      "examples": ["Who are the biggest holders of <token address>?", "Show the top 20 indexed holders and their observable shares."]
+    },
+    "birdeye-top-token-traders": {
+      "capabilities": ["Rank the token's indexed traders using the chosen Birdeye ordering and time frame.", "Show the trading metrics returned for each wallet, including buy, sell, volume or P&L fields when present.", "Keep wallet labels and funding-source claims out unless they are explicitly returned by the endpoint."],
+      "examples": ["Who are the top traders for <token address> this week?", "Show the most profitable indexed traders for this token over 30 days."]
+    },
+    "birdeye-token-kline-chart": {
+      "capabilities": ["Fetch OHLCV candles for an exact Solana token address.", "Support a caller-selected resolution and Unix time window.", "Return open, high, low, close, volume and candle timestamps with gaps and coverage disclosed."],
+      "examples": ["Show 5-minute candles for <token address> over the last 24 hours.", "Get the 1-hour OHLCV history for this token for the past 7 days."]
+    },
+    "birdeye-large-trade-scanner": {
+      "capabilities": ["Fetch recent indexed token transactions and order the observable trades by USD size.", "Preserve direction, wallet, token amount, USD value and timestamp when returned.", "Keep the scan window, page limit and any ambiguous transaction direction visible."],
+      "examples": ["What were the biggest trades in <token address> during the last hour?", "Show the 20 largest recent indexed trades for this token."]
+    },
+    "birdeye-token-trade-activity": {
+      "capabilities": ["Return recent indexed buys and sells for an exact token address.", "Filter by transaction type and bounded time range where the endpoint supports it.", "Show timestamp, side, amount, USD value, wallet and transaction identity when present."],
+      "examples": ["Show recent buys and sells for <token address>.", "What trades happened in this token during the last 30 minutes?"]
+    },
+    "birdeye-token-mint-burn-activity": {
+      "capabilities": ["Inspect indexed mint and burn transactions for one token.", "Show event type, amount, timestamp, transaction identity and involved accounts when present.", "Keep the observation window and index coverage explicit; no events means none observed, not proof none occurred."],
+      "examples": ["Was <token address> minted or burned recently?", "Show mint and burn events for this token in the last 24 hours."]
+    },
+    "birdeye-token-transfer-activity": {
+      "capabilities": ["Inspect indexed token transfers over a bounded time window.", "Show sender, receiver, amount, timestamp and transaction identity when present.", "Report transfer totals and pagination coverage separately from the returned event sample."],
+      "examples": ["Show recent transfers for <token address>.", "What transfers happened in this token during the last hour?"]
+    },
+    "birdeye-token-due-diligence": {
+      "capabilities": ["Build one dossier across token identity, price, security, liquidity, holder distribution and top-trader evidence.", "Keep each section endpoint-linked so the trader can see which evidence supports each observation.", "Return a research priority and material unknowns, not an automatic buy or safe-token verdict."],
+      "examples": ["Do a full Birdeye due-diligence check on <token address>.", "What should worry me about this token before I spend more time on it?"]
+    },
+    "birdeye-wallet-trade-history": {
+      "capabilities": ["Return a wallet's indexed swap and trading history for a bounded window.", "Filter by transaction type, token and time where supported.", "Show token, direction, amount, USD value, timestamp and transaction identity without calling the result current holdings."],
+      "examples": ["What has <wallet address> traded in the last 7 days?", "Show recent sells by this wallet for <token address>."]
+    },
+    "birdeye-wallet-recent-sells": {
+      "capabilities": ["Filter a wallet's indexed recent activity to observable sells.", "Exclude transactions whose side cannot be classified reliably.", "Show sold token, amount, USD value and timestamp with the selected lookback window."],
+      "examples": ["What did <wallet address> sell today?", "Show this wallet's recent sells in the last 6 hours."]
+    },
+    "birdeye-wallet-net-buying": {
+      "capabilities": ["Aggregate indexed buys and sells by token for one wallet.", "Rank tokens where observed buy value exceeds observed sell value during the selected window.", "Show gross buys, gross sells, net flow, trade count and coverage rather than implying current ownership."],
+      "examples": ["What tokens is <wallet address> net buying this week?", "Where has this wallet's positive net flow gone in the last 24 hours?"]
+    },
+    "birdeye-wallet-pnl-analysis": {
+      "capabilities": ["Reconstruct wallet performance from the indexed trades available in the selected window.", "Show covered realized outcomes, wins, losses, trade counts and reconstruction assumptions.", "State that the result is not provider-complete wallet P&L and does not include unsupported current-position data."],
+      "examples": ["Reconstruct the last 30 days of P&L for <wallet address>.", "How profitable does this wallet look from Birdeye's indexed trades, and what is missing?"]
+    },
+    "birdeye-wallet-trading-style": {
+      "capabilities": ["Profile observable trade cadence, holding duration, position repetition and outcome distribution.", "Describe whether the wallet behaves more like a fast trader, swing trader or slower holder only when the evidence supports it.", "Show sample size, coverage window and uncertainty behind every style label."],
+      "examples": ["How does <wallet address> usually trade?", "Does this wallet flip quickly or hold positions longer, based on the last 30 days?"]
+    },
+    "birdeye-wallet-copy-trade-assessment": {
+      "capabilities": ["Score the observable track record separately from copyability.", "Stress the result with caller-supplied position size and execution-delay assumptions using available market liquidity context.", "Explain failure modes, sample size and missing current-holdings data before giving a research verdict."],
+      "examples": ["Is <wallet address> realistically copyable with a $500 position and 30-second delay?", "Would this wallet's observed edge survive my execution constraints?"]
+    },
+    "birdeye-compare-smart-money-wallets": {
+      "capabilities": ["Compare at least two wallet addresses over the same time window and reconstruction method.", "Rank them on shared observed metrics rather than mixing unequal periods or coverage.", "Show the metric-by-metric evidence, sample-size differences and reasons a winner may still be unsuitable to copy."],
+      "examples": ["Compare these three wallets over the last 30 days: <wallets>.", "Which of these wallets looks strongest on the same win, P&L and trading-frequency evidence?"]
+    },
+    "birdeye-dev-created-tokens": {
+      "capabilities": ["List Birdeye-indexed launchpad tokens associated with a supplied creator wallet.", "Show token identity, launchpad, creation time, graduation state and current market fields when present.", "Keep index coverage visible and do not claim a complete creator history outside supported launchpad data."],
+      "examples": ["What tokens did <developer wallet> create?", "List this developer's indexed launches and show which ones graduated."]
+    },
+    "birdeye-dev-launch-track-record": {
+      "capabilities": ["Review a developer's indexed token launches using a consistent outcome window and market-data method.", "Summarize launch count, observed graduation or survival outcomes and current market context where available.", "Surface missing launches and coverage limits before assigning any reputation interpretation."],
+      "examples": ["How have the tokens created by <developer wallet> performed?", "Does this developer have a repeatable launch track record in Birdeye's indexed data?"]
+    },
+    "birdeye-token-smart-money-trades": {
+      "capabilities": ["Inspect smart-money activity associated with one token over a bounded window.", "Show wallets, direction, amount, value and timestamp when the underlying evidence provides them.", "Separate provider smart-money labels from the agent's interpretation and disclose missing label coverage."],
+      "examples": ["What smart-money activity is visible in <token address> today?", "Are Birdeye smart-money wallets buying or selling this token recently?"]
+    },
+    "birdeye-selected-kol-wallet-activity": {
+      "capabilities": ["Track recent indexed trades for caller-supplied KOL wallet addresses.", "Combine the selected wallets into one time-ordered activity view with wallet identity preserved.", "Never imply that the supplied list is Birdeye's complete KOL universe."],
+      "examples": ["What did these KOL wallets trade today: <wallets>?", "Show only the recent buys from this list of KOL wallets."]
+    },
+    "birdeye-wallet-activity-feed": {
+      "capabilities": ["Fetch one wallet's latest indexed activity for the last 24 hours by default.", "Show token, direction, amount, USD value and timestamp when available.", "Allow a different bounded time window and transaction filters while preserving pagination coverage."],
+      "examples": ["What did <wallet address> trade in the last 24 hours?", "Show this wallet's latest buys today."]
+    },
+    "birdeye-wallet-exit-destination": {
+      "capabilities": ["Find the observable activity that followed a wallet's reduction of a specified token.", "Order subsequent swaps and transfers by time and show the destination assets actually observed.", "Avoid claiming causal fund tracing when the indexed events do not prove where the same proceeds went."],
+      "examples": ["After <wallet address> sold <token address>, what did it do next?", "Where did this wallet's observable activity go after exiting this token?"]
+    },
+    "birdeye-wallet-post-sell-rotation": {
+      "capabilities": ["Identify a specified token sale and search the same wallet's subsequent indexed buys.", "Rank or sequence the post-sale purchases within a bounded follow-up window.", "Show timing gaps and exclude buys that occurred before the observed sale."],
+      "examples": ["What did <wallet address> buy after selling <token address>?", "Show this wallet's post-sell rotation during the next 6 hours."]
+    },
+    "birdeye-token-liquidity-change": {
+      "capabilities": ["Compare the token's current indexed liquidity with a compatible prior snapshot.", "Calculate absolute and percentage change while preserving both observed values and timestamps.", "Require a baseline and refuse to present a current snapshot as a change alert."],
+      "examples": ["Has liquidity for <token address> dropped since my last snapshot?", "Compare current liquidity with this baseline and flag a change over 20%."]
+    },
+    "birdeye-token-security-change": {
+      "capabilities": ["Compare current token-security fields with a compatible prior snapshot.", "List added, removed and changed values without assigning safety to missing fields.", "Require a baseline and preserve the exact before/after evidence."],
+      "examples": ["Did any security fields change for <token address> since this snapshot?", "Compare this token's current authority fields with my last check."]
+    },
+    "birdeye-bonding-curve-progress": {
+      "capabilities": ["Compare current bonding-curve progress with a prior snapshot for the same token.", "Show progress delta, graduation state, observation times and launchpad identity.", "Require a compatible baseline and keep a simple current-status lookup separate from monitoring."],
+      "examples": ["How much has <token address> moved up its bonding curve since my last check?", "Compare this token's progress with the baseline and tell me whether it is nearing graduation."]
+    },
+    "birdeye-graduation-status-change": {
+      "capabilities": ["Compare the current launchpad graduation state with a prior snapshot.", "Report the transition and any observed graduation timestamp.", "Require the same token and a compatible baseline before claiming a status change."],
+      "examples": ["Did <token address> graduate since my last snapshot?", "Compare this launchpad token's current graduation status with the baseline."]
+    },
+    "birdeye-holder-concentration-change": {
+      "capabilities": ["Recalculate observable holder concentration under the same denominator and ranking policy as the baseline.", "Show absolute and relative changes for the tracked concentration bands.", "Refuse comparison when pagination, denominator or token identity is incompatible."],
+      "examples": ["Has holder concentration increased for <token address> since my last check?", "Compare the top-holder share with this compatible baseline."]
+    },
+    "birdeye-pool-activity-change": {
+      "capabilities": ["Compare current pool trading activity with a compatible prior snapshot for the same pair.", "Show changes in observable trade count, volume and liquidity fields over matching windows.", "Require a pair address, matched window policy and caller baseline before claiming a change."],
+      "examples": ["Has activity in <pair address> changed since this snapshot?", "Compare this pool's current volume and trade count with the same window yesterday."]
+    },
+    "birdeye-token-wallet-watchlist": {
+      "capabilities": ["Run a bounded change check for one watched token and one watched wallet.", "Combine only the token and wallet observations declared by the watchlist workflow and compare them with the caller baseline.", "Return section-level failures and material changes without treating the check as a persistent Birdeye-hosted watchlist."],
+      "examples": ["What materially changed for <token address> and <wallet address> since this watchlist snapshot?", "Check this token-wallet pair and show only changes that pass my baseline thresholds."]
+    }
+  }
+}

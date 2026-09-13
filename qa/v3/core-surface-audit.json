@@ -1,0 +1,1298 @@
+{
+  "schema_version": "3.0.0",
+  "generated_at": "2026-09-13T12:51:43.192250Z",
+  "release": "3.0.0-rc.1",
+  "package_gate": "PASS",
+  "production_answer_gate": "BLOCKED",
+  "core_skill_count": 12,
+  "command_count": 65,
+  "marketplace_skill_count": 47,
+  "marketplace_detail_benchmark": {
+    "source": "Public agentic-skill marketplace detail-page research",
+    "observed_on": "2026-09-10",
+    "scope": "27 Data Analytics and 11 Monitor cards",
+    "required_sections": [
+      "installation",
+      "core_capabilities",
+      "inputs_and_filters",
+      "output_fields",
+      "example_prompts",
+      "boundaries"
+    ]
+  },
+  "marketplace_detail_gate": "PASS",
+  "marketplace_detail_rows": [
+    {
+      "skill": "birdeye-5-minute-trending-tokens",
+      "capability_count": 3,
+      "example_prompt_count": 2,
+      "missing_sections": [],
+      "installation_targets_exact_skill": true,
+      "gate": "PASS"
+    },
+    {
+      "skill": "birdeye-launchpad-trending-tokens",
+      "capability_count": 3,
+      "example_prompt_count": 2,
+      "missing_sections": [],
+      "installation_targets_exact_skill": true,
+      "gate": "PASS"
+    },
+    {
+      "skill": "birdeye-launchpad-new-tokens",
+      "capability_count": 3,
+      "example_prompt_count": 2,
+      "missing_sections": [],
+      "installation_targets_exact_skill": true,
+      "gate": "PASS"
+    },
+    {
+      "skill": "birdeye-pumpfun-trending-tokens",
+      "capability_count": 3,
+      "example_prompt_count": 2,
+      "missing_sections": [],
+      "installation_targets_exact_skill": true,
+      "gate": "PASS"
+    },
+    {
+      "skill": "birdeye-pumpfun-new-tokens",
+      "capability_count": 3,
+      "example_prompt_count": 2,
+      "missing_sections": [],
+      "installation_targets_exact_skill": true,
+      "gate": "PASS"
+    },
+    {
+      "skill": "birdeye-newly-listed-tokens",
+      "capability_count": 3,
+      "example_prompt_count": 2,
+      "missing_sections": [],
+      "installation_targets_exact_skill": true,
+      "gate": "PASS"
+    },
+    {
+      "skill": "birdeye-near-graduation-tokens",
+      "capability_count": 3,
+      "example_prompt_count": 2,
+      "missing_sections": [],
+      "installation_targets_exact_skill": true,
+      "gate": "PASS"
+    },
+    {
+      "skill": "birdeye-recently-migrated-tokens",
+      "capability_count": 3,
+      "example_prompt_count": 2,
+      "missing_sections": [],
+      "installation_targets_exact_skill": true,
+      "gate": "PASS"
+    },
+    {
+      "skill": "birdeye-migrated-token-screener",
+      "capability_count": 3,
+      "example_prompt_count": 2,
+      "missing_sections": [],
+      "installation_targets_exact_skill": true,
+      "gate": "PASS"
+    },
+    {
+      "skill": "birdeye-5-minute-volume-surge",
+      "capability_count": 3,
+      "example_prompt_count": 2,
+      "missing_sections": [],
+      "installation_targets_exact_skill": true,
+      "gate": "PASS"
+    },
+    {
+      "skill": "birdeye-5-minute-price-surge",
+      "capability_count": 3,
+      "example_prompt_count": 2,
+      "missing_sections": [],
+      "installation_targets_exact_skill": true,
+      "gate": "PASS"
+    },
+    {
+      "skill": "birdeye-5-minute-most-traded",
+      "capability_count": 3,
+      "example_prompt_count": 2,
+      "missing_sections": [],
+      "installation_targets_exact_skill": true,
+      "gate": "PASS"
+    },
+    {
+      "skill": "birdeye-smart-money-token-radar",
+      "capability_count": 3,
+      "example_prompt_count": 2,
+      "missing_sections": [],
+      "installation_targets_exact_skill": true,
+      "gate": "PASS"
+    },
+    {
+      "skill": "birdeye-market-radar",
+      "capability_count": 4,
+      "example_prompt_count": 3,
+      "missing_sections": [],
+      "installation_targets_exact_skill": true,
+      "gate": "PASS"
+    },
+    {
+      "skill": "birdeye-token-basic-info",
+      "capability_count": 3,
+      "example_prompt_count": 2,
+      "missing_sections": [],
+      "installation_targets_exact_skill": true,
+      "gate": "PASS"
+    },
+    {
+      "skill": "birdeye-token-security-check",
+      "capability_count": 3,
+      "example_prompt_count": 2,
+      "missing_sections": [],
+      "installation_targets_exact_skill": true,
+      "gate": "PASS"
+    },
+    {
+      "skill": "birdeye-liquidity-pool-analysis",
+      "capability_count": 3,
+      "example_prompt_count": 2,
+      "missing_sections": [],
+      "installation_targets_exact_skill": true,
+      "gate": "PASS"
+    },
+    {
+      "skill": "birdeye-holder-distribution-analysis",
+      "capability_count": 3,
+      "example_prompt_count": 2,
+      "missing_sections": [],
+      "installation_targets_exact_skill": true,
+      "gate": "PASS"
+    },
+    {
+      "skill": "birdeye-top-holders",
+      "capability_count": 3,
+      "example_prompt_count": 2,
+      "missing_sections": [],
+      "installation_targets_exact_skill": true,
+      "gate": "PASS"
+    },
+    {
+      "skill": "birdeye-top-token-traders",
+      "capability_count": 3,
+      "example_prompt_count": 2,
+      "missing_sections": [],
+      "installation_targets_exact_skill": true,
+      "gate": "PASS"
+    },
+    {
+      "skill": "birdeye-token-kline-chart",
+      "capability_count": 3,
+      "example_prompt_count": 2,
+      "missing_sections": [],
+      "installation_targets_exact_skill": true,
+      "gate": "PASS"
+    },
+    {
+      "skill": "birdeye-large-trade-scanner",
+      "capability_count": 3,
+      "example_prompt_count": 2,
+      "missing_sections": [],
+      "installation_targets_exact_skill": true,
+      "gate": "PASS"
+    },
+    {
+      "skill": "birdeye-token-trade-activity",
+      "capability_count": 3,
+      "example_prompt_count": 2,
+      "missing_sections": [],
+      "installation_targets_exact_skill": true,
+      "gate": "PASS"
+    },
+    {
+      "skill": "birdeye-token-mint-burn-activity",
+      "capability_count": 3,
+      "example_prompt_count": 2,
+      "missing_sections": [],
+      "installation_targets_exact_skill": true,
+      "gate": "PASS"
+    },
+    {
+      "skill": "birdeye-token-transfer-activity",
+      "capability_count": 3,
+      "example_prompt_count": 2,
+      "missing_sections": [],
+      "installation_targets_exact_skill": true,
+      "gate": "PASS"
+    },
+    {
+      "skill": "birdeye-token-due-diligence",
+      "capability_count": 3,
+      "example_prompt_count": 2,
+      "missing_sections": [],
+      "installation_targets_exact_skill": true,
+      "gate": "PASS"
+    },
+    {
+      "skill": "birdeye-wallet-trade-history",
+      "capability_count": 3,
+      "example_prompt_count": 2,
+      "missing_sections": [],
+      "installation_targets_exact_skill": true,
+      "gate": "PASS"
+    },
+    {
+      "skill": "birdeye-wallet-recent-sells",
+      "capability_count": 3,
+      "example_prompt_count": 2,
+      "missing_sections": [],
+      "installation_targets_exact_skill": true,
+      "gate": "PASS"
+    },
+    {
+      "skill": "birdeye-wallet-net-buying",
+      "capability_count": 3,
+      "example_prompt_count": 2,
+      "missing_sections": [],
+      "installation_targets_exact_skill": true,
+      "gate": "PASS"
+    },
+    {
+      "skill": "birdeye-wallet-pnl-analysis",
+      "capability_count": 3,
+      "example_prompt_count": 2,
+      "missing_sections": [],
+      "installation_targets_exact_skill": true,
+      "gate": "PASS"
+    },
+    {
+      "skill": "birdeye-wallet-trading-style",
+      "capability_count": 3,
+      "example_prompt_count": 2,
+      "missing_sections": [],
+      "installation_targets_exact_skill": true,
+      "gate": "PASS"
+    },
+    {
+      "skill": "birdeye-wallet-copy-trade-assessment",
+      "capability_count": 3,
+      "example_prompt_count": 2,
+      "missing_sections": [],
+      "installation_targets_exact_skill": true,
+      "gate": "PASS"
+    },
+    {
+      "skill": "birdeye-compare-smart-money-wallets",
+      "capability_count": 3,
+      "example_prompt_count": 2,
+      "missing_sections": [],
+      "installation_targets_exact_skill": true,
+      "gate": "PASS"
+    },
+    {
+      "skill": "birdeye-dev-created-tokens",
+      "capability_count": 3,
+      "example_prompt_count": 2,
+      "missing_sections": [],
+      "installation_targets_exact_skill": true,
+      "gate": "PASS"
+    },
+    {
+      "skill": "birdeye-dev-launch-track-record",
+      "capability_count": 3,
+      "example_prompt_count": 2,
+      "missing_sections": [],
+      "installation_targets_exact_skill": true,
+      "gate": "PASS"
+    },
+    {
+      "skill": "birdeye-token-smart-money-trades",
+      "capability_count": 3,
+      "example_prompt_count": 2,
+      "missing_sections": [],
+      "installation_targets_exact_skill": true,
+      "gate": "PASS"
+    },
+    {
+      "skill": "birdeye-selected-kol-wallet-activity",
+      "capability_count": 3,
+      "example_prompt_count": 2,
+      "missing_sections": [],
+      "installation_targets_exact_skill": true,
+      "gate": "PASS"
+    },
+    {
+      "skill": "birdeye-wallet-activity-feed",
+      "capability_count": 3,
+      "example_prompt_count": 2,
+      "missing_sections": [],
+      "installation_targets_exact_skill": true,
+      "gate": "PASS"
+    },
+    {
+      "skill": "birdeye-wallet-exit-destination",
+      "capability_count": 3,
+      "example_prompt_count": 2,
+      "missing_sections": [],
+      "installation_targets_exact_skill": true,
+      "gate": "PASS"
+    },
+    {
+      "skill": "birdeye-wallet-post-sell-rotation",
+      "capability_count": 3,
+      "example_prompt_count": 2,
+      "missing_sections": [],
+      "installation_targets_exact_skill": true,
+      "gate": "PASS"
+    },
+    {
+      "skill": "birdeye-token-liquidity-change",
+      "capability_count": 3,
+      "example_prompt_count": 2,
+      "missing_sections": [],
+      "installation_targets_exact_skill": true,
+      "gate": "PASS"
+    },
+    {
+      "skill": "birdeye-token-security-change",
+      "capability_count": 3,
+      "example_prompt_count": 2,
+      "missing_sections": [],
+      "installation_targets_exact_skill": true,
+      "gate": "PASS"
+    },
+    {
+      "skill": "birdeye-bonding-curve-progress",
+      "capability_count": 3,
+      "example_prompt_count": 2,
+      "missing_sections": [],
+      "installation_targets_exact_skill": true,
+      "gate": "PASS"
+    },
+    {
+      "skill": "birdeye-graduation-status-change",
+      "capability_count": 3,
+      "example_prompt_count": 2,
+      "missing_sections": [],
+      "installation_targets_exact_skill": true,
+      "gate": "PASS"
+    },
+    {
+      "skill": "birdeye-holder-concentration-change",
+      "capability_count": 3,
+      "example_prompt_count": 2,
+      "missing_sections": [],
+      "installation_targets_exact_skill": true,
+      "gate": "PASS"
+    },
+    {
+      "skill": "birdeye-pool-activity-change",
+      "capability_count": 3,
+      "example_prompt_count": 2,
+      "missing_sections": [],
+      "installation_targets_exact_skill": true,
+      "gate": "PASS"
+    },
+    {
+      "skill": "birdeye-token-wallet-watchlist",
+      "capability_count": 3,
+      "example_prompt_count": 2,
+      "missing_sections": [],
+      "installation_targets_exact_skill": true,
+      "gate": "PASS"
+    }
+  ],
+  "unique_internal_leaf_count": 62,
+  "unique_endpoint_count": 27,
+  "endpoint_ids": [
+    "EP-002",
+    "EP-004",
+    "EP-005",
+    "EP-006",
+    "EP-007",
+    "EP-008",
+    "EP-009",
+    "EP-010",
+    "EP-011",
+    "EP-017",
+    "EP-019",
+    "EP-020",
+    "EP-023",
+    "EP-029",
+    "EP-031",
+    "EP-037",
+    "EP-039",
+    "EP-040",
+    "EP-041",
+    "EP-044",
+    "EP-047",
+    "EP-048",
+    "EP-061",
+    "EP-066",
+    "EP-077",
+    "EP-078",
+    "EP-079"
+  ],
+  "scope_excluded_endpoint_overlap": [],
+  "leaf_runtime_status_counts": {
+    "EVIDENCE_ONLY_ANALYSIS": 25,
+    "EVIDENCE_ONLY_BASELINE": 10,
+    "READY_ATOMIC": 27
+  },
+  "command_answer_readiness_counts": {
+    "ATOMIC_TYPED_PATH": 39,
+    "REQUIRES_ANALYTICAL_ACCEPTANCE": 26
+  },
+  "marketplace_answer_readiness_counts": {
+    "ANALYTICAL_EVIDENCE_PATH": 18,
+    "ATOMIC_TYPED_PATH": 29
+  },
+  "generated_package_folders": [
+    "birdeye-5-minute-most-traded",
+    "birdeye-5-minute-price-surge",
+    "birdeye-5-minute-trending-tokens",
+    "birdeye-5-minute-volume-surge",
+    "birdeye-bonding-curve-progress",
+    "birdeye-compare-smart-money-wallets",
+    "birdeye-dev-created-tokens",
+    "birdeye-dev-launch-track-record",
+    "birdeye-graduation-status-change",
+    "birdeye-holder-concentration-change",
+    "birdeye-holder-distribution-analysis",
+    "birdeye-large-trade-scanner",
+    "birdeye-launchpad-new-tokens",
+    "birdeye-launchpad-trending-tokens",
+    "birdeye-liquidity-pool-analysis",
+    "birdeye-market-radar",
+    "birdeye-migrated-token-screener",
+    "birdeye-near-graduation-tokens",
+    "birdeye-newly-listed-tokens",
+    "birdeye-pool-activity-change",
+    "birdeye-pumpfun-new-tokens",
+    "birdeye-pumpfun-trending-tokens",
+    "birdeye-recently-migrated-tokens",
+    "birdeye-selected-kol-wallet-activity",
+    "birdeye-smart-money-token-radar",
+    "birdeye-token-basic-info",
+    "birdeye-token-due-diligence",
+    "birdeye-token-kline-chart",
+    "birdeye-token-liquidity-change",
+    "birdeye-token-mint-burn-activity",
+    "birdeye-token-security-change",
+    "birdeye-token-security-check",
+    "birdeye-token-smart-money-trades",
+    "birdeye-token-trade-activity",
+    "birdeye-token-transfer-activity",
+    "birdeye-token-wallet-watchlist",
+    "birdeye-top-holders",
+    "birdeye-top-token-traders",
+    "birdeye-wallet-activity-feed",
+    "birdeye-wallet-copy-trade-assessment",
+    "birdeye-wallet-exit-destination",
+    "birdeye-wallet-net-buying",
+    "birdeye-wallet-pnl-analysis",
+    "birdeye-wallet-post-sell-rotation",
+    "birdeye-wallet-recent-sells",
+    "birdeye-wallet-trade-history",
+    "birdeye-wallet-trading-style"
+  ],
+  "generated_core_folders": [
+    "birdeye-dev-analysis",
+    "birdeye-holder-analysis",
+    "birdeye-kline-pattern",
+    "birdeye-market",
+    "birdeye-market-radar",
+    "birdeye-monitor",
+    "birdeye-token",
+    "birdeye-token-dd",
+    "birdeye-track",
+    "birdeye-wallet",
+    "birdeye-wallet-analysis",
+    "birdeye-wallet-score"
+  ],
+  "violations": [],
+  "commands": [
+    {
+      "skill": "birdeye-market",
+      "command": "trending-5m",
+      "question": "Which tokens are trading most actively in the last five minutes?",
+      "mode": "direct",
+      "leaf_count": 0,
+      "leaf_runtime_statuses": [
+        "READY_ATOMIC_DIRECT"
+      ],
+      "answer_readiness": "ATOMIC_TYPED_PATH",
+      "max_calls": 1
+    },
+    {
+      "skill": "birdeye-market",
+      "command": "launchpad-trending",
+      "question": "Which tokens are trending on this launchpad right now?",
+      "mode": "direct",
+      "leaf_count": 0,
+      "leaf_runtime_statuses": [
+        "READY_ATOMIC_DIRECT"
+      ],
+      "answer_readiness": "ATOMIC_TYPED_PATH",
+      "max_calls": 1
+    },
+    {
+      "skill": "birdeye-market",
+      "command": "launchpad-new",
+      "question": "Which tokens were created on this launchpad in the last 24 hours?",
+      "mode": "direct",
+      "leaf_count": 0,
+      "leaf_runtime_statuses": [
+        "READY_ATOMIC_DIRECT"
+      ],
+      "answer_readiness": "ATOMIC_TYPED_PATH",
+      "max_calls": 1
+    },
+    {
+      "skill": "birdeye-market",
+      "command": "pumpfun-trending",
+      "question": "Which Pump.fun tokens are hottest over the last hour?",
+      "mode": "direct",
+      "leaf_count": 0,
+      "leaf_runtime_statuses": [
+        "READY_ATOMIC_DIRECT"
+      ],
+      "answer_readiness": "ATOMIC_TYPED_PATH",
+      "max_calls": 1
+    },
+    {
+      "skill": "birdeye-market",
+      "command": "pumpfun-new",
+      "question": "Which Pump.fun tokens were created in the last 24 hours?",
+      "mode": "direct",
+      "leaf_count": 0,
+      "leaf_runtime_statuses": [
+        "READY_ATOMIC_DIRECT"
+      ],
+      "answer_readiness": "ATOMIC_TYPED_PATH",
+      "max_calls": 1
+    },
+    {
+      "skill": "birdeye-market",
+      "command": "near-graduation",
+      "question": "Which launchpad tokens are closest to graduating?",
+      "mode": "direct",
+      "leaf_count": 0,
+      "leaf_runtime_statuses": [
+        "READY_ATOMIC_DIRECT"
+      ],
+      "answer_readiness": "ATOMIC_TYPED_PATH",
+      "max_calls": 1
+    },
+    {
+      "skill": "birdeye-market",
+      "command": "migrated",
+      "question": "Which launchpad tokens graduated to a DEX in the last 24 hours?",
+      "mode": "direct",
+      "leaf_count": 0,
+      "leaf_runtime_statuses": [
+        "READY_ATOMIC_DIRECT"
+      ],
+      "answer_readiness": "ATOMIC_TYPED_PATH",
+      "max_calls": 1
+    },
+    {
+      "skill": "birdeye-market",
+      "command": "migrated-quality",
+      "question": "Which recently migrated tokens pass practical liquidity and market-cap filters?",
+      "mode": "direct",
+      "leaf_count": 0,
+      "leaf_runtime_statuses": [
+        "READY_ATOMIC_DIRECT"
+      ],
+      "answer_readiness": "ATOMIC_TYPED_PATH",
+      "max_calls": 1
+    },
+    {
+      "skill": "birdeye-market",
+      "command": "volume-surge-5m",
+      "question": "Which tokens have the strongest five-minute volume acceleration?",
+      "mode": "direct",
+      "leaf_count": 0,
+      "leaf_runtime_statuses": [
+        "READY_ATOMIC_DIRECT"
+      ],
+      "answer_readiness": "ATOMIC_TYPED_PATH",
+      "max_calls": 1
+    },
+    {
+      "skill": "birdeye-market",
+      "command": "price-surge-5m",
+      "question": "Which liquid tokens are surging most over five minutes?",
+      "mode": "direct",
+      "leaf_count": 0,
+      "leaf_runtime_statuses": [
+        "READY_ATOMIC_DIRECT"
+      ],
+      "answer_readiness": "ATOMIC_TYPED_PATH",
+      "max_calls": 1
+    },
+    {
+      "skill": "birdeye-market",
+      "command": "most-traded-5m",
+      "question": "Which tokens have the most trades in the last five minutes?",
+      "mode": "direct",
+      "leaf_count": 0,
+      "leaf_runtime_statuses": [
+        "READY_ATOMIC_DIRECT"
+      ],
+      "answer_readiness": "ATOMIC_TYPED_PATH",
+      "max_calls": 1
+    },
+    {
+      "skill": "birdeye-market",
+      "command": "trending",
+      "question": "Which tokens are trending right now?",
+      "mode": "leaf",
+      "leaf_count": 1,
+      "leaf_runtime_statuses": [
+        "READY_ATOMIC"
+      ],
+      "answer_readiness": "ATOMIC_TYPED_PATH",
+      "max_calls": 1
+    },
+    {
+      "skill": "birdeye-market",
+      "command": "new-listings",
+      "question": "Which tokens were listed recently?",
+      "mode": "leaf",
+      "leaf_count": 1,
+      "leaf_runtime_statuses": [
+        "READY_ATOMIC"
+      ],
+      "answer_readiness": "ATOMIC_TYPED_PATH",
+      "max_calls": 1
+    },
+    {
+      "skill": "birdeye-market",
+      "command": "launch-stages",
+      "question": "Which launchpad tokens are near or past graduation?",
+      "mode": "leaf",
+      "leaf_count": 1,
+      "leaf_runtime_statuses": [
+        "READY_ATOMIC"
+      ],
+      "answer_readiness": "ATOMIC_TYPED_PATH",
+      "max_calls": 2
+    },
+    {
+      "skill": "birdeye-market",
+      "command": "screen",
+      "question": "Which tokens match my numeric market filters?",
+      "mode": "leaf",
+      "leaf_count": 1,
+      "leaf_runtime_statuses": [
+        "EVIDENCE_ONLY_ANALYSIS"
+      ],
+      "answer_readiness": "REQUIRES_ANALYTICAL_ACCEPTANCE",
+      "max_calls": 1
+    },
+    {
+      "skill": "birdeye-market",
+      "command": "smart-money",
+      "question": "Which tokens appear in Birdeye smart-money data?",
+      "mode": "leaf",
+      "leaf_count": 1,
+      "leaf_runtime_statuses": [
+        "READY_ATOMIC"
+      ],
+      "answer_readiness": "ATOMIC_TYPED_PATH",
+      "max_calls": 1
+    },
+    {
+      "skill": "birdeye-market",
+      "command": "gainers",
+      "question": "Which indexed traders are gaining or losing the most?",
+      "mode": "leaf",
+      "leaf_count": 1,
+      "leaf_runtime_statuses": [
+        "READY_ATOMIC"
+      ],
+      "answer_readiness": "ATOMIC_TYPED_PATH",
+      "max_calls": 1
+    },
+    {
+      "skill": "birdeye-market",
+      "command": "kline",
+      "question": "Show this token's candles for the selected window.",
+      "mode": "leaf",
+      "leaf_count": 1,
+      "leaf_runtime_statuses": [
+        "READY_ATOMIC"
+      ],
+      "answer_readiness": "ATOMIC_TYPED_PATH",
+      "max_calls": 1
+    },
+    {
+      "skill": "birdeye-market",
+      "command": "activity",
+      "question": "What trades are happening across the market now?",
+      "mode": "leaf",
+      "leaf_count": 1,
+      "leaf_runtime_statuses": [
+        "READY_ATOMIC"
+      ],
+      "answer_readiness": "ATOMIC_TYPED_PATH",
+      "max_calls": 2
+    },
+    {
+      "skill": "birdeye-token",
+      "command": "info",
+      "question": "Give me the token's basic identity, price and valuation.",
+      "mode": "composite",
+      "leaf_count": 3,
+      "leaf_runtime_statuses": [
+        "READY_ATOMIC"
+      ],
+      "answer_readiness": "ATOMIC_TYPED_PATH",
+      "max_calls": 3
+    },
+    {
+      "skill": "birdeye-token",
+      "command": "price",
+      "question": "What is this token's current price?",
+      "mode": "leaf",
+      "leaf_count": 1,
+      "leaf_runtime_statuses": [
+        "READY_ATOMIC"
+      ],
+      "answer_readiness": "ATOMIC_TYPED_PATH",
+      "max_calls": 1
+    },
+    {
+      "skill": "birdeye-token",
+      "command": "security",
+      "question": "Which observable authority and security fields are present?",
+      "mode": "leaf",
+      "leaf_count": 1,
+      "leaf_runtime_statuses": [
+        "READY_ATOMIC"
+      ],
+      "answer_readiness": "ATOMIC_TYPED_PATH",
+      "max_calls": 1
+    },
+    {
+      "skill": "birdeye-token",
+      "command": "liquidity",
+      "question": "How much indexed liquidity does this token have now?",
+      "mode": "leaf",
+      "leaf_count": 1,
+      "leaf_runtime_statuses": [
+        "READY_ATOMIC"
+      ],
+      "answer_readiness": "ATOMIC_TYPED_PATH",
+      "max_calls": 1
+    },
+    {
+      "skill": "birdeye-token",
+      "command": "pools",
+      "question": "Where is this token traded and which pools are indexed?",
+      "mode": "leaf",
+      "leaf_count": 1,
+      "leaf_runtime_statuses": [
+        "READY_ATOMIC"
+      ],
+      "answer_readiness": "ATOMIC_TYPED_PATH",
+      "max_calls": 1
+    },
+    {
+      "skill": "birdeye-token",
+      "command": "holders",
+      "question": "How is this token distributed across holders?",
+      "mode": "leaf",
+      "leaf_count": 1,
+      "leaf_runtime_statuses": [
+        "READY_ATOMIC"
+      ],
+      "answer_readiness": "ATOMIC_TYPED_PATH",
+      "max_calls": 1
+    },
+    {
+      "skill": "birdeye-token",
+      "command": "holder-ranking",
+      "question": "Who are the largest indexed holders?",
+      "mode": "leaf",
+      "leaf_count": 1,
+      "leaf_runtime_statuses": [
+        "READY_ATOMIC"
+      ],
+      "answer_readiness": "ATOMIC_TYPED_PATH",
+      "max_calls": 1
+    },
+    {
+      "skill": "birdeye-token",
+      "command": "traders",
+      "question": "Who are the top indexed traders for this token?",
+      "mode": "leaf",
+      "leaf_count": 1,
+      "leaf_runtime_statuses": [
+        "READY_ATOMIC"
+      ],
+      "answer_readiness": "ATOMIC_TYPED_PATH",
+      "max_calls": 1
+    },
+    {
+      "skill": "birdeye-token",
+      "command": "trades",
+      "question": "Show this token's indexed trades for the selected window.",
+      "mode": "leaf",
+      "leaf_count": 1,
+      "leaf_runtime_statuses": [
+        "READY_ATOMIC"
+      ],
+      "answer_readiness": "ATOMIC_TYPED_PATH",
+      "max_calls": 1
+    },
+    {
+      "skill": "birdeye-token",
+      "command": "large-trades",
+      "question": "Were there unusually large indexed token trades?",
+      "mode": "leaf",
+      "leaf_count": 1,
+      "leaf_runtime_statuses": [
+        "READY_ATOMIC"
+      ],
+      "answer_readiness": "ATOMIC_TYPED_PATH",
+      "max_calls": 1
+    },
+    {
+      "skill": "birdeye-token",
+      "command": "creation",
+      "question": "Who created this token and when?",
+      "mode": "leaf",
+      "leaf_count": 1,
+      "leaf_runtime_statuses": [
+        "READY_ATOMIC"
+      ],
+      "answer_readiness": "ATOMIC_TYPED_PATH",
+      "max_calls": 1
+    },
+    {
+      "skill": "birdeye-token",
+      "command": "mint-burn",
+      "question": "Has this token been minted or burned recently?",
+      "mode": "leaf",
+      "leaf_count": 1,
+      "leaf_runtime_statuses": [
+        "READY_ATOMIC"
+      ],
+      "answer_readiness": "ATOMIC_TYPED_PATH",
+      "max_calls": 1
+    },
+    {
+      "skill": "birdeye-token",
+      "command": "transfers",
+      "question": "What token transfers occurred in the selected window?",
+      "mode": "leaf",
+      "leaf_count": 1,
+      "leaf_runtime_statuses": [
+        "READY_ATOMIC"
+      ],
+      "answer_readiness": "ATOMIC_TYPED_PATH",
+      "max_calls": 2
+    },
+    {
+      "skill": "birdeye-wallet",
+      "command": "activity",
+      "question": "What has this wallet traded in the selected window?",
+      "mode": "leaf",
+      "leaf_count": 1,
+      "leaf_runtime_statuses": [
+        "READY_ATOMIC"
+      ],
+      "answer_readiness": "ATOMIC_TYPED_PATH",
+      "max_calls": 1
+    },
+    {
+      "skill": "birdeye-wallet",
+      "command": "traded-tokens",
+      "question": "Which tokens has this wallet traded?",
+      "mode": "leaf",
+      "leaf_count": 1,
+      "leaf_runtime_statuses": [
+        "READY_ATOMIC"
+      ],
+      "answer_readiness": "ATOMIC_TYPED_PATH",
+      "max_calls": 1
+    },
+    {
+      "skill": "birdeye-wallet",
+      "command": "sells",
+      "question": "What has this wallet sold recently?",
+      "mode": "leaf",
+      "leaf_count": 1,
+      "leaf_runtime_statuses": [
+        "READY_ATOMIC"
+      ],
+      "answer_readiness": "ATOMIC_TYPED_PATH",
+      "max_calls": 1
+    },
+    {
+      "skill": "birdeye-wallet",
+      "command": "net-flow",
+      "question": "Which tokens is this wallet buying more than selling?",
+      "mode": "leaf",
+      "leaf_count": 1,
+      "leaf_runtime_statuses": [
+        "EVIDENCE_ONLY_ANALYSIS"
+      ],
+      "answer_readiness": "REQUIRES_ANALYTICAL_ACCEPTANCE",
+      "max_calls": 1
+    },
+    {
+      "skill": "birdeye-wallet",
+      "command": "pnl",
+      "question": "What PnL can be reconstructed from indexed wallet trades?",
+      "mode": "leaf",
+      "leaf_count": 1,
+      "leaf_runtime_statuses": [
+        "EVIDENCE_ONLY_ANALYSIS"
+      ],
+      "answer_readiness": "REQUIRES_ANALYTICAL_ACCEPTANCE",
+      "max_calls": 2
+    },
+    {
+      "skill": "birdeye-wallet",
+      "command": "token-pnl",
+      "question": "Which covered tokens made or lost this wallet money?",
+      "mode": "leaf",
+      "leaf_count": 1,
+      "leaf_runtime_statuses": [
+        "EVIDENCE_ONLY_ANALYSIS"
+      ],
+      "answer_readiness": "REQUIRES_ANALYTICAL_ACCEPTANCE",
+      "max_calls": 2
+    },
+    {
+      "skill": "birdeye-wallet",
+      "command": "outcomes",
+      "question": "How are this wallet's covered trade outcomes distributed?",
+      "mode": "leaf",
+      "leaf_count": 1,
+      "leaf_runtime_statuses": [
+        "EVIDENCE_ONLY_ANALYSIS"
+      ],
+      "answer_readiness": "REQUIRES_ANALYTICAL_ACCEPTANCE",
+      "max_calls": 2
+    },
+    {
+      "skill": "birdeye-wallet",
+      "command": "transfers",
+      "question": "Which indexed token transfers involved this wallet?",
+      "mode": "leaf",
+      "leaf_count": 1,
+      "leaf_runtime_statuses": [
+        "EVIDENCE_ONLY_ANALYSIS"
+      ],
+      "answer_readiness": "REQUIRES_ANALYTICAL_ACCEPTANCE",
+      "max_calls": 2
+    },
+    {
+      "skill": "birdeye-wallet",
+      "command": "created-tokens",
+      "question": "Which Birdeye-indexed launchpad tokens did this developer create?",
+      "mode": "leaf",
+      "leaf_count": 1,
+      "leaf_runtime_statuses": [
+        "READY_ATOMIC"
+      ],
+      "answer_readiness": "ATOMIC_TYPED_PATH",
+      "max_calls": 1
+    },
+    {
+      "skill": "birdeye-wallet",
+      "command": "compare",
+      "question": "How do these wallets compare on the same observed metrics?",
+      "mode": "leaf",
+      "leaf_count": 1,
+      "leaf_runtime_statuses": [
+        "EVIDENCE_ONLY_ANALYSIS"
+      ],
+      "answer_readiness": "REQUIRES_ANALYTICAL_ACCEPTANCE",
+      "max_calls": 20
+    },
+    {
+      "skill": "birdeye-track",
+      "command": "smart-money",
+      "question": "Which tokens are visible in Birdeye's smart-money feed?",
+      "mode": "leaf",
+      "leaf_count": 1,
+      "leaf_runtime_statuses": [
+        "READY_ATOMIC"
+      ],
+      "answer_readiness": "ATOMIC_TYPED_PATH",
+      "max_calls": 1
+    },
+    {
+      "skill": "birdeye-track",
+      "command": "smart-money-token",
+      "question": "What smart-money evidence is visible for this token?",
+      "mode": "leaf",
+      "leaf_count": 1,
+      "leaf_runtime_statuses": [
+        "EVIDENCE_ONLY_ANALYSIS"
+      ],
+      "answer_readiness": "REQUIRES_ANALYTICAL_ACCEPTANCE",
+      "max_calls": 3
+    },
+    {
+      "skill": "birdeye-track",
+      "command": "kol",
+      "question": "What did these selected KOL wallets trade?",
+      "mode": "leaf",
+      "leaf_count": 1,
+      "leaf_runtime_statuses": [
+        "READY_ATOMIC"
+      ],
+      "answer_readiness": "ATOMIC_TYPED_PATH",
+      "max_calls": 5
+    },
+    {
+      "skill": "birdeye-track",
+      "command": "wallet",
+      "question": "What did this wallet trade recently?",
+      "mode": "leaf",
+      "leaf_count": 1,
+      "leaf_runtime_statuses": [
+        "READY_ATOMIC"
+      ],
+      "answer_readiness": "ATOMIC_TYPED_PATH",
+      "max_calls": 1
+    },
+    {
+      "skill": "birdeye-track",
+      "command": "exit",
+      "question": "Where did observable activity go after this wallet reduced a token?",
+      "mode": "leaf",
+      "leaf_count": 1,
+      "leaf_runtime_statuses": [
+        "EVIDENCE_ONLY_ANALYSIS"
+      ],
+      "answer_readiness": "REQUIRES_ANALYTICAL_ACCEPTANCE",
+      "max_calls": 2
+    },
+    {
+      "skill": "birdeye-track",
+      "command": "rotation",
+      "question": "What did this wallet buy after selling this token?",
+      "mode": "leaf",
+      "leaf_count": 1,
+      "leaf_runtime_statuses": [
+        "EVIDENCE_ONLY_ANALYSIS"
+      ],
+      "answer_readiness": "REQUIRES_ANALYTICAL_ACCEPTANCE",
+      "max_calls": 2
+    },
+    {
+      "skill": "birdeye-monitor",
+      "command": "wallet-flow",
+      "question": "How did this wallet's observed token flow change?",
+      "mode": "leaf",
+      "leaf_count": 1,
+      "leaf_runtime_statuses": [
+        "EVIDENCE_ONLY_BASELINE"
+      ],
+      "answer_readiness": "REQUIRES_ANALYTICAL_ACCEPTANCE",
+      "max_calls": 1
+    },
+    {
+      "skill": "birdeye-monitor",
+      "command": "wallet-pnl",
+      "question": "How did reconstructed wallet PnL change?",
+      "mode": "leaf",
+      "leaf_count": 1,
+      "leaf_runtime_statuses": [
+        "EVIDENCE_ONLY_BASELINE"
+      ],
+      "answer_readiness": "REQUIRES_ANALYTICAL_ACCEPTANCE",
+      "max_calls": 1
+    },
+    {
+      "skill": "birdeye-monitor",
+      "command": "wallet-behavior",
+      "question": "Is this wallet behaving differently from the baseline?",
+      "mode": "leaf",
+      "leaf_count": 1,
+      "leaf_runtime_statuses": [
+        "EVIDENCE_ONLY_BASELINE"
+      ],
+      "answer_readiness": "REQUIRES_ANALYTICAL_ACCEPTANCE",
+      "max_calls": 1
+    },
+    {
+      "skill": "birdeye-monitor",
+      "command": "token-security",
+      "question": "Which observable token security fields changed?",
+      "mode": "leaf",
+      "leaf_count": 1,
+      "leaf_runtime_statuses": [
+        "EVIDENCE_ONLY_BASELINE"
+      ],
+      "answer_readiness": "REQUIRES_ANALYTICAL_ACCEPTANCE",
+      "max_calls": 1
+    },
+    {
+      "skill": "birdeye-monitor",
+      "command": "token-liquidity",
+      "question": "How did current indexed token liquidity change?",
+      "mode": "leaf",
+      "leaf_count": 1,
+      "leaf_runtime_statuses": [
+        "EVIDENCE_ONLY_BASELINE"
+      ],
+      "answer_readiness": "REQUIRES_ANALYTICAL_ACCEPTANCE",
+      "max_calls": 1
+    },
+    {
+      "skill": "birdeye-monitor",
+      "command": "holders",
+      "question": "How did observed holder concentration change?",
+      "mode": "leaf",
+      "leaf_count": 1,
+      "leaf_runtime_statuses": [
+        "EVIDENCE_ONLY_BASELINE"
+      ],
+      "answer_readiness": "REQUIRES_ANALYTICAL_ACCEPTANCE",
+      "max_calls": 1
+    },
+    {
+      "skill": "birdeye-monitor",
+      "command": "bonding-curve",
+      "question": "How did this token's bonding-curve progress change?",
+      "mode": "leaf",
+      "leaf_count": 1,
+      "leaf_runtime_statuses": [
+        "EVIDENCE_ONLY_BASELINE"
+      ],
+      "answer_readiness": "REQUIRES_ANALYTICAL_ACCEPTANCE",
+      "max_calls": 1
+    },
+    {
+      "skill": "birdeye-monitor",
+      "command": "graduation",
+      "question": "Did this launchpad token's graduation status change?",
+      "mode": "leaf",
+      "leaf_count": 1,
+      "leaf_runtime_statuses": [
+        "EVIDENCE_ONLY_BASELINE"
+      ],
+      "answer_readiness": "REQUIRES_ANALYTICAL_ACCEPTANCE",
+      "max_calls": 2
+    },
+    {
+      "skill": "birdeye-monitor",
+      "command": "pool",
+      "question": "How did this pool's activity change?",
+      "mode": "leaf",
+      "leaf_count": 1,
+      "leaf_runtime_statuses": [
+        "EVIDENCE_ONLY_BASELINE"
+      ],
+      "answer_readiness": "REQUIRES_ANALYTICAL_ACCEPTANCE",
+      "max_calls": 2
+    },
+    {
+      "skill": "birdeye-monitor",
+      "command": "watchlist",
+      "question": "What materially changed for this watched token and wallet?",
+      "mode": "leaf",
+      "leaf_count": 1,
+      "leaf_runtime_statuses": [
+        "EVIDENCE_ONLY_BASELINE"
+      ],
+      "answer_readiness": "REQUIRES_ANALYTICAL_ACCEPTANCE",
+      "max_calls": 4
+    },
+    {
+      "skill": "birdeye-token-dd",
+      "command": "run",
+      "question": "Does this token deserve deeper investigation based on observable conditions?",
+      "mode": "composite",
+      "leaf_count": 7,
+      "leaf_runtime_statuses": [
+        "EVIDENCE_ONLY_ANALYSIS",
+        "READY_ATOMIC"
+      ],
+      "answer_readiness": "REQUIRES_ANALYTICAL_ACCEPTANCE",
+      "max_calls": 10
+    },
+    {
+      "skill": "birdeye-holder-analysis",
+      "command": "run",
+      "question": "What does the observable holder structure of this token look like?",
+      "mode": "composite",
+      "leaf_count": 5,
+      "leaf_runtime_statuses": [
+        "EVIDENCE_ONLY_ANALYSIS",
+        "READY_ATOMIC"
+      ],
+      "answer_readiness": "REQUIRES_ANALYTICAL_ACCEPTANCE",
+      "max_calls": 8
+    },
+    {
+      "skill": "birdeye-wallet-analysis",
+      "command": "run",
+      "question": "How does this wallet trade, and is the observed behavior still consistent?",
+      "mode": "composite",
+      "leaf_count": 6,
+      "leaf_runtime_statuses": [
+        "EVIDENCE_ONLY_ANALYSIS",
+        "READY_ATOMIC"
+      ],
+      "answer_readiness": "REQUIRES_ANALYTICAL_ACCEPTANCE",
+      "max_calls": 12
+    },
+    {
+      "skill": "birdeye-wallet-score",
+      "command": "run",
+      "question": "How copyable are this wallet's observed results under my assumptions?",
+      "mode": "composite",
+      "leaf_count": 5,
+      "leaf_runtime_statuses": [
+        "EVIDENCE_ONLY_ANALYSIS"
+      ],
+      "answer_readiness": "REQUIRES_ANALYTICAL_ACCEPTANCE",
+      "max_calls": 12
+    },
+    {
+      "skill": "birdeye-kline-pattern",
+      "command": "run",
+      "question": "What price-action pattern is visible in this token's selected window?",
+      "mode": "composite",
+      "leaf_count": 4,
+      "leaf_runtime_statuses": [
+        "EVIDENCE_ONLY_ANALYSIS",
+        "READY_ATOMIC"
+      ],
+      "answer_readiness": "REQUIRES_ANALYTICAL_ACCEPTANCE",
+      "max_calls": 8
+    },
+    {
+      "skill": "birdeye-dev-analysis",
+      "command": "run",
+      "question": "What has this developer launched and how did the indexed launches perform?",
+      "mode": "composite",
+      "leaf_count": 2,
+      "leaf_runtime_statuses": [
+        "EVIDENCE_ONLY_ANALYSIS",
+        "READY_ATOMIC"
+      ],
+      "answer_readiness": "REQUIRES_ANALYTICAL_ACCEPTANCE",
+      "max_calls": 10
+    },
+    {
+      "skill": "birdeye-market-radar",
+      "command": "run",
+      "question": "Which hot Solana tokens are actually worth researching right now?",
+      "mode": "radar",
+      "leaf_count": 0,
+      "leaf_runtime_statuses": [
+        "READY_DETERMINISTIC_RADAR"
+      ],
+      "answer_readiness": "ATOMIC_TYPED_PATH",
+      "max_calls": 5
+    }
+  ]
+}

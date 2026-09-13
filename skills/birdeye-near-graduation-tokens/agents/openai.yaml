@@ -1,0 +1,4 @@
+interface:
+  display_name: "🌗 Near-Graduation Tokens"
+  short_description: "Find ungraduated launchpad tokens at 80% or more bonding-curv..."
+  default_prompt: "Use $birdeye-near-graduation-tokens to answer: What launchpad tokens are closest to graduating?"

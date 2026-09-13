@@ -1,0 +1,4 @@
+interface:
+  display_name: "🏅 Top Token Traders"
+  short_description: "Rank indexed token traders by the selected Birdeye metric and..."
+  default_prompt: "Use $birdeye-top-token-traders to answer: Who are the top traders for this token over the selected period?"

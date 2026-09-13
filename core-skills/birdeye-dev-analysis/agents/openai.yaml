@@ -1,0 +1,4 @@
+interface:
+  display_name: "Birdeye Developer Analysis"
+  short_description: "Birdeye Developer Analysis workflows"
+  default_prompt: "Use $birdeye-dev-analysis to review this developer wallet's Birdeye-indexed token launches."

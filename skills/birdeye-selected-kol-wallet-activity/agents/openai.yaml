@@ -1,0 +1,4 @@
+interface:
+  display_name: "📡 Selected KOL Wallet Activity"
+  short_description: "Track recent trades for caller-supplied KOL wallet addresses..."
+  default_prompt: "Use $birdeye-selected-kol-wallet-activity to answer: What did these selected KOL wallets trade recently?"

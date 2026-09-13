@@ -1,0 +1,4 @@
+interface:
+  display_name: "🚀 Launchpad Trending Tokens"
+  short_description: "Rank tokens by one-hour volume across all supported Solana la..."
+  default_prompt: "Use $birdeye-launchpad-trending-tokens to answer: What tokens are trending on a launchpad right now?"

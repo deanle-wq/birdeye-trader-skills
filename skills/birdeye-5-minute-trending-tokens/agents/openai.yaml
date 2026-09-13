@@ -1,0 +1,4 @@
+interface:
+  display_name: "🔥 5-Min Trending Tokens"
+  short_description: "Scan liquid Solana tokens ranked by five-minute trading volum..."
+  default_prompt: "Use $birdeye-5-minute-trending-tokens to answer: What tokens are trading most actively in the last five minutes?"

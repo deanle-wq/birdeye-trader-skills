@@ -1,0 +1,4 @@
+interface:
+  display_name: "🔥 Token Mint & Burn Activity"
+  short_description: "Inspect indexed mint and burn transactions for a token over t..."
+  default_prompt: "Use $birdeye-token-mint-burn-activity to answer: Was this token minted or burned recently?"

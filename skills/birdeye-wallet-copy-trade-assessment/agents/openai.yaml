@@ -1,0 +1,4 @@
+interface:
+  display_name: "⚖️ Wallet Copy-Trade Assessment"
+  short_description: "Assess track-record quality and copyability under explicit po..."
+  default_prompt: "Use $birdeye-wallet-copy-trade-assessment to answer: Would this wallet's observed results survive my copy-trading constraints?"

@@ -1,0 +1,4 @@
+interface:
+  display_name: "🧠 Smart-Money Trades for a Token"
+  short_description: "Inspect token-specific smart-money evidence over a bounded re..."
+  default_prompt: "Use $birdeye-token-smart-money-trades to answer: What smart-money activity is visible for this token?"

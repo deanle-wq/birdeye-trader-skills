@@ -1,0 +1,4 @@
+interface:
+  display_name: "🎓 Graduation Status Change"
+  short_description: "Compare indexed launch and graduation status against a caller..."
+  default_prompt: "Use $birdeye-graduation-status-change to answer: Did this launchpad token graduate since my last snapshot?"

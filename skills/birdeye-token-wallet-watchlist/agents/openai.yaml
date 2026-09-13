@@ -1,0 +1,4 @@
+interface:
+  display_name: "👀 Token & Wallet Watchlist Check"
+  short_description: "Run a bounded token-and-wallet change check against the calle..."
+  default_prompt: "Use $birdeye-token-wallet-watchlist to answer: What materially changed for this watched token and wallet?"

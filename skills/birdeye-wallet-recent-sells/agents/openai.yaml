@@ -1,0 +1,4 @@
+interface:
+  display_name: "📤 Wallet Recent Sells"
+  short_description: "Show a wallet's recent observable sells while excluding ambig..."
+  default_prompt: "Use $birdeye-wallet-recent-sells to answer: What has this wallet sold recently?"

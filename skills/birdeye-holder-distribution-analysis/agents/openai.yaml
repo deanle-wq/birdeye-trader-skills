@@ -1,0 +1,4 @@
+interface:
+  display_name: "👥 Holder Distribution Analysis"
+  short_description: "Analyze holder distribution, concentration bands, smart-money..."
+  default_prompt: "Use $birdeye-holder-distribution-analysis to answer: How concentrated is this token's observable holder distribution?"

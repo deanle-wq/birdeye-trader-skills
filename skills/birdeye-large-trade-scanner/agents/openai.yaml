@@ -1,0 +1,4 @@
+interface:
+  display_name: "🐳 Large Token Trades"
+  short_description: "Scan recent token transactions ordered by USD volume and pres..."
+  default_prompt: "Use $birdeye-large-trade-scanner to answer: What unusually large trades hit this token recently?"

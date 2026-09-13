@@ -1,0 +1,4 @@
+interface:
+  display_name: "🔍 Migrated Token Quality Screener"
+  short_description: "Screen recently migrated tokens with default market cap of $5..."
+  default_prompt: "Use $birdeye-migrated-token-screener to answer: What recently migrated tokens meet practical liquidity and market-cap thresholds?"

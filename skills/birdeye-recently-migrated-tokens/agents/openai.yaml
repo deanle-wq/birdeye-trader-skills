@@ -1,0 +1,4 @@
+interface:
+  display_name: "🎓 Recently Migrated Tokens"
+  short_description: "Scan launchpad tokens that graduated during the last 24 hours..."
+  default_prompt: "Use $birdeye-recently-migrated-tokens to answer: What launchpad tokens graduated to a DEX in the last 24 hours?"

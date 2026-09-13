@@ -1,0 +1,12 @@
+{
+  "name": "birdeye-data-skills",
+  "description": "Forty-seven specific daily Solana trader skills backed by Birdeye Data",
+  "version": "3.0.0-rc.1",
+  "author": {
+    "name": "Birdeye Data"
+  },
+  "repository": "https://github.com/deanle-wq/birdeye-trader-skills",
+  "license": "Proprietary prototype",
+  "keywords": ["birdeye", "crypto", "solana", "market", "wallet", "token", "x402"],
+  "skills": ["./skills/"]
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "🔥 Curated Hot Token Radar"
+  short_description: "Sweep several Birdeye time windows, require minimum market qu..."
+  default_prompt: "Use $birdeye-market-radar to answer: Which hot Solana tokens are actually worth researching right now?"

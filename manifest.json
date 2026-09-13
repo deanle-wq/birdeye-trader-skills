@@ -1,0 +1,811 @@
+{
+  "schema_version": "1.0.0",
+  "release": "3.0.0-rc.1",
+  "skill_count": 47,
+  "core_command_count": 48,
+  "skills": [
+    {
+      "name": "birdeye-5-minute-trending-tokens",
+      "title": "\ud83d\udd25 5-Min Trending Tokens",
+      "category": "Discovery",
+      "stage": "DISCOVER",
+      "difficulty": "Basic",
+      "question": "What tokens are trading most actively in the last five minutes?",
+      "answer_readiness": "ATOMIC_TYPED_PATH",
+      "core_calls": [
+        {
+          "group": "market",
+          "command": "trending-5m"
+        }
+      ],
+      "capability_count": 3,
+      "example_prompt_count": 2
+    },
+    {
+      "name": "birdeye-launchpad-trending-tokens",
+      "title": "\ud83d\ude80 Launchpad Trending Tokens",
+      "category": "Discovery",
+      "stage": "DISCOVER",
+      "difficulty": "Basic",
+      "question": "What tokens are trending on a launchpad right now?",
+      "answer_readiness": "ATOMIC_TYPED_PATH",
+      "core_calls": [
+        {
+          "group": "market",
+          "command": "launchpad-trending"
+        }
+      ],
+      "capability_count": 3,
+      "example_prompt_count": 2
+    },
+    {
+      "name": "birdeye-launchpad-new-tokens",
+      "title": "\ud83d\udeeb Launchpad New Tokens",
+      "category": "Discovery",
+      "stage": "DISCOVER",
+      "difficulty": "Basic",
+      "question": "What new tokens launched on a specific launchpad in the last 24 hours?",
+      "answer_readiness": "ATOMIC_TYPED_PATH",
+      "core_calls": [
+        {
+          "group": "market",
+          "command": "launchpad-new"
+        }
+      ],
+      "capability_count": 3,
+      "example_prompt_count": 2
+    },
+    {
+      "name": "birdeye-pumpfun-trending-tokens",
+      "title": "\ud83c\udfc6 Pump.fun Trending Tokens",
+      "category": "Discovery",
+      "stage": "DISCOVER",
+      "difficulty": "Basic",
+      "question": "What are the hottest Pump.fun tokens right now?",
+      "answer_readiness": "ATOMIC_TYPED_PATH",
+      "core_calls": [
+        {
+          "group": "market",
+          "command": "pumpfun-trending"
+        }
+      ],
+      "capability_count": 3,
+      "example_prompt_count": 2
+    },
+    {
+      "name": "birdeye-pumpfun-new-tokens",
+      "title": "\ud83c\udf31 Pump.fun New Tokens",
+      "category": "Discovery",
+      "stage": "DISCOVER",
+      "difficulty": "Basic",
+      "question": "What Pump.fun tokens were created in the last 24 hours?",
+      "answer_readiness": "ATOMIC_TYPED_PATH",
+      "core_calls": [
+        {
+          "group": "market",
+          "command": "pumpfun-new"
+        }
+      ],
+      "capability_count": 3,
+      "example_prompt_count": 2
+    },
+    {
+      "name": "birdeye-newly-listed-tokens",
+      "title": "\ud83d\udc23 Newly Listed Tokens",
+      "category": "Discovery",
+      "stage": "DISCOVER",
+      "difficulty": "Basic",
+      "question": "What tokens were listed most recently?",
+      "answer_readiness": "ATOMIC_TYPED_PATH",
+      "core_calls": [
+        {
+          "group": "market",
+          "command": "new-listings"
+        }
+      ],
+      "capability_count": 3,
+      "example_prompt_count": 2
+    },
+    {
+      "name": "birdeye-near-graduation-tokens",
+      "title": "\ud83c\udf17 Near-Graduation Tokens",
+      "category": "Discovery",
+      "stage": "DISCOVER",
+      "difficulty": "Intermediate",
+      "question": "What launchpad tokens are closest to graduating?",
+      "answer_readiness": "ATOMIC_TYPED_PATH",
+      "core_calls": [
+        {
+          "group": "market",
+          "command": "near-graduation"
+        }
+      ],
+      "capability_count": 3,
+      "example_prompt_count": 2
+    },
+    {
+      "name": "birdeye-recently-migrated-tokens",
+      "title": "\ud83c\udf93 Recently Migrated Tokens",
+      "category": "Discovery",
+      "stage": "DISCOVER",
+      "difficulty": "Intermediate",
+      "question": "What launchpad tokens graduated to a DEX in the last 24 hours?",
+      "answer_readiness": "ATOMIC_TYPED_PATH",
+      "core_calls": [
+        {
+          "group": "market",
+          "command": "migrated"
+        }
+      ],
+      "capability_count": 3,
+      "example_prompt_count": 2
+    },
+    {
+      "name": "birdeye-migrated-token-screener",
+      "title": "\ud83d\udd0d Migrated Token Quality Screener",
+      "category": "Discovery",
+      "stage": "DISCOVER",
+      "difficulty": "Advanced",
+      "question": "What recently migrated tokens meet practical liquidity and market-cap thresholds?",
+      "answer_readiness": "ATOMIC_TYPED_PATH",
+      "core_calls": [
+        {
+          "group": "market",
+          "command": "migrated-quality"
+        }
+      ],
+      "capability_count": 3,
+      "example_prompt_count": 2
+    },
+    {
+      "name": "birdeye-5-minute-volume-surge",
+      "title": "\ud83d\udcc8 5-Min Volume Surge",
+      "category": "Discovery",
+      "stage": "DISCOVER",
+      "difficulty": "Intermediate",
+      "question": "What liquid tokens have the strongest five-minute volume acceleration?",
+      "answer_readiness": "ATOMIC_TYPED_PATH",
+      "core_calls": [
+        {
+          "group": "market",
+          "command": "volume-surge-5m"
+        }
+      ],
+      "capability_count": 3,
+      "example_prompt_count": 2
+    },
+    {
+      "name": "birdeye-5-minute-price-surge",
+      "title": "\ud83d\udcb9 5-Min Price Surge",
+      "category": "Discovery",
+      "stage": "DISCOVER",
+      "difficulty": "Intermediate",
+      "question": "What liquid tokens are surging most over five minutes?",
+      "answer_readiness": "ATOMIC_TYPED_PATH",
+      "core_calls": [
+        {
+          "group": "market",
+          "command": "price-surge-5m"
+        }
+      ],
+      "capability_count": 3,
+      "example_prompt_count": 2
+    },
+    {
+      "name": "birdeye-5-minute-most-traded",
+      "title": "\u26a1 5-Min Most-Traded Tokens",
+      "category": "Discovery",
+      "stage": "DISCOVER",
+      "difficulty": "Basic",
+      "question": "What tokens have the most trades in the last five minutes?",
+      "answer_readiness": "ATOMIC_TYPED_PATH",
+      "core_calls": [
+        {
+          "group": "market",
+          "command": "most-traded-5m"
+        }
+      ],
+      "capability_count": 3,
+      "example_prompt_count": 2
+    },
+    {
+      "name": "birdeye-smart-money-token-radar",
+      "title": "\ud83e\udde0 Smart-Money Token Radar",
+      "category": "Discovery",
+      "stage": "DISCOVER",
+      "difficulty": "Intermediate",
+      "question": "What tokens are attracting the most Birdeye smart-money wallets?",
+      "answer_readiness": "ATOMIC_TYPED_PATH",
+      "core_calls": [
+        {
+          "group": "market",
+          "command": "smart-money"
+        }
+      ],
+      "capability_count": 3,
+      "example_prompt_count": 2
+    },
+    {
+      "name": "birdeye-market-radar",
+      "title": "\ud83d\udd25 Curated Hot Token Radar",
+      "category": "Discovery",
+      "stage": "DISCOVER",
+      "difficulty": "Advanced",
+      "question": "Which hot Solana tokens are actually worth researching right now?",
+      "answer_readiness": "ATOMIC_TYPED_PATH",
+      "core_calls": [
+        {
+          "group": "market-radar",
+          "command": "run"
+        }
+      ],
+      "capability_count": 4,
+      "example_prompt_count": 3
+    },
+    {
+      "name": "birdeye-token-basic-info",
+      "title": "\ud83e\udeaa Token Basic Info",
+      "category": "Token Analysis",
+      "stage": "RESEARCH",
+      "difficulty": "Basic",
+      "question": "What are this token's identity, price, market cap and valuation?",
+      "answer_readiness": "ATOMIC_TYPED_PATH",
+      "core_calls": [
+        {
+          "group": "token",
+          "command": "info"
+        }
+      ],
+      "capability_count": 3,
+      "example_prompt_count": 2
+    },
+    {
+      "name": "birdeye-token-security-check",
+      "title": "\ud83d\udee1\ufe0f Token Security Check",
+      "category": "Token Analysis",
+      "stage": "RESEARCH",
+      "difficulty": "Basic",
+      "question": "What security and authority risks are observable for this token?",
+      "answer_readiness": "ATOMIC_TYPED_PATH",
+      "core_calls": [
+        {
+          "group": "token",
+          "command": "security"
+        }
+      ],
+      "capability_count": 3,
+      "example_prompt_count": 2
+    },
+    {
+      "name": "birdeye-liquidity-pool-analysis",
+      "title": "\ud83d\udca7 Liquidity Pool Analysis",
+      "category": "Token Analysis",
+      "stage": "RESEARCH",
+      "difficulty": "Intermediate",
+      "question": "How liquid is this token and where is that liquidity?",
+      "answer_readiness": "ATOMIC_TYPED_PATH",
+      "core_calls": [
+        {
+          "group": "token",
+          "command": "liquidity"
+        },
+        {
+          "group": "token",
+          "command": "pools"
+        }
+      ],
+      "capability_count": 3,
+      "example_prompt_count": 2
+    },
+    {
+      "name": "birdeye-holder-distribution-analysis",
+      "title": "\ud83d\udc65 Holder Distribution Analysis",
+      "category": "Token Analysis",
+      "stage": "RESEARCH",
+      "difficulty": "Advanced",
+      "question": "How concentrated is this token's observable holder distribution?",
+      "answer_readiness": "ANALYTICAL_EVIDENCE_PATH",
+      "core_calls": [
+        {
+          "group": "holder-analysis",
+          "command": "run"
+        }
+      ],
+      "capability_count": 3,
+      "example_prompt_count": 2
+    },
+    {
+      "name": "birdeye-top-holders",
+      "title": "\ud83d\udc0b Top Token Holders",
+      "category": "Token Analysis",
+      "stage": "RESEARCH",
+      "difficulty": "Basic",
+      "question": "Who are the largest indexed holders of this token?",
+      "answer_readiness": "ATOMIC_TYPED_PATH",
+      "core_calls": [
+        {
+          "group": "token",
+          "command": "holder-ranking"
+        }
+      ],
+      "capability_count": 3,
+      "example_prompt_count": 2
+    },
+    {
+      "name": "birdeye-top-token-traders",
+      "title": "\ud83c\udfc5 Top Token Traders",
+      "category": "Token Analysis",
+      "stage": "RESEARCH",
+      "difficulty": "Basic",
+      "question": "Who are the top traders for this token over the selected period?",
+      "answer_readiness": "ATOMIC_TYPED_PATH",
+      "core_calls": [
+        {
+          "group": "token",
+          "command": "traders"
+        }
+      ],
+      "capability_count": 3,
+      "example_prompt_count": 2
+    },
+    {
+      "name": "birdeye-token-kline-chart",
+      "title": "\ud83d\udcca Token Kline Data",
+      "category": "Token Analysis",
+      "stage": "RESEARCH",
+      "difficulty": "Basic",
+      "question": "What does this token's recent OHLCV history look like?",
+      "answer_readiness": "ATOMIC_TYPED_PATH",
+      "core_calls": [
+        {
+          "group": "market",
+          "command": "kline"
+        }
+      ],
+      "capability_count": 3,
+      "example_prompt_count": 2
+    },
+    {
+      "name": "birdeye-large-trade-scanner",
+      "title": "\ud83d\udc33 Large Token Trades",
+      "category": "Token Analysis",
+      "stage": "RESEARCH",
+      "difficulty": "Intermediate",
+      "question": "What unusually large trades hit this token recently?",
+      "answer_readiness": "ATOMIC_TYPED_PATH",
+      "core_calls": [
+        {
+          "group": "token",
+          "command": "large-trades"
+        }
+      ],
+      "capability_count": 3,
+      "example_prompt_count": 2
+    },
+    {
+      "name": "birdeye-token-trade-activity",
+      "title": "\ud83d\udd04 Token Trade Activity",
+      "category": "Token Analysis",
+      "stage": "RESEARCH",
+      "difficulty": "Basic",
+      "question": "What buys and sells happened for this token recently?",
+      "answer_readiness": "ATOMIC_TYPED_PATH",
+      "core_calls": [
+        {
+          "group": "token",
+          "command": "trades"
+        }
+      ],
+      "capability_count": 3,
+      "example_prompt_count": 2
+    },
+    {
+      "name": "birdeye-token-mint-burn-activity",
+      "title": "\ud83d\udd25 Token Mint & Burn Activity",
+      "category": "Token Analysis",
+      "stage": "RESEARCH",
+      "difficulty": "Intermediate",
+      "question": "Was this token minted or burned recently?",
+      "answer_readiness": "ATOMIC_TYPED_PATH",
+      "core_calls": [
+        {
+          "group": "token",
+          "command": "mint-burn"
+        }
+      ],
+      "capability_count": 3,
+      "example_prompt_count": 2
+    },
+    {
+      "name": "birdeye-token-transfer-activity",
+      "title": "\ud83d\udce8 Token Transfer Activity",
+      "category": "Token Analysis",
+      "stage": "RESEARCH",
+      "difficulty": "Intermediate",
+      "question": "What token transfers occurred during the selected window?",
+      "answer_readiness": "ATOMIC_TYPED_PATH",
+      "core_calls": [
+        {
+          "group": "token",
+          "command": "transfers"
+        }
+      ],
+      "capability_count": 3,
+      "example_prompt_count": 2
+    },
+    {
+      "name": "birdeye-token-due-diligence",
+      "title": "\ud83e\uddea Token Due Diligence",
+      "category": "Token Analysis",
+      "stage": "DECIDE",
+      "difficulty": "Advanced",
+      "question": "Does this token deserve deeper investigation?",
+      "answer_readiness": "ANALYTICAL_EVIDENCE_PATH",
+      "core_calls": [
+        {
+          "group": "token-dd",
+          "command": "run"
+        }
+      ],
+      "capability_count": 3,
+      "example_prompt_count": 2
+    },
+    {
+      "name": "birdeye-wallet-trade-history",
+      "title": "\ud83d\udcdd Wallet Trade History",
+      "category": "Wallet Intelligence",
+      "stage": "RESEARCH",
+      "difficulty": "Basic",
+      "question": "What has this wallet traded recently?",
+      "answer_readiness": "ATOMIC_TYPED_PATH",
+      "core_calls": [
+        {
+          "group": "wallet",
+          "command": "activity"
+        }
+      ],
+      "capability_count": 3,
+      "example_prompt_count": 2
+    },
+    {
+      "name": "birdeye-wallet-recent-sells",
+      "title": "\ud83d\udce4 Wallet Recent Sells",
+      "category": "Wallet Intelligence",
+      "stage": "MONITOR",
+      "difficulty": "Basic",
+      "question": "What has this wallet sold recently?",
+      "answer_readiness": "ATOMIC_TYPED_PATH",
+      "core_calls": [
+        {
+          "group": "wallet",
+          "command": "sells"
+        }
+      ],
+      "capability_count": 3,
+      "example_prompt_count": 2
+    },
+    {
+      "name": "birdeye-wallet-net-buying",
+      "title": "\ud83d\udcb8 Wallet Net Buying",
+      "category": "Wallet Intelligence",
+      "stage": "MONITOR",
+      "difficulty": "Intermediate",
+      "question": "What tokens is this wallet buying more than selling?",
+      "answer_readiness": "ANALYTICAL_EVIDENCE_PATH",
+      "core_calls": [
+        {
+          "group": "wallet",
+          "command": "net-flow"
+        }
+      ],
+      "capability_count": 3,
+      "example_prompt_count": 2
+    },
+    {
+      "name": "birdeye-wallet-pnl-analysis",
+      "title": "\ud83d\udcb5 Wallet P&L Analysis",
+      "category": "Wallet Intelligence",
+      "stage": "RESEARCH",
+      "difficulty": "Advanced",
+      "question": "What P&L can be reconstructed from this wallet's indexed trades?",
+      "answer_readiness": "ANALYTICAL_EVIDENCE_PATH",
+      "core_calls": [
+        {
+          "group": "wallet",
+          "command": "pnl"
+        }
+      ],
+      "capability_count": 3,
+      "example_prompt_count": 2
+    },
+    {
+      "name": "birdeye-wallet-trading-style",
+      "title": "\ud83c\udfaf Wallet Trading Style",
+      "category": "Wallet Intelligence",
+      "stage": "RESEARCH",
+      "difficulty": "Advanced",
+      "question": "How does this wallet trade?",
+      "answer_readiness": "ANALYTICAL_EVIDENCE_PATH",
+      "core_calls": [
+        {
+          "group": "wallet-analysis",
+          "command": "run"
+        }
+      ],
+      "capability_count": 3,
+      "example_prompt_count": 2
+    },
+    {
+      "name": "birdeye-wallet-copy-trade-assessment",
+      "title": "\u2696\ufe0f Wallet Copy-Trade Assessment",
+      "category": "Wallet Intelligence",
+      "stage": "DECIDE",
+      "difficulty": "Advanced",
+      "question": "Would this wallet's observed results survive my copy-trading constraints?",
+      "answer_readiness": "ANALYTICAL_EVIDENCE_PATH",
+      "core_calls": [
+        {
+          "group": "wallet-score",
+          "command": "run"
+        }
+      ],
+      "capability_count": 3,
+      "example_prompt_count": 2
+    },
+    {
+      "name": "birdeye-compare-smart-money-wallets",
+      "title": "\ud83c\udfc1 Compare Smart-Money Wallets",
+      "category": "Wallet Intelligence",
+      "stage": "DECIDE",
+      "difficulty": "Advanced",
+      "question": "Which of these wallets looks stronger on the same observed metrics?",
+      "answer_readiness": "ANALYTICAL_EVIDENCE_PATH",
+      "core_calls": [
+        {
+          "group": "wallet",
+          "command": "compare"
+        }
+      ],
+      "capability_count": 3,
+      "example_prompt_count": 2
+    },
+    {
+      "name": "birdeye-dev-created-tokens",
+      "title": "\ud83d\udc69\ud83c\udffb\u200d\ud83c\udf73 Dev Created Tokens",
+      "category": "Wallet Intelligence",
+      "stage": "RESEARCH",
+      "difficulty": "Basic",
+      "question": "What Birdeye-indexed launchpad tokens did this developer create?",
+      "answer_readiness": "ATOMIC_TYPED_PATH",
+      "core_calls": [
+        {
+          "group": "wallet",
+          "command": "created-tokens"
+        }
+      ],
+      "capability_count": 3,
+      "example_prompt_count": 2
+    },
+    {
+      "name": "birdeye-dev-launch-track-record",
+      "title": "\ud83e\uddd0 Dev Launch Track Record",
+      "category": "Wallet Intelligence",
+      "stage": "RESEARCH",
+      "difficulty": "Advanced",
+      "question": "How did this developer's indexed token launches perform?",
+      "answer_readiness": "ANALYTICAL_EVIDENCE_PATH",
+      "core_calls": [
+        {
+          "group": "dev-analysis",
+          "command": "run"
+        }
+      ],
+      "capability_count": 3,
+      "example_prompt_count": 2
+    },
+    {
+      "name": "birdeye-token-smart-money-trades",
+      "title": "\ud83e\udde0 Smart-Money Trades for a Token",
+      "category": "Wallet Intelligence",
+      "stage": "MONITOR",
+      "difficulty": "Intermediate",
+      "question": "What smart-money activity is visible for this token?",
+      "answer_readiness": "ANALYTICAL_EVIDENCE_PATH",
+      "core_calls": [
+        {
+          "group": "track",
+          "command": "smart-money-token"
+        }
+      ],
+      "capability_count": 3,
+      "example_prompt_count": 2
+    },
+    {
+      "name": "birdeye-selected-kol-wallet-activity",
+      "title": "\ud83d\udce1 Selected KOL Wallet Activity",
+      "category": "Wallet Intelligence",
+      "stage": "MONITOR",
+      "difficulty": "Intermediate",
+      "question": "What did these selected KOL wallets trade recently?",
+      "answer_readiness": "ATOMIC_TYPED_PATH",
+      "core_calls": [
+        {
+          "group": "track",
+          "command": "kol"
+        }
+      ],
+      "capability_count": 3,
+      "example_prompt_count": 2
+    },
+    {
+      "name": "birdeye-wallet-activity-feed",
+      "title": "\u2764\ufe0f Wallet Activity Feed",
+      "category": "Monitor",
+      "stage": "MONITOR",
+      "difficulty": "Basic",
+      "question": "What did this wallet trade in the last 24 hours?",
+      "answer_readiness": "ATOMIC_TYPED_PATH",
+      "core_calls": [
+        {
+          "group": "track",
+          "command": "wallet"
+        }
+      ],
+      "capability_count": 3,
+      "example_prompt_count": 2
+    },
+    {
+      "name": "birdeye-wallet-exit-destination",
+      "title": "\ud83d\udeaa Wallet Exit Destination",
+      "category": "Monitor",
+      "stage": "MONITOR",
+      "difficulty": "Advanced",
+      "question": "Where did this wallet's observable activity go after reducing a token?",
+      "answer_readiness": "ANALYTICAL_EVIDENCE_PATH",
+      "core_calls": [
+        {
+          "group": "track",
+          "command": "exit"
+        }
+      ],
+      "capability_count": 3,
+      "example_prompt_count": 2
+    },
+    {
+      "name": "birdeye-wallet-post-sell-rotation",
+      "title": "\ud83d\udd01 Wallet Post-Sell Rotation",
+      "category": "Monitor",
+      "stage": "MONITOR",
+      "difficulty": "Advanced",
+      "question": "What did this wallet buy after selling the token?",
+      "answer_readiness": "ANALYTICAL_EVIDENCE_PATH",
+      "core_calls": [
+        {
+          "group": "track",
+          "command": "rotation"
+        }
+      ],
+      "capability_count": 3,
+      "example_prompt_count": 2
+    },
+    {
+      "name": "birdeye-token-liquidity-change",
+      "title": "\ud83d\udca7 Token Liquidity Change",
+      "category": "Monitor",
+      "stage": "MONITOR",
+      "difficulty": "Intermediate",
+      "question": "How has this token's indexed liquidity changed since my last snapshot?",
+      "answer_readiness": "ANALYTICAL_EVIDENCE_PATH",
+      "core_calls": [
+        {
+          "group": "monitor",
+          "command": "token-liquidity"
+        }
+      ],
+      "capability_count": 3,
+      "example_prompt_count": 2
+    },
+    {
+      "name": "birdeye-token-security-change",
+      "title": "\ud83d\udea8 Token Security Change",
+      "category": "Monitor",
+      "stage": "MONITOR",
+      "difficulty": "Intermediate",
+      "question": "What token security fields changed since my last snapshot?",
+      "answer_readiness": "ANALYTICAL_EVIDENCE_PATH",
+      "core_calls": [
+        {
+          "group": "monitor",
+          "command": "token-security"
+        }
+      ],
+      "capability_count": 3,
+      "example_prompt_count": 2
+    },
+    {
+      "name": "birdeye-bonding-curve-progress",
+      "title": "\ud83d\udcf6 Bonding-Curve Progress",
+      "category": "Monitor",
+      "stage": "MONITOR",
+      "difficulty": "Intermediate",
+      "question": "How has this token's bonding-curve progress changed?",
+      "answer_readiness": "ANALYTICAL_EVIDENCE_PATH",
+      "core_calls": [
+        {
+          "group": "monitor",
+          "command": "bonding-curve"
+        }
+      ],
+      "capability_count": 3,
+      "example_prompt_count": 2
+    },
+    {
+      "name": "birdeye-graduation-status-change",
+      "title": "\ud83c\udf93 Graduation Status Change",
+      "category": "Monitor",
+      "stage": "MONITOR",
+      "difficulty": "Intermediate",
+      "question": "Did this launchpad token graduate since my last snapshot?",
+      "answer_readiness": "ANALYTICAL_EVIDENCE_PATH",
+      "core_calls": [
+        {
+          "group": "monitor",
+          "command": "graduation"
+        }
+      ],
+      "capability_count": 3,
+      "example_prompt_count": 2
+    },
+    {
+      "name": "birdeye-holder-concentration-change",
+      "title": "\ud83d\udc0b Holder Concentration Change",
+      "category": "Monitor",
+      "stage": "MONITOR",
+      "difficulty": "Advanced",
+      "question": "Has this token's holder concentration changed materially?",
+      "answer_readiness": "ANALYTICAL_EVIDENCE_PATH",
+      "core_calls": [
+        {
+          "group": "monitor",
+          "command": "holders"
+        }
+      ],
+      "capability_count": 3,
+      "example_prompt_count": 2
+    },
+    {
+      "name": "birdeye-pool-activity-change",
+      "title": "\ud83c\udf0a Pool Activity Change",
+      "category": "Monitor",
+      "stage": "MONITOR",
+      "difficulty": "Advanced",
+      "question": "How has this pool's trading activity changed?",
+      "answer_readiness": "ANALYTICAL_EVIDENCE_PATH",
+      "core_calls": [
+        {
+          "group": "monitor",
+          "command": "pool"
+        }
+      ],
+      "capability_count": 3,
+      "example_prompt_count": 2
+    },
+    {
+      "name": "birdeye-token-wallet-watchlist",
+      "title": "\ud83d\udc40 Token & Wallet Watchlist Check",
+      "category": "Monitor",
+      "stage": "MONITOR",
+      "difficulty": "Advanced",
+      "question": "What materially changed for this watched token and wallet?",
+      "answer_readiness": "ANALYTICAL_EVIDENCE_PATH",
+      "core_calls": [
+        {
+          "group": "monitor",
+          "command": "watchlist"
+        }
+      ],
+      "capability_count": 3,
+      "example_prompt_count": 2
+    }
+  ]
+}

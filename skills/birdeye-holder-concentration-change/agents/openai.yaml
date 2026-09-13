@@ -1,0 +1,4 @@
+interface:
+  display_name: "🐋 Holder Concentration Change"
+  short_description: "Compare current observable holder concentration with a compat..."
+  default_prompt: "Use $birdeye-holder-concentration-change to answer: Has this token's holder concentration changed materially?"

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "birdeye-data-skills",
+  "description": "Read-only Solana market, token, wallet, monitoring and advanced trader research with Birdeye Data",
+  "owner": {
+    "name": "Birdeye Data"
+  },
+  "plugins": [
+    {
+      "name": "birdeye-data-skills",
+      "source": "./",
+      "description": "47 focused Birdeye marketplace skills for five-minute momentum, curated radar, multi-launchpad discovery, token and wallet analysis, and monitoring",
+      "version": "3.0.0-rc.1",
+      "author": {
+        "name": "Birdeye Data"
+      },
+      "repository": "https://github.com/deanle-wq/birdeye-trader-skills",
+      "license": "Proprietary prototype",
+      "keywords": ["birdeye", "crypto", "solana", "market", "wallet", "token", "x402", "analysis"],
+      "category": "web3",
+      "tags": ["skills", "token", "market", "wallet", "monitoring", "defi", "analysis"],
+      "strict": false
+    }
+  ]
+}

@@ -1,0 +1,709 @@
+{
+  "schema_version": "1.0.0",
+  "catalog_version": "2.0.0-rc.1",
+  "namespace": "birdeye-",
+  "skill_count": 100,
+  "policy": "Public package names are branded and trader-facing; internal runtime slugs remain stable aliases.",
+  "skills": [
+    {
+      "skill_id": "V2-001",
+      "internal_slug": "trending-tokens",
+      "public_package_name": "birdeye-trending-tokens",
+      "public_display_name": "Birdeye Trending Tokens",
+      "naming_rule": "BIRDEYE_PREFIX"
+    },
+    {
+      "skill_id": "V2-002",
+      "internal_slug": "newly-listed-tokens",
+      "public_package_name": "birdeye-newly-listed-tokens",
+      "public_display_name": "Birdeye Newly Listed Tokens",
+      "naming_rule": "BIRDEYE_PREFIX"
+    },
+    {
+      "skill_id": "V2-003",
+      "internal_slug": "bonding-curve-token-stages",
+      "public_package_name": "birdeye-bonding-curve-token-stages",
+      "public_display_name": "Birdeye Bonding Curve Token Stages",
+      "naming_rule": "BIRDEYE_PREFIX"
+    },
+    {
+      "skill_id": "V2-004",
+      "internal_slug": "configurable-token-filter",
+      "public_package_name": "birdeye-token-screener",
+      "public_display_name": "Birdeye Token Screener",
+      "naming_rule": "TRADER_LANGUAGE_OVERRIDE"
+    },
+    {
+      "skill_id": "V2-005",
+      "internal_slug": "smart-money-token-feed",
+      "public_package_name": "birdeye-smart-money-token-feed",
+      "public_display_name": "Birdeye Smart Money Token Feed",
+      "naming_rule": "BIRDEYE_PREFIX"
+    },
+    {
+      "skill_id": "V2-006",
+      "internal_slug": "recent-market-activity",
+      "public_package_name": "birdeye-recent-market-activity",
+      "public_display_name": "Birdeye Recent Market Activity",
+      "naming_rule": "BIRDEYE_PREFIX"
+    },
+    {
+      "skill_id": "V2-007",
+      "internal_slug": "trader-gainers-losers",
+      "public_package_name": "birdeye-trader-gainers-losers",
+      "public_display_name": "Birdeye Trader Gainers and Losers",
+      "naming_rule": "BIRDEYE_PREFIX"
+    },
+    {
+      "skill_id": "V2-008",
+      "internal_slug": "participant-accumulation-candidates",
+      "public_package_name": "birdeye-multi-wallet-accumulation",
+      "public_display_name": "Birdeye Multi-Wallet Accumulation",
+      "naming_rule": "TRADER_LANGUAGE_OVERRIDE"
+    },
+    {
+      "skill_id": "V2-009",
+      "internal_slug": "token-identity-resolver",
+      "public_package_name": "birdeye-token-identity",
+      "public_display_name": "Birdeye Token Identity",
+      "naming_rule": "TRADER_LANGUAGE_OVERRIDE"
+    },
+    {
+      "skill_id": "V2-010",
+      "internal_slug": "token-metadata",
+      "public_package_name": "birdeye-token-metadata",
+      "public_display_name": "Birdeye Token Metadata",
+      "naming_rule": "BIRDEYE_PREFIX"
+    },
+    {
+      "skill_id": "V2-011",
+      "internal_slug": "token-valuation-snapshot",
+      "public_package_name": "birdeye-token-valuation-snapshot",
+      "public_display_name": "Birdeye Token Valuation Snapshot",
+      "naming_rule": "BIRDEYE_PREFIX"
+    },
+    {
+      "skill_id": "V2-012",
+      "internal_slug": "token-security-check",
+      "public_package_name": "birdeye-token-security-check",
+      "public_display_name": "Birdeye Token Security Check",
+      "naming_rule": "BIRDEYE_PREFIX"
+    },
+    {
+      "skill_id": "V2-013",
+      "internal_slug": "token-liquidity-snapshot",
+      "public_package_name": "birdeye-token-liquidity-snapshot",
+      "public_display_name": "Birdeye Token Liquidity Snapshot",
+      "naming_rule": "BIRDEYE_PREFIX"
+    },
+    {
+      "skill_id": "V2-014",
+      "internal_slug": "holder-concentration-gate",
+      "public_package_name": "birdeye-holder-concentration-check",
+      "public_display_name": "Birdeye Holder Concentration Check",
+      "naming_rule": "TRADER_LANGUAGE_OVERRIDE"
+    },
+    {
+      "skill_id": "V2-015",
+      "internal_slug": "token-data-completeness",
+      "public_package_name": "birdeye-token-data-availability",
+      "public_display_name": "Birdeye Token Data Availability",
+      "naming_rule": "TRADER_LANGUAGE_OVERRIDE"
+    },
+    {
+      "skill_id": "V2-016",
+      "internal_slug": "batch-token-condition-screen",
+      "public_package_name": "birdeye-batch-token-condition-screen",
+      "public_display_name": "Birdeye Batch Token Condition Screen",
+      "naming_rule": "BIRDEYE_PREFIX"
+    },
+    {
+      "skill_id": "V2-017",
+      "internal_slug": "current-token-price",
+      "public_package_name": "birdeye-current-token-price",
+      "public_display_name": "Birdeye Current Token Price",
+      "naming_rule": "BIRDEYE_PREFIX"
+    },
+    {
+      "skill_id": "V2-018",
+      "internal_slug": "token-market-activity",
+      "public_package_name": "birdeye-token-market-activity",
+      "public_display_name": "Birdeye Token Market Activity",
+      "naming_rule": "BIRDEYE_PREFIX"
+    },
+    {
+      "skill_id": "V2-019",
+      "internal_slug": "token-creation-evidence",
+      "public_package_name": "birdeye-token-creation-evidence",
+      "public_display_name": "Birdeye Token Creation Evidence",
+      "naming_rule": "BIRDEYE_PREFIX"
+    },
+    {
+      "skill_id": "V2-020",
+      "internal_slug": "token-kline-data",
+      "public_package_name": "birdeye-token-kline-data",
+      "public_display_name": "Birdeye Token Kline Data",
+      "naming_rule": "BIRDEYE_PREFIX"
+    },
+    {
+      "skill_id": "V2-021",
+      "internal_slug": "historical-price-at-time",
+      "public_package_name": "birdeye-historical-price-at-time",
+      "public_display_name": "Birdeye Historical Price at Time",
+      "naming_rule": "BIRDEYE_PREFIX"
+    },
+    {
+      "skill_id": "V2-022",
+      "internal_slug": "token-markets-and-pools",
+      "public_package_name": "birdeye-token-markets-and-pools",
+      "public_display_name": "Birdeye Token Markets and Pools",
+      "naming_rule": "BIRDEYE_PREFIX"
+    },
+    {
+      "skill_id": "V2-023",
+      "internal_slug": "token-liquidity-history",
+      "public_package_name": "birdeye-liquidity-volume-context",
+      "public_display_name": "Birdeye Liquidity to Volume Context",
+      "naming_rule": "TRADER_LANGUAGE_OVERRIDE"
+    },
+    {
+      "skill_id": "V2-024",
+      "internal_slug": "holder-distribution",
+      "public_package_name": "birdeye-holder-distribution",
+      "public_display_name": "Birdeye Holder Distribution",
+      "naming_rule": "BIRDEYE_PREFIX"
+    },
+    {
+      "skill_id": "V2-025",
+      "internal_slug": "holder-profile",
+      "public_package_name": "birdeye-holder-concentration-band",
+      "public_display_name": "Birdeye Holder Concentration Band",
+      "naming_rule": "TRADER_LANGUAGE_OVERRIDE"
+    },
+    {
+      "skill_id": "V2-026",
+      "internal_slug": "holder-positions",
+      "public_package_name": "birdeye-holder-balance-ranking",
+      "public_display_name": "Birdeye Holder Balance Ranking",
+      "naming_rule": "TRADER_LANGUAGE_OVERRIDE"
+    },
+    {
+      "skill_id": "V2-027",
+      "internal_slug": "holder-count-history",
+      "public_package_name": "birdeye-holder-count-monitor",
+      "public_display_name": "Birdeye Holder Count Monitor",
+      "naming_rule": "TRADER_LANGUAGE_OVERRIDE"
+    },
+    {
+      "skill_id": "V2-028",
+      "internal_slug": "holder-category-history",
+      "public_package_name": "birdeye-holder-distribution-baseline-change",
+      "public_display_name": "Birdeye Holder Distribution Baseline Change",
+      "naming_rule": "TRADER_LANGUAGE_OVERRIDE"
+    },
+    {
+      "skill_id": "V2-029",
+      "internal_slug": "top-token-traders",
+      "public_package_name": "birdeye-top-token-traders",
+      "public_display_name": "Birdeye Top Token Traders",
+      "naming_rule": "BIRDEYE_PREFIX"
+    },
+    {
+      "skill_id": "V2-030",
+      "internal_slug": "token-trade-feed",
+      "public_package_name": "birdeye-token-trade-feed",
+      "public_display_name": "Birdeye Token Trade Feed",
+      "naming_rule": "BIRDEYE_PREFIX"
+    },
+    {
+      "skill_id": "V2-031",
+      "internal_slug": "large-token-trades",
+      "public_package_name": "birdeye-large-token-trades",
+      "public_display_name": "Birdeye Large Token Trades",
+      "naming_rule": "BIRDEYE_PREFIX"
+    },
+    {
+      "skill_id": "V2-032",
+      "internal_slug": "mint-burn-activity",
+      "public_package_name": "birdeye-mint-burn-activity",
+      "public_display_name": "Birdeye Mint and Burn Activity",
+      "naming_rule": "BIRDEYE_PREFIX"
+    },
+    {
+      "skill_id": "V2-033",
+      "internal_slug": "first-buyers",
+      "public_package_name": "birdeye-first-buyers",
+      "public_display_name": "Birdeye First Buyers",
+      "naming_rule": "BIRDEYE_PREFIX"
+    },
+    {
+      "skill_id": "V2-034",
+      "internal_slug": "early-buyer-current-positions",
+      "public_package_name": "birdeye-early-buyer-follow-on-activity",
+      "public_display_name": "Birdeye Early Buyer Follow-On Activity",
+      "naming_rule": "TRADER_LANGUAGE_OVERRIDE"
+    },
+    {
+      "skill_id": "V2-035",
+      "internal_slug": "early-buyer-churn",
+      "public_package_name": "birdeye-early-buyer-churn",
+      "public_display_name": "Birdeye Early Buyer Churn",
+      "naming_rule": "BIRDEYE_PREFIX"
+    },
+    {
+      "skill_id": "V2-036",
+      "internal_slug": "early-buyer-performance",
+      "public_package_name": "birdeye-early-buyer-performance",
+      "public_display_name": "Birdeye Early Buyer Price Outcome",
+      "naming_rule": "BIRDEYE_PREFIX"
+    },
+    {
+      "skill_id": "V2-037",
+      "internal_slug": "early-buyer-funding-overlap",
+      "public_package_name": "birdeye-early-buyer-timing-clusters",
+      "public_display_name": "Birdeye Early Buyer Timing Clusters",
+      "naming_rule": "TRADER_LANGUAGE_OVERRIDE"
+    },
+    {
+      "skill_id": "V2-038",
+      "internal_slug": "holder-concentration-analysis",
+      "public_package_name": "birdeye-holder-concentration-analysis",
+      "public_display_name": "Birdeye Holder Concentration Analysis",
+      "naming_rule": "BIRDEYE_PREFIX"
+    },
+    {
+      "skill_id": "V2-039",
+      "internal_slug": "holder-category-composition",
+      "public_package_name": "birdeye-holder-concentration-bands",
+      "public_display_name": "Birdeye Holder Concentration Bands",
+      "naming_rule": "TRADER_LANGUAGE_OVERRIDE"
+    },
+    {
+      "skill_id": "V2-040",
+      "internal_slug": "smart-money-holder-presence",
+      "public_package_name": "birdeye-smart-money-token-presence",
+      "public_display_name": "Birdeye Smart Money Token Presence",
+      "naming_rule": "TRADER_LANGUAGE_OVERRIDE"
+    },
+    {
+      "skill_id": "V2-041",
+      "internal_slug": "top-trader-performance",
+      "public_package_name": "birdeye-top-trader-performance",
+      "public_display_name": "Birdeye Top Trader Performance",
+      "naming_rule": "BIRDEYE_PREFIX"
+    },
+    {
+      "skill_id": "V2-042",
+      "internal_slug": "wallet-current-holdings",
+      "public_package_name": "birdeye-wallet-traded-tokens",
+      "public_display_name": "Birdeye Wallet Traded Tokens",
+      "naming_rule": "TRADER_LANGUAGE_OVERRIDE"
+    },
+    {
+      "skill_id": "V2-043",
+      "internal_slug": "wallet-pnl-stats",
+      "public_package_name": "birdeye-wallet-reconstructed-pnl",
+      "public_display_name": "Birdeye Wallet Reconstructed PnL",
+      "naming_rule": "TRADER_LANGUAGE_OVERRIDE"
+    },
+    {
+      "skill_id": "V2-044",
+      "internal_slug": "wallet-token-pnl",
+      "public_package_name": "birdeye-wallet-reconstructed-token-pnl",
+      "public_display_name": "Birdeye Wallet Reconstructed Token PnL",
+      "naming_rule": "TRADER_LANGUAGE_OVERRIDE"
+    },
+    {
+      "skill_id": "V2-045",
+      "internal_slug": "wallet-outcome-distribution",
+      "public_package_name": "birdeye-wallet-outcome-distribution",
+      "public_display_name": "Birdeye Wallet Outcome Distribution",
+      "naming_rule": "BIRDEYE_PREFIX"
+    },
+    {
+      "skill_id": "V2-046",
+      "internal_slug": "participant-independence",
+      "public_package_name": "birdeye-wallet-activity-overlap",
+      "public_display_name": "Birdeye Wallet Activity Overlap",
+      "naming_rule": "TRADER_LANGUAGE_OVERRIDE"
+    },
+    {
+      "skill_id": "V2-047",
+      "internal_slug": "participant-signal-convergence",
+      "public_package_name": "birdeye-wallet-signal-convergence",
+      "public_display_name": "Birdeye Wallet Signal Convergence",
+      "naming_rule": "TRADER_LANGUAGE_OVERRIDE"
+    },
+    {
+      "skill_id": "V2-048",
+      "internal_slug": "price-range-position",
+      "public_package_name": "birdeye-price-range-location",
+      "public_display_name": "Birdeye Price Range Location",
+      "naming_rule": "TRADER_LANGUAGE_OVERRIDE"
+    },
+    {
+      "skill_id": "V2-049",
+      "internal_slug": "volatility-context",
+      "public_package_name": "birdeye-token-volatility",
+      "public_display_name": "Birdeye Token Volatility",
+      "naming_rule": "TRADER_LANGUAGE_OVERRIDE"
+    },
+    {
+      "skill_id": "V2-050",
+      "internal_slug": "volume-price-structure",
+      "public_package_name": "birdeye-price-volume-analysis",
+      "public_display_name": "Birdeye Price and Volume Analysis",
+      "naming_rule": "TRADER_LANGUAGE_OVERRIDE"
+    },
+    {
+      "skill_id": "V2-051",
+      "internal_slug": "observed-wallet-entry-price",
+      "public_package_name": "birdeye-wallet-entry-price",
+      "public_display_name": "Birdeye Wallet Entry Price",
+      "naming_rule": "TRADER_LANGUAGE_OVERRIDE"
+    },
+    {
+      "skill_id": "V2-052",
+      "internal_slug": "size-to-liquidity-context",
+      "public_package_name": "birdeye-position-size-liquidity-check",
+      "public_display_name": "Birdeye Position Size vs Liquidity",
+      "naming_rule": "TRADER_LANGUAGE_OVERRIDE"
+    },
+    {
+      "skill_id": "V2-053",
+      "internal_slug": "entry-delay-sensitivity",
+      "public_package_name": "birdeye-entry-delay-impact",
+      "public_display_name": "Birdeye Entry Delay Impact",
+      "naming_rule": "TRADER_LANGUAGE_OVERRIDE"
+    },
+    {
+      "skill_id": "V2-054",
+      "internal_slug": "token-pool-verification",
+      "public_package_name": "birdeye-token-pool-check",
+      "public_display_name": "Birdeye Token Pool Check",
+      "naming_rule": "TRADER_LANGUAGE_OVERRIDE"
+    },
+    {
+      "skill_id": "V2-055",
+      "internal_slug": "fresh-pre-action-snapshot",
+      "public_package_name": "birdeye-pre-trade-data-snapshot",
+      "public_display_name": "Birdeye Pre-Trade Data Snapshot",
+      "naming_rule": "TRADER_LANGUAGE_OVERRIDE"
+    },
+    {
+      "skill_id": "V2-056",
+      "internal_slug": "index-freshness",
+      "public_package_name": "birdeye-data-freshness-check",
+      "public_display_name": "Birdeye Data Freshness Check",
+      "naming_rule": "TRADER_LANGUAGE_OVERRIDE"
+    },
+    {
+      "skill_id": "V2-057",
+      "internal_slug": "wallet-trade-history",
+      "public_package_name": "birdeye-wallet-trade-history",
+      "public_display_name": "Birdeye Wallet Trade History",
+      "naming_rule": "BIRDEYE_PREFIX"
+    },
+    {
+      "skill_id": "V2-058",
+      "internal_slug": "token-activity-feed",
+      "public_package_name": "birdeye-token-activity-feed",
+      "public_display_name": "Birdeye Token Activity Feed",
+      "naming_rule": "BIRDEYE_PREFIX"
+    },
+    {
+      "skill_id": "V2-059",
+      "internal_slug": "wallet-sell-feed",
+      "public_package_name": "birdeye-wallet-sell-feed",
+      "public_display_name": "Birdeye Wallet Sell Feed",
+      "naming_rule": "BIRDEYE_PREFIX"
+    },
+    {
+      "skill_id": "V2-060",
+      "internal_slug": "wallet-balance-changes",
+      "public_package_name": "birdeye-wallet-trade-net-flow",
+      "public_display_name": "Birdeye Wallet Trade Net Flow",
+      "naming_rule": "TRADER_LANGUAGE_OVERRIDE"
+    },
+    {
+      "skill_id": "V2-061",
+      "internal_slug": "wallet-transfers",
+      "public_package_name": "birdeye-wallet-token-transfers",
+      "public_display_name": "Birdeye Wallet Token Transfers",
+      "naming_rule": "TRADER_LANGUAGE_OVERRIDE"
+    },
+    {
+      "skill_id": "V2-062",
+      "internal_slug": "token-transfers",
+      "public_package_name": "birdeye-token-transfers",
+      "public_display_name": "Birdeye Token Transfers",
+      "naming_rule": "BIRDEYE_PREFIX"
+    },
+    {
+      "skill_id": "V2-063",
+      "internal_slug": "smart-money-trades",
+      "public_package_name": "birdeye-smart-money-trades",
+      "public_display_name": "Birdeye Smart Money Trades",
+      "naming_rule": "BIRDEYE_PREFIX"
+    },
+    {
+      "skill_id": "V2-064",
+      "internal_slug": "kol-trades",
+      "public_package_name": "birdeye-kol-trades",
+      "public_display_name": "Birdeye KOL Wallet Trades",
+      "naming_rule": "BIRDEYE_PREFIX"
+    },
+    {
+      "skill_id": "V2-065",
+      "internal_slug": "wallet-position-delta",
+      "public_package_name": "birdeye-wallet-trade-exposure-monitor",
+      "public_display_name": "Birdeye Wallet Trade Exposure Monitor",
+      "naming_rule": "TRADER_LANGUAGE_OVERRIDE"
+    },
+    {
+      "skill_id": "V2-066",
+      "internal_slug": "wallet-pnl-delta",
+      "public_package_name": "birdeye-wallet-reconstructed-pnl-monitor",
+      "public_display_name": "Birdeye Wallet Reconstructed PnL Monitor",
+      "naming_rule": "TRADER_LANGUAGE_OVERRIDE"
+    },
+    {
+      "skill_id": "V2-067",
+      "internal_slug": "wallet-behavior-deviation",
+      "public_package_name": "birdeye-wallet-behavior-monitor",
+      "public_display_name": "Birdeye Wallet Behavior Monitor",
+      "naming_rule": "TRADER_LANGUAGE_OVERRIDE"
+    },
+    {
+      "skill_id": "V2-068",
+      "internal_slug": "wallet-cohort-exposure-delta",
+      "public_package_name": "birdeye-wallet-cohort-exposure-monitor",
+      "public_display_name": "Birdeye Wallet Cohort Exposure Monitor",
+      "naming_rule": "TRADER_LANGUAGE_OVERRIDE"
+    },
+    {
+      "skill_id": "V2-069",
+      "internal_slug": "token-security-delta",
+      "public_package_name": "birdeye-token-security-monitor",
+      "public_display_name": "Birdeye Token Security Monitor",
+      "naming_rule": "TRADER_LANGUAGE_OVERRIDE"
+    },
+    {
+      "skill_id": "V2-070",
+      "internal_slug": "token-liquidity-delta",
+      "public_package_name": "birdeye-token-liquidity-monitor",
+      "public_display_name": "Birdeye Token Liquidity Monitor",
+      "naming_rule": "TRADER_LANGUAGE_OVERRIDE"
+    },
+    {
+      "skill_id": "V2-071",
+      "internal_slug": "holder-concentration-delta",
+      "public_package_name": "birdeye-holder-concentration-monitor",
+      "public_display_name": "Birdeye Holder Concentration Monitor",
+      "naming_rule": "TRADER_LANGUAGE_OVERRIDE"
+    },
+    {
+      "skill_id": "V2-072",
+      "internal_slug": "holder-category-delta",
+      "public_package_name": "birdeye-holder-concentration-band-monitor",
+      "public_display_name": "Birdeye Holder Concentration Band Monitor",
+      "naming_rule": "TRADER_LANGUAGE_OVERRIDE"
+    },
+    {
+      "skill_id": "V2-073",
+      "internal_slug": "bonding-curve-progress-delta",
+      "public_package_name": "birdeye-bonding-curve-progress-monitor",
+      "public_display_name": "Birdeye Bonding Curve Progress Monitor",
+      "naming_rule": "TRADER_LANGUAGE_OVERRIDE"
+    },
+    {
+      "skill_id": "V2-074",
+      "internal_slug": "graduation-status-delta",
+      "public_package_name": "birdeye-graduation-status-monitor",
+      "public_display_name": "Birdeye Graduation Status Monitor",
+      "naming_rule": "TRADER_LANGUAGE_OVERRIDE"
+    },
+    {
+      "skill_id": "V2-075",
+      "internal_slug": "pool-activity-delta",
+      "public_package_name": "birdeye-pool-activity-monitor",
+      "public_display_name": "Birdeye Pool Activity Monitor",
+      "naming_rule": "TRADER_LANGUAGE_OVERRIDE"
+    },
+    {
+      "skill_id": "V2-076",
+      "internal_slug": "watchlist-material-change",
+      "public_package_name": "birdeye-watchlist-change-monitor",
+      "public_display_name": "Birdeye Watchlist Change Monitor",
+      "naming_rule": "TRADER_LANGUAGE_OVERRIDE"
+    },
+    {
+      "skill_id": "V2-077",
+      "internal_slug": "position-reduction-percentage",
+      "public_package_name": "birdeye-wallet-position-reduction",
+      "public_display_name": "Birdeye Wallet Position Reduction",
+      "naming_rule": "TRADER_LANGUAGE_OVERRIDE"
+    },
+    {
+      "skill_id": "V2-078",
+      "internal_slug": "clustered-position-reductions",
+      "public_package_name": "birdeye-multi-wallet-position-reductions",
+      "public_display_name": "Birdeye Multi-Wallet Position Reductions",
+      "naming_rule": "TRADER_LANGUAGE_OVERRIDE"
+    },
+    {
+      "skill_id": "V2-079",
+      "internal_slug": "market-context-at-exit",
+      "public_package_name": "birdeye-exit-market-context",
+      "public_display_name": "Birdeye Exit Market Context",
+      "naming_rule": "TRADER_LANGUAGE_OVERRIDE"
+    },
+    {
+      "skill_id": "V2-080",
+      "internal_slug": "liquidity-context-at-exit",
+      "public_package_name": "birdeye-exit-liquidity-context",
+      "public_display_name": "Birdeye Exit Liquidity Context",
+      "naming_rule": "TRADER_LANGUAGE_OVERRIDE"
+    },
+    {
+      "skill_id": "V2-081",
+      "internal_slug": "exit-destination-trace",
+      "public_package_name": "birdeye-exit-destination-trace",
+      "public_display_name": "Birdeye Exit Destination Trace",
+      "naming_rule": "BIRDEYE_PREFIX"
+    },
+    {
+      "skill_id": "V2-082",
+      "internal_slug": "post-exit-activity",
+      "public_package_name": "birdeye-post-exit-activity",
+      "public_display_name": "Birdeye Post Exit Trading Activity",
+      "naming_rule": "BIRDEYE_PREFIX"
+    },
+    {
+      "skill_id": "V2-083",
+      "internal_slug": "destination-classification",
+      "public_package_name": "birdeye-exit-destination-type",
+      "public_display_name": "Birdeye Exit Destination Type",
+      "naming_rule": "TRADER_LANGUAGE_OVERRIDE"
+    },
+    {
+      "skill_id": "V2-084",
+      "internal_slug": "same-wallet-rotation",
+      "public_package_name": "birdeye-wallet-post-exit-rotation",
+      "public_display_name": "Birdeye Wallet Post-Exit Rotation",
+      "naming_rule": "TRADER_LANGUAGE_OVERRIDE"
+    },
+    {
+      "skill_id": "V2-085",
+      "internal_slug": "multi-wallet-rotation-convergence",
+      "public_package_name": "birdeye-multi-wallet-post-exit-rotation",
+      "public_display_name": "Birdeye Multi-Wallet Post-Exit Rotation",
+      "naming_rule": "TRADER_LANGUAGE_OVERRIDE"
+    },
+    {
+      "skill_id": "V2-086",
+      "internal_slug": "wallet-observation-fit",
+      "public_package_name": "birdeye-wallet-criteria-check",
+      "public_display_name": "Birdeye Wallet Criteria Check",
+      "naming_rule": "TRADER_LANGUAGE_OVERRIDE"
+    },
+    {
+      "skill_id": "V2-087",
+      "internal_slug": "wallet-trading-style",
+      "public_package_name": "birdeye-wallet-trading-style",
+      "public_display_name": "Birdeye Wallet Trading Style",
+      "naming_rule": "BIRDEYE_PREFIX"
+    },
+    {
+      "skill_id": "V2-088",
+      "internal_slug": "wallet-holding-duration",
+      "public_package_name": "birdeye-wallet-holding-duration",
+      "public_display_name": "Birdeye Wallet Holding Duration",
+      "naming_rule": "BIRDEYE_PREFIX"
+    },
+    {
+      "skill_id": "V2-089",
+      "internal_slug": "take-profit-pattern",
+      "public_package_name": "birdeye-take-profit-pattern",
+      "public_display_name": "Birdeye Take Profit Pattern",
+      "naming_rule": "BIRDEYE_PREFIX"
+    },
+    {
+      "skill_id": "V2-090",
+      "internal_slug": "loss-cut-pattern",
+      "public_package_name": "birdeye-loss-cut-pattern",
+      "public_display_name": "Birdeye Loss Cut Pattern",
+      "naming_rule": "BIRDEYE_PREFIX"
+    },
+    {
+      "skill_id": "V2-091",
+      "internal_slug": "wallet-repeatability",
+      "public_package_name": "birdeye-wallet-repeatability",
+      "public_display_name": "Birdeye Wallet Repeatability",
+      "naming_rule": "BIRDEYE_PREFIX"
+    },
+    {
+      "skill_id": "V2-092",
+      "internal_slug": "wallet-performance-trend",
+      "public_package_name": "birdeye-wallet-performance-trend",
+      "public_display_name": "Birdeye Wallet Performance Trend",
+      "naming_rule": "BIRDEYE_PREFIX"
+    },
+    {
+      "skill_id": "V2-093",
+      "internal_slug": "liquidity-adjusted-copyability",
+      "public_package_name": "birdeye-copy-liquidity-impact",
+      "public_display_name": "Birdeye Copy Liquidity Impact",
+      "naming_rule": "TRADER_LANGUAGE_OVERRIDE"
+    },
+    {
+      "skill_id": "V2-094",
+      "internal_slug": "latency-adjusted-copyability",
+      "public_package_name": "birdeye-copy-delay-impact",
+      "public_display_name": "Birdeye Copy Delay Impact",
+      "naming_rule": "TRADER_LANGUAGE_OVERRIDE"
+    },
+    {
+      "skill_id": "V2-095",
+      "internal_slug": "wallet-comparison",
+      "public_package_name": "birdeye-wallet-comparison",
+      "public_display_name": "Birdeye Wallet Comparison",
+      "naming_rule": "BIRDEYE_PREFIX"
+    },
+    {
+      "skill_id": "V2-096",
+      "internal_slug": "developer-created-tokens",
+      "public_package_name": "birdeye-developer-created-tokens",
+      "public_display_name": "Birdeye Developer Launchpad Tokens",
+      "naming_rule": "BIRDEYE_PREFIX"
+    },
+    {
+      "skill_id": "V2-097",
+      "internal_slug": "developer-launch-track-record",
+      "public_package_name": "birdeye-developer-launch-track-record",
+      "public_display_name": "Birdeye Developer Launchpad Track Record",
+      "naming_rule": "BIRDEYE_PREFIX"
+    },
+    {
+      "skill_id": "V2-098",
+      "internal_slug": "source-track-record",
+      "public_package_name": "birdeye-source-track-record",
+      "public_display_name": "Birdeye Source Track Record",
+      "naming_rule": "BIRDEYE_PREFIX"
+    },
+    {
+      "skill_id": "V2-099",
+      "internal_slug": "strategy-threshold-review",
+      "public_package_name": "birdeye-strategy-threshold-review",
+      "public_display_name": "Birdeye Strategy Threshold Review",
+      "naming_rule": "BIRDEYE_PREFIX"
+    },
+    {
+      "skill_id": "V2-100",
+      "internal_slug": "wallet-cohort-comparison",
+      "public_package_name": "birdeye-wallet-cohort-comparison",
+      "public_display_name": "Birdeye Wallet Cohort Comparison",
+      "naming_rule": "BIRDEYE_PREFIX"
+    }
+  ]
+}

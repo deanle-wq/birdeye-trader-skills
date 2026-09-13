@@ -1,0 +1,4 @@
+interface:
+  display_name: "💵 Wallet P&L Analysis"
+  short_description: "Reconstruct covered wallet performance over a disclosed windo..."
+  default_prompt: "Use $birdeye-wallet-pnl-analysis to answer: What P&L can be reconstructed from this wallet's indexed trades?"

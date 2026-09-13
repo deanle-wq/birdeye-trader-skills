@@ -1,0 +1,226 @@
+{
+  "answer_schema_version": "2.1.0",
+  "methodology_version": "wave0-x402-1.0.0",
+  "models": {
+    "candle": {
+      "close": "decimal-string|null",
+      "high": "decimal-string|null",
+      "low": "decimal-string|null",
+      "open": "decimal-string|null",
+      "unix_time": "integer-string",
+      "volume": "decimal-string|null"
+    },
+    "market": {
+      "base_token": "token-side|null",
+      "created_at": "string|null",
+      "dex": "string|null",
+      "liquidity_usd": "decimal-string|null",
+      "name": "string|null",
+      "pool_address": "string|null",
+      "price_usd": "decimal-string|null",
+      "quote_token": "token-side|null",
+      "trade_count_24h": "integer-string|null",
+      "unique_wallet_count_24h": "integer-string|null",
+      "volume_24h_usd": "decimal-string|null"
+    },
+    "token-side": {
+      "address": "string|null",
+      "decimals": "integer-string|null",
+      "symbol": "string|null"
+    },
+    "trade": {
+      "base": "trade-side|null",
+      "block_number": "integer-string|null",
+      "block_unix_time": "integer-string",
+      "event_id": "string",
+      "owner": "string|null",
+      "quote": "trade-side|null",
+      "source": "string|null",
+      "tx_hash": "string|null",
+      "tx_type": "string|null",
+      "volume": "decimal-string|null",
+      "volume_usd": "decimal-string|null"
+    },
+    "trade-side": {
+      "address": "string|null",
+      "amount": "decimal-string|null",
+      "decimals": "integer-string|null",
+      "price": "decimal-string|null",
+      "symbol": "string|null",
+      "type_swap": "string|null"
+    }
+  },
+  "release_status": "frozen-not-production-accepted",
+  "release_wave": "WAVE_0_X402_ATOMIC",
+  "schema_version": "1.0.0",
+  "skill_count": 10,
+  "skills": [
+    {
+      "endpoint_ids": ["EP-009"],
+      "entity_type": "token",
+      "field_types": {
+        "canonical_address": "string|null",
+        "decimals": "integer-string|null",
+        "name": "string|null",
+        "symbol": "string|null"
+      },
+      "pagination": "not-applicable",
+      "production_accepted": false,
+      "required_fields": ["canonical_address", "decimals", "name", "symbol"],
+      "skill_id": "V2-009",
+      "slug": "token-identity-resolver"
+    },
+    {
+      "endpoint_ids": ["EP-009"],
+      "entity_type": "token",
+      "field_types": {
+        "canonical_address": "string|null",
+        "decimals": "integer-string|null",
+        "extensions": "object|null",
+        "logo_uri": "string|null",
+        "name": "string|null",
+        "symbol": "string|null"
+      },
+      "pagination": "not-applicable",
+      "production_accepted": false,
+      "required_fields": ["canonical_address", "decimals", "name", "symbol"],
+      "skill_id": "V2-010",
+      "slug": "token-metadata"
+    },
+    {
+      "endpoint_ids": ["EP-011"],
+      "entity_type": "token",
+      "field_types": {
+        "canonical_address": "string|null",
+        "circulating_supply": "decimal-string|null",
+        "fdv_usd": "decimal-string|null",
+        "holder_count": "integer-string|null",
+        "liquidity_usd": "decimal-string|null",
+        "market_cap_usd": "decimal-string|null",
+        "price_usd": "decimal-string|null",
+        "total_supply": "decimal-string|null"
+      },
+      "pagination": "not-applicable",
+      "production_accepted": false,
+      "required_fields": ["canonical_address", "market_cap_usd", "fdv_usd", "total_supply"],
+      "skill_id": "V2-011",
+      "slug": "token-valuation-snapshot"
+    },
+    {
+      "endpoint_ids": ["EP-011"],
+      "entity_type": "token",
+      "field_types": {
+        "liquidity_usd": "decimal-string|null",
+        "price_usd": "decimal-string|null",
+        "token_address": "string|null"
+      },
+      "pagination": "not-applicable",
+      "production_accepted": false,
+      "required_fields": ["token_address", "liquidity_usd"],
+      "skill_id": "V2-013",
+      "slug": "token-liquidity-snapshot"
+    },
+    {
+      "endpoint_ids": ["EP-020"],
+      "entity_type": "token",
+      "field_types": {
+        "is_scaled_ui_token": "boolean|null",
+        "price_change_24h_pct": "decimal-string|null",
+        "price_native": "decimal-string|null",
+        "price_usd": "decimal-string|null",
+        "provider_update_human": "string|null",
+        "provider_update_unix": "integer-string|null"
+      },
+      "pagination": "not-applicable",
+      "production_accepted": false,
+      "required_fields": ["price_usd", "provider_update_unix"],
+      "skill_id": "V2-017",
+      "slug": "current-token-price"
+    },
+    {
+      "endpoint_ids": ["EP-013"],
+      "entity_type": "token",
+      "field_types": {
+        "buy_count_1h": "integer-string|null",
+        "buy_count_24h": "integer-string|null",
+        "last_trade_unix": "integer-string|null",
+        "price_usd": "decimal-string|null",
+        "sell_count_1h": "integer-string|null",
+        "sell_count_24h": "integer-string|null",
+        "trade_count_1h": "integer-string|null",
+        "trade_count_24h": "integer-string|null",
+        "unique_wallet_count_1h": "integer-string|null",
+        "unique_wallet_count_24h": "integer-string|null",
+        "volume_1h_usd": "decimal-string|null",
+        "volume_24h_usd": "decimal-string|null"
+      },
+      "pagination": "not-applicable",
+      "production_accepted": false,
+      "required_fields": ["buy_count_24h", "sell_count_24h", "trade_count_24h", "volume_24h_usd"],
+      "skill_id": "V2-018",
+      "slug": "token-market-activity"
+    },
+    {
+      "endpoint_ids": ["EP-019"],
+      "entity_type": "token",
+      "field_types": {
+        "markets": "array[market]",
+        "ordering": "string",
+        "returned_count": "integer",
+        "total": "integer-string|null"
+      },
+      "pagination": "offset-limit",
+      "production_accepted": false,
+      "required_fields": ["markets"],
+      "skill_id": "V2-022",
+      "slug": "token-markets-and-pools"
+    },
+    {
+      "endpoint_ids": ["EP-023"],
+      "entity_type": "token",
+      "field_types": {
+        "candles": "array[candle]",
+        "gap_count_estimate": "integer|null",
+        "requested_slot_estimate": "integer|null",
+        "resolution": "string",
+        "returned_count": "integer",
+        "time_from": "integer-string|null",
+        "time_to": "integer-string|null"
+      },
+      "pagination": "not-applicable-provider-cap-5000",
+      "production_accepted": false,
+      "required_fields": ["candles", "resolution", "time_from", "time_to"],
+      "skill_id": "V2-020",
+      "slug": "token-kline-data"
+    },
+    {
+      "endpoint_ids": ["EP-048"],
+      "entity_type": "wallet",
+      "field_types": {
+        "closed_window_complete": "boolean",
+        "filtered_out_after_time_to": "integer",
+        "returned_count": "integer",
+        "time_from": "integer-string|null",
+        "time_to": "integer-string|null",
+        "trades": "array[trade]"
+      },
+      "pagination": "offset-limit-one-sided-time-seek",
+      "production_accepted": false,
+      "required_fields": ["trades"],
+      "skill_id": "V2-057",
+      "slug": "wallet-trade-history"
+    },
+    {
+      "endpoint_ids": ["EP-045"],
+      "entity_type": "chain",
+      "field_types": {
+        "latest_indexed_block": "integer-string|null"
+      },
+      "pagination": "not-applicable",
+      "production_accepted": false,
+      "required_fields": ["latest_indexed_block"],
+      "skill_id": "V2-056",
+      "slug": "index-freshness"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "💧 Liquidity Pool Analysis"
+  short_description: "Combine current indexed token liquidity with the markets and..."
+  default_prompt: "Use $birdeye-liquidity-pool-analysis to answer: How liquid is this token and where is that liquidity?"

@@ -1,0 +1,4 @@
+interface:
+  display_name: "📨 Token Transfer Activity"
+  short_description: "Inspect a token's indexed transfer events and total transfer..."
+  default_prompt: "Use $birdeye-token-transfer-activity to answer: What token transfers occurred during the selected window?"

@@ -1,0 +1,4 @@
+interface:
+  display_name: "🧠 Smart-Money Token Radar"
+  short_description: "Rank tokens in Birdeye's smart-money feed by smart-trader par..."
+  default_prompt: "Use $birdeye-smart-money-token-radar to answer: What tokens are attracting the most Birdeye smart-money wallets?"

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Birdeye Wallet Analysis"
+  short_description: "Birdeye Wallet Analysis workflows"
+  default_prompt: "Use $birdeye-wallet-analysis to explain how this wallet trades and what the evidence can support."

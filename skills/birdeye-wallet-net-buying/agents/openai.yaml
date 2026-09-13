@@ -1,0 +1,4 @@
+interface:
+  display_name: "💸 Wallet Net Buying"
+  short_description: "Compare indexed buys and sells to identify positive observed..."
+  default_prompt: "Use $birdeye-wallet-net-buying to answer: What tokens is this wallet buying more than selling?"

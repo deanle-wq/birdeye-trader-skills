@@ -1,0 +1,4 @@
+interface:
+  display_name: "🎯 Wallet Trading Style"
+  short_description: "Profile observable holding duration, trade cadence, outcomes,..."
+  default_prompt: "Use $birdeye-wallet-trading-style to answer: How does this wallet trade?"

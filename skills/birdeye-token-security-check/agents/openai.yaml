@@ -1,0 +1,4 @@
+interface:
+  display_name: "🛡️ Token Security Check"
+  short_description: "Inspect Birdeye token-security fields and clearly separate ob..."
+  default_prompt: "Use $birdeye-token-security-check to answer: What security and authority risks are observable for this token?"

@@ -1,0 +1,4 @@
+interface:
+  display_name: "⚡ 5-Min Most-Traded Tokens"
+  short_description: "Rank liquid Solana tokens by five-minute trade count to surfa..."
+  default_prompt: "Use $birdeye-5-minute-most-traded to answer: What tokens have the most trades in the last five minutes?"

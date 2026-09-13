@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "birdeye-trader-intelligence"
+version = "3.0.0rc1"
+description = "Read-only Solana trader skills backed by Birdeye Data"
+readme = "README.md"
+requires-python = ">=3.9"
+license = "LicenseRef-Proprietary"
+dependencies = []
+
+[project.scripts]
+birdeye-cli = "birdeye_intel.v3.cli:main"
+
+[project.urls]
+Repository = "https://github.com/deanle-wq/birdeye-trader-skills"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"birdeye_intel.v2" = ["*.json"]
+"birdeye_intel.v3" = ["*.json"]

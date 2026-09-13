@@ -1,0 +1,3516 @@
+{
+  "catalog_version": "2.0.0-rc.1",
+  "endpoint_surface_policy": "BIRDEYE_X402_ONLY",
+  "schema_version": "2.0.0",
+  "skill_count": 100,
+  "skills": [
+    {
+      "answer_status": "ATOMIC_EVALUATION_READY",
+      "capability_path": "discover/market/trending-tokens",
+      "difficulty": "L1",
+      "domain": "market",
+      "endpoint_ids": [
+        "EP-005"
+      ],
+      "name": "Trending Tokens",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-DISCOVER-MARKET",
+      "pricing_drivers": [
+        "endpoint_calls"
+      ],
+      "pricing_role": "MICRO",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "Which tokens are most active in the selected window?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "READY_ATOMIC",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-001",
+      "skill_type": "ATOMIC_QUERY",
+      "slug": "trending-tokens",
+      "stage": "DISCOVER",
+      "state": "STATELESS_CURRENT",
+      "unapproved_endpoint_ids": [],
+      "wave": "B_ENDPOINT_EXPANSION",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/defi/token_trending"
+      ]
+    },
+    {
+      "answer_status": "ATOMIC_EVALUATION_READY",
+      "capability_path": "discover/launch/newly-listed-tokens",
+      "difficulty": "L1",
+      "domain": "launch",
+      "endpoint_ids": [
+        "EP-004"
+      ],
+      "name": "Newly Listed Tokens",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-DISCOVER-LAUNCH",
+      "pricing_drivers": [
+        "endpoint_calls"
+      ],
+      "pricing_role": "MICRO",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "Which tokens were newly listed in the selected window?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "READY_ATOMIC",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-002",
+      "skill_type": "ATOMIC_QUERY",
+      "slug": "newly-listed-tokens",
+      "stage": "DISCOVER",
+      "state": "STATELESS_CURRENT",
+      "unapproved_endpoint_ids": [],
+      "wave": "B_ENDPOINT_EXPANSION",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/defi/v2/tokens/new_listing"
+      ]
+    },
+    {
+      "answer_status": "ATOMIC_EVALUATION_READY",
+      "capability_path": "discover/launch/bonding-curve-token-stages",
+      "difficulty": "L1",
+      "domain": "launch",
+      "endpoint_ids": [
+        "EP-006",
+        "EP-007"
+      ],
+      "name": "Bonding Curve Token Stages",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-DISCOVER-LAUNCH",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "multi_endpoint"
+      ],
+      "pricing_role": "MICRO",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "Which tokens are new near graduation or already graduated?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "READY_ATOMIC",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-003",
+      "skill_type": "ATOMIC_QUERY",
+      "slug": "bonding-curve-token-stages",
+      "stage": "DISCOVER",
+      "state": "STATELESS_CURRENT",
+      "unapproved_endpoint_ids": [],
+      "wave": "B_ENDPOINT_EXPANSION",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/defi/v3/token/meme/list",
+        "/x402/defi/v3/token/meme/detail/single"
+      ]
+    },
+    {
+      "answer_status": "NOT_FORWARD_TESTED",
+      "capability_path": "discover/filter/configurable-token-filter",
+      "difficulty": "L2",
+      "domain": "filter",
+      "endpoint_ids": [
+        "EP-002"
+      ],
+      "name": "Configurable Token Filter",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-DISCOVER-FILTER",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "multi_endpoint"
+      ],
+      "pricing_role": "LOW",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "Which tokens meet the user supplied market and activity conditions?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "EVIDENCE_ONLY_ANALYSIS",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-004",
+      "skill_type": "ATOMIC_ANALYSIS",
+      "slug": "configurable-token-filter",
+      "stage": "DISCOVER",
+      "state": "STATELESS_CURRENT",
+      "unapproved_endpoint_ids": [],
+      "wave": "B_ENDPOINT_EXPANSION",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/defi/v3/token/list"
+      ]
+    },
+    {
+      "answer_status": "ATOMIC_EVALUATION_READY",
+      "capability_path": "discover/participants/smart-money-token-feed",
+      "difficulty": "L1",
+      "domain": "participants",
+      "endpoint_ids": [
+        "EP-008"
+      ],
+      "name": "Smart Money Token Feed",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-DISCOVER-PARTICIPANTS",
+      "pricing_drivers": [
+        "endpoint_calls"
+      ],
+      "pricing_role": "MICRO",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "Which tokens currently appear in the Birdeye smart money feed?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "READY_ATOMIC",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-005",
+      "skill_type": "ATOMIC_QUERY",
+      "slug": "smart-money-token-feed",
+      "stage": "DISCOVER",
+      "state": "STATELESS_CURRENT",
+      "unapproved_endpoint_ids": [],
+      "wave": "B_ENDPOINT_EXPANSION",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/smart-money/v1/token/list"
+      ]
+    },
+    {
+      "answer_status": "ATOMIC_EVALUATION_READY",
+      "capability_path": "discover/activity/recent-market-activity",
+      "difficulty": "L1",
+      "domain": "activity",
+      "endpoint_ids": [
+        "EP-044",
+        "EP-077"
+      ],
+      "name": "Recent Market Activity",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-DISCOVER-ACTIVITY",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "multi_endpoint"
+      ],
+      "pricing_role": "MICRO",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "What are the most recent indexed trades across the selected market?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "READY_ATOMIC",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-006",
+      "skill_type": "ATOMIC_QUERY",
+      "slug": "recent-market-activity",
+      "stage": "DISCOVER",
+      "state": "STATELESS_CURRENT",
+      "unapproved_endpoint_ids": [],
+      "wave": "B_ENDPOINT_EXPANSION",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/defi/v3/txs/recent",
+        "/x402/defi/v3/txs"
+      ]
+    },
+    {
+      "answer_status": "ATOMIC_EVALUATION_READY",
+      "capability_path": "discover/wallets/trader-gainers-losers",
+      "difficulty": "L1",
+      "domain": "wallets",
+      "endpoint_ids": [
+        "EP-079"
+      ],
+      "name": "Trader Gainers and Losers",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-DISCOVER-WALLETS",
+      "pricing_drivers": [
+        "endpoint_calls"
+      ],
+      "pricing_role": "MICRO",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "Which traders gained or lost the most in the selected period?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "READY_ATOMIC",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-007",
+      "skill_type": "ATOMIC_QUERY",
+      "slug": "trader-gainers-losers",
+      "stage": "DISCOVER",
+      "state": "STATELESS_CURRENT",
+      "unapproved_endpoint_ids": [],
+      "wave": "B_ENDPOINT_EXPANSION",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/trader/gainers-losers"
+      ]
+    },
+    {
+      "answer_status": "NOT_FORWARD_TESTED",
+      "capability_path": "discover/participants/participant-accumulation-candidates",
+      "difficulty": "L3",
+      "domain": "participants",
+      "endpoint_ids": [
+        "EP-008",
+        "EP-037",
+        "EP-039"
+      ],
+      "name": "Multi Wallet Accumulation",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-DISCOVER-PARTICIPANTS",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "multi_endpoint",
+        "entity_count",
+        "pagination"
+      ],
+      "pricing_role": "MEDIUM",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "Which tokens show same-direction accumulation by multiple observed wallets?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "EVIDENCE_ONLY_ANALYSIS",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-008",
+      "skill_type": "COMPOSITE_ANALYSIS",
+      "slug": "participant-accumulation-candidates",
+      "stage": "DISCOVER",
+      "state": "STATELESS_CURRENT",
+      "unapproved_endpoint_ids": [],
+      "wave": "C_DERIVED_INTELLIGENCE",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/smart-money/v1/token/list",
+        "/x402/defi/v2/tokens/top_traders",
+        "/x402/defi/v3/token/txs"
+      ]
+    },
+    {
+      "answer_status": "ATOMIC_EVALUATION_READY",
+      "capability_path": "screen/identity/token-identity-resolver",
+      "difficulty": "L1",
+      "domain": "identity",
+      "endpoint_ids": [
+        "EP-009"
+      ],
+      "name": "Token Identity Resolver",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-SCREEN-IDENTITY",
+      "pricing_drivers": [
+        "endpoint_calls"
+      ],
+      "pricing_role": "MICRO",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "What indexed token identity matches this supplied Solana address?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "READY_ATOMIC",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-009",
+      "skill_type": "UTILITY",
+      "slug": "token-identity-resolver",
+      "stage": "SCREEN",
+      "state": "STATELESS_CURRENT",
+      "unapproved_endpoint_ids": [],
+      "wave": "A_PUBLIC_ATOMIC",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/defi/v3/token/meta-data/single"
+      ]
+    },
+    {
+      "answer_status": "ATOMIC_EVALUATION_READY",
+      "capability_path": "screen/identity/token-metadata",
+      "difficulty": "L1",
+      "domain": "identity",
+      "endpoint_ids": [
+        "EP-009"
+      ],
+      "name": "Token Metadata",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-SCREEN-IDENTITY",
+      "pricing_drivers": [
+        "endpoint_calls"
+      ],
+      "pricing_role": "MICRO",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "What are this token's name symbol decimals and metadata?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "READY_ATOMIC",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-010",
+      "skill_type": "ATOMIC_QUERY",
+      "slug": "token-metadata",
+      "stage": "SCREEN",
+      "state": "STATELESS_CURRENT",
+      "unapproved_endpoint_ids": [],
+      "wave": "A_PUBLIC_ATOMIC",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/defi/v3/token/meta-data/single"
+      ]
+    },
+    {
+      "answer_status": "ATOMIC_EVALUATION_READY",
+      "capability_path": "screen/market/token-valuation-snapshot",
+      "difficulty": "L1",
+      "domain": "market",
+      "endpoint_ids": [
+        "EP-011"
+      ],
+      "name": "Token Valuation Snapshot",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-SCREEN-MARKET",
+      "pricing_drivers": [
+        "endpoint_calls"
+      ],
+      "pricing_role": "MICRO",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "What are this token's current market cap FDV and supply facts?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "READY_ATOMIC",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-011",
+      "skill_type": "ATOMIC_QUERY",
+      "slug": "token-valuation-snapshot",
+      "stage": "SCREEN",
+      "state": "STATELESS_CURRENT",
+      "unapproved_endpoint_ids": [],
+      "wave": "A_PUBLIC_ATOMIC",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/defi/v3/token/market-data"
+      ]
+    },
+    {
+      "answer_status": "ATOMIC_EVALUATION_READY",
+      "capability_path": "screen/security/token-security-check",
+      "difficulty": "L1",
+      "domain": "security",
+      "endpoint_ids": [
+        "EP-010"
+      ],
+      "name": "Token Security Check",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-SCREEN-SECURITY",
+      "pricing_drivers": [
+        "endpoint_calls"
+      ],
+      "pricing_role": "MICRO",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "Which observable authority and security fields are present for this token?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "READY_ATOMIC",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-012",
+      "skill_type": "ATOMIC_QUERY",
+      "slug": "token-security-check",
+      "stage": "SCREEN",
+      "state": "STATELESS_CURRENT",
+      "unapproved_endpoint_ids": [],
+      "wave": "A_PUBLIC_ATOMIC",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/defi/token_security"
+      ]
+    },
+    {
+      "answer_status": "ATOMIC_EVALUATION_READY",
+      "capability_path": "screen/liquidity/token-liquidity-snapshot",
+      "difficulty": "L1",
+      "domain": "liquidity",
+      "endpoint_ids": [
+        "EP-011"
+      ],
+      "name": "Token Liquidity Snapshot",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-SCREEN-LIQUIDITY",
+      "pricing_drivers": [
+        "endpoint_calls"
+      ],
+      "pricing_role": "MICRO",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "How much indexed liquidity does this token currently have?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "READY_ATOMIC",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-013",
+      "skill_type": "ATOMIC_QUERY",
+      "slug": "token-liquidity-snapshot",
+      "stage": "SCREEN",
+      "state": "STATELESS_CURRENT",
+      "unapproved_endpoint_ids": [],
+      "wave": "A_PUBLIC_ATOMIC",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/defi/v3/token/market-data"
+      ]
+    },
+    {
+      "answer_status": "NOT_FORWARD_TESTED",
+      "capability_path": "screen/holders/holder-concentration-gate",
+      "difficulty": "L2",
+      "domain": "holders",
+      "endpoint_ids": [
+        "EP-031"
+      ],
+      "name": "Holder Concentration Gate",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-SCREEN-HOLDERS",
+      "pricing_drivers": [
+        "endpoint_calls"
+      ],
+      "pricing_role": "LOW",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "Does the observed holder distribution meet the supplied concentration condition?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "EVIDENCE_ONLY_ANALYSIS",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-014",
+      "skill_type": "ATOMIC_ANALYSIS",
+      "slug": "holder-concentration-gate",
+      "stage": "SCREEN",
+      "state": "STATELESS_CURRENT",
+      "unapproved_endpoint_ids": [],
+      "wave": "A_PUBLIC_ATOMIC",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/holder/v1/distribution"
+      ]
+    },
+    {
+      "answer_status": "NOT_FORWARD_TESTED",
+      "capability_path": "screen/completeness/token-data-completeness",
+      "difficulty": "L2",
+      "domain": "completeness",
+      "endpoint_ids": [
+        "EP-009",
+        "EP-010",
+        "EP-011",
+        "EP-031"
+      ],
+      "name": "Token Data Completeness",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-SCREEN-COMPLETENESS",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "multi_endpoint"
+      ],
+      "pricing_role": "LOW",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "Which required screening facts are available missing null or unsupported?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "EVIDENCE_ONLY_ANALYSIS",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-015",
+      "skill_type": "ATOMIC_ANALYSIS",
+      "slug": "token-data-completeness",
+      "stage": "SCREEN",
+      "state": "STATELESS_CURRENT",
+      "unapproved_endpoint_ids": [],
+      "wave": "A_PUBLIC_ATOMIC",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/defi/v3/token/meta-data/single",
+        "/x402/defi/token_security",
+        "/x402/defi/v3/token/market-data",
+        "/x402/holder/v1/distribution"
+      ]
+    },
+    {
+      "answer_status": "NOT_FORWARD_TESTED",
+      "capability_path": "screen/batch/batch-token-condition-screen",
+      "difficulty": "L3",
+      "domain": "batch",
+      "endpoint_ids": [
+        "EP-011"
+      ],
+      "name": "Batch Token Condition Screen",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-SCREEN-BATCH",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "multi_endpoint",
+        "entity_count",
+        "pagination"
+      ],
+      "pricing_role": "MEDIUM",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "Which tokens in this supplied list meet the user's screening conditions?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "EVIDENCE_ONLY_ANALYSIS",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-016",
+      "skill_type": "COMPARATIVE",
+      "slug": "batch-token-condition-screen",
+      "stage": "SCREEN",
+      "state": "STATELESS_CURRENT",
+      "unapproved_endpoint_ids": [],
+      "wave": "B_ENDPOINT_EXPANSION",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/defi/v3/token/market-data"
+      ]
+    },
+    {
+      "answer_status": "ATOMIC_EVALUATION_READY",
+      "capability_path": "research/price/current-token-price",
+      "difficulty": "L1",
+      "domain": "price",
+      "endpoint_ids": [
+        "EP-020"
+      ],
+      "name": "Current Token Price",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-RESEARCH-PRICE",
+      "pricing_drivers": [
+        "endpoint_calls"
+      ],
+      "pricing_role": "MICRO",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "What is the current indexed price of this token?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "READY_ATOMIC",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-017",
+      "skill_type": "ATOMIC_QUERY",
+      "slug": "current-token-price",
+      "stage": "RESEARCH",
+      "state": "STATELESS_CURRENT",
+      "unapproved_endpoint_ids": [],
+      "wave": "A_PUBLIC_ATOMIC",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/defi/price"
+      ]
+    },
+    {
+      "answer_status": "ATOMIC_EVALUATION_READY",
+      "capability_path": "research/market/token-market-activity",
+      "difficulty": "L1",
+      "domain": "market",
+      "endpoint_ids": [
+        "EP-013"
+      ],
+      "name": "Token Market Activity",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-RESEARCH-MARKET",
+      "pricing_drivers": [
+        "endpoint_calls"
+      ],
+      "pricing_role": "MICRO",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "What are this token's current buy sell volume and trade-count facts?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "READY_ATOMIC",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-018",
+      "skill_type": "ATOMIC_QUERY",
+      "slug": "token-market-activity",
+      "stage": "RESEARCH",
+      "state": "STATELESS_CURRENT",
+      "unapproved_endpoint_ids": [],
+      "wave": "A_PUBLIC_ATOMIC",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/defi/v3/token/trade-data/single"
+      ]
+    },
+    {
+      "answer_status": "ATOMIC_EVALUATION_READY",
+      "capability_path": "research/creation/token-creation-evidence",
+      "difficulty": "L1",
+      "domain": "creation",
+      "endpoint_ids": [
+        "EP-029"
+      ],
+      "name": "Token Creation Evidence",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-RESEARCH-CREATION",
+      "pricing_drivers": [
+        "endpoint_calls"
+      ],
+      "pricing_role": "MICRO",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "What creation transaction and creator evidence is available for this token?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "READY_ATOMIC",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-019",
+      "skill_type": "ATOMIC_QUERY",
+      "slug": "token-creation-evidence",
+      "stage": "RESEARCH",
+      "state": "STATELESS_CURRENT",
+      "unapproved_endpoint_ids": [],
+      "wave": "A_PUBLIC_ATOMIC",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/defi/token_creation_info"
+      ]
+    },
+    {
+      "answer_status": "ATOMIC_EVALUATION_READY",
+      "capability_path": "research/chart/token-kline-data",
+      "difficulty": "L1",
+      "domain": "chart",
+      "endpoint_ids": [
+        "EP-023"
+      ],
+      "name": "Token Kline Data",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-RESEARCH-CHART",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "historical_window"
+      ],
+      "pricing_role": "MICRO",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "What OHLCV candles exist for this token and time range?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "READY_ATOMIC",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-020",
+      "skill_type": "ATOMIC_QUERY",
+      "slug": "token-kline-data",
+      "stage": "RESEARCH",
+      "state": "HISTORICAL_QUERY",
+      "unapproved_endpoint_ids": [],
+      "wave": "A_PUBLIC_ATOMIC",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/defi/v3/ohlcv"
+      ]
+    },
+    {
+      "answer_status": "ATOMIC_EVALUATION_READY",
+      "capability_path": "research/history/historical-price-at-time",
+      "difficulty": "L1",
+      "domain": "history",
+      "endpoint_ids": [
+        "EP-066"
+      ],
+      "name": "Historical Price at Time",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-RESEARCH-HISTORY",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "historical_window"
+      ],
+      "pricing_role": "MICRO",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "What indexed token price is available at the requested timestamp?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "READY_ATOMIC",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-021",
+      "skill_type": "ATOMIC_QUERY",
+      "slug": "historical-price-at-time",
+      "stage": "RESEARCH",
+      "state": "HISTORICAL_QUERY",
+      "unapproved_endpoint_ids": [],
+      "wave": "A_PUBLIC_ATOMIC",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/defi/historical_price_unix"
+      ]
+    },
+    {
+      "answer_status": "ATOMIC_EVALUATION_READY",
+      "capability_path": "research/pools/token-markets-and-pools",
+      "difficulty": "L1",
+      "domain": "pools",
+      "endpoint_ids": [
+        "EP-019"
+      ],
+      "name": "Token Markets and Pools",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-RESEARCH-POOLS",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "pagination"
+      ],
+      "pricing_role": "MICRO",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "On which indexed pools and DEX markets is this token traded?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "READY_ATOMIC",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-022",
+      "skill_type": "ATOMIC_QUERY",
+      "slug": "token-markets-and-pools",
+      "stage": "RESEARCH",
+      "state": "STATELESS_CURRENT",
+      "unapproved_endpoint_ids": [],
+      "wave": "B_ENDPOINT_EXPANSION",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/defi/v2/markets"
+      ]
+    },
+    {
+      "answer_status": "NOT_FORWARD_TESTED",
+      "capability_path": "research/liquidity/token-liquidity-history",
+      "difficulty": "L2",
+      "domain": "liquidity",
+      "endpoint_ids": [
+        "EP-011",
+        "EP-013"
+      ],
+      "name": "Liquidity to Volume Context",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-RESEARCH-LIQUIDITY",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "multi_endpoint",
+        "historical_window"
+      ],
+      "pricing_role": "LOW",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "How large is this token's current indexed liquidity relative to recent indexed volume?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "EVIDENCE_ONLY_ANALYSIS",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-023",
+      "skill_type": "ATOMIC_ANALYSIS",
+      "slug": "token-liquidity-history",
+      "stage": "RESEARCH",
+      "state": "STATELESS_CURRENT",
+      "unapproved_endpoint_ids": [],
+      "wave": "B_ENDPOINT_EXPANSION",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/defi/v3/token/market-data",
+        "/x402/defi/v3/token/trade-data/single"
+      ]
+    },
+    {
+      "answer_status": "ATOMIC_EVALUATION_READY",
+      "capability_path": "research/holders/holder-distribution",
+      "difficulty": "L1",
+      "domain": "holders",
+      "endpoint_ids": [
+        "EP-031"
+      ],
+      "name": "Holder Distribution",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-RESEARCH-HOLDERS",
+      "pricing_drivers": [
+        "endpoint_calls"
+      ],
+      "pricing_role": "MICRO",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "What holder distribution is currently indexed for this token?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "READY_ATOMIC",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-024",
+      "skill_type": "ATOMIC_QUERY",
+      "slug": "holder-distribution",
+      "stage": "RESEARCH",
+      "state": "STATELESS_CURRENT",
+      "unapproved_endpoint_ids": [],
+      "wave": "A_PUBLIC_ATOMIC",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/holder/v1/distribution"
+      ]
+    },
+    {
+      "answer_status": "NOT_FORWARD_TESTED",
+      "capability_path": "research/holders/holder-profile",
+      "difficulty": "L1",
+      "domain": "holders",
+      "endpoint_ids": [
+        "EP-031"
+      ],
+      "name": "Holder Concentration Band",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-RESEARCH-HOLDERS",
+      "pricing_drivers": [
+        "endpoint_calls"
+      ],
+      "pricing_role": "MICRO",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "How many observed holders fall within the supplied concentration band?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "EVIDENCE_ONLY_ANALYSIS",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-025",
+      "skill_type": "ATOMIC_ANALYSIS",
+      "slug": "holder-profile",
+      "stage": "RESEARCH",
+      "state": "STATELESS_CURRENT",
+      "unapproved_endpoint_ids": [],
+      "wave": "A_PUBLIC_ATOMIC",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/holder/v1/distribution"
+      ]
+    },
+    {
+      "answer_status": "ATOMIC_EVALUATION_READY",
+      "capability_path": "research/holders/holder-positions",
+      "difficulty": "L1",
+      "domain": "holders",
+      "endpoint_ids": [
+        "EP-031"
+      ],
+      "name": "Holder Balance Ranking",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-RESEARCH-HOLDERS",
+      "pricing_drivers": [
+        "endpoint_calls"
+      ],
+      "pricing_role": "MICRO",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "Which observed holders rank highest by token balance?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "READY_ATOMIC",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-026",
+      "skill_type": "ATOMIC_QUERY",
+      "slug": "holder-positions",
+      "stage": "RESEARCH",
+      "state": "STATELESS_CURRENT",
+      "unapproved_endpoint_ids": [],
+      "wave": "A_PUBLIC_ATOMIC",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/holder/v1/distribution"
+      ]
+    },
+    {
+      "answer_status": "NOT_FORWARD_TESTED",
+      "capability_path": "research/holders/holder-count-history",
+      "difficulty": "L1",
+      "domain": "holders",
+      "endpoint_ids": [
+        "EP-031"
+      ],
+      "name": "Holder Count Change",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-RESEARCH-HOLDERS",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "historical_window"
+      ],
+      "pricing_role": "MICRO",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "How did the current observed holder count change from the supplied baseline?",
+      "readiness": "NEEDS_BASELINE",
+      "runtime_status": "EVIDENCE_ONLY_BASELINE",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-027",
+      "skill_type": "MONITOR",
+      "slug": "holder-count-history",
+      "stage": "RESEARCH",
+      "state": "CALLER_BASELINE",
+      "unapproved_endpoint_ids": [],
+      "wave": "A_PUBLIC_ATOMIC",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/holder/v1/distribution"
+      ]
+    },
+    {
+      "answer_status": "NOT_FORWARD_TESTED",
+      "capability_path": "research/holders/holder-category-history",
+      "difficulty": "L1",
+      "domain": "holders",
+      "endpoint_ids": [
+        "EP-031"
+      ],
+      "name": "Holder Distribution Change",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-RESEARCH-HOLDERS",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "historical_window"
+      ],
+      "pricing_role": "MICRO",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "How did the current observed holder distribution change from the supplied baseline?",
+      "readiness": "NEEDS_BASELINE",
+      "runtime_status": "EVIDENCE_ONLY_BASELINE",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-028",
+      "skill_type": "MONITOR",
+      "slug": "holder-category-history",
+      "stage": "RESEARCH",
+      "state": "CALLER_BASELINE",
+      "unapproved_endpoint_ids": [],
+      "wave": "A_PUBLIC_ATOMIC",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/holder/v1/distribution"
+      ]
+    },
+    {
+      "answer_status": "ATOMIC_EVALUATION_READY",
+      "capability_path": "research/traders/top-token-traders",
+      "difficulty": "L1",
+      "domain": "traders",
+      "endpoint_ids": [
+        "EP-037"
+      ],
+      "name": "Top Token Traders",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-RESEARCH-TRADERS",
+      "pricing_drivers": [
+        "endpoint_calls"
+      ],
+      "pricing_role": "MICRO",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "Who are the top indexed traders for this token under the selected ordering?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "READY_ATOMIC",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-029",
+      "skill_type": "ATOMIC_QUERY",
+      "slug": "top-token-traders",
+      "stage": "RESEARCH",
+      "state": "STATELESS_CURRENT",
+      "unapproved_endpoint_ids": [],
+      "wave": "A_PUBLIC_ATOMIC",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/defi/v2/tokens/top_traders"
+      ]
+    },
+    {
+      "answer_status": "ATOMIC_EVALUATION_READY",
+      "capability_path": "research/trades/token-trade-feed",
+      "difficulty": "L1",
+      "domain": "trades",
+      "endpoint_ids": [
+        "EP-039"
+      ],
+      "name": "Token Trade Feed",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-RESEARCH-TRADES",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "historical_window"
+      ],
+      "pricing_role": "MICRO",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "What trades are indexed for this token in the requested window?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "READY_ATOMIC",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-030",
+      "skill_type": "ATOMIC_QUERY",
+      "slug": "token-trade-feed",
+      "stage": "RESEARCH",
+      "state": "HISTORICAL_QUERY",
+      "unapproved_endpoint_ids": [],
+      "wave": "A_PUBLIC_ATOMIC",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/defi/v3/token/txs"
+      ]
+    },
+    {
+      "answer_status": "ATOMIC_EVALUATION_READY",
+      "capability_path": "research/trades/large-token-trades",
+      "difficulty": "L1",
+      "domain": "trades",
+      "endpoint_ids": [
+        "EP-040"
+      ],
+      "name": "Large Token Trades",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-RESEARCH-TRADES",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "historical_window"
+      ],
+      "pricing_role": "MICRO",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "Which token trades exceed the requested size threshold?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "READY_ATOMIC",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-031",
+      "skill_type": "ATOMIC_QUERY",
+      "slug": "large-token-trades",
+      "stage": "RESEARCH",
+      "state": "HISTORICAL_QUERY",
+      "unapproved_endpoint_ids": [],
+      "wave": "B_ENDPOINT_EXPANSION",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/defi/v3/token/txs-by-volume"
+      ]
+    },
+    {
+      "answer_status": "ATOMIC_EVALUATION_READY",
+      "capability_path": "research/supply/mint-burn-activity",
+      "difficulty": "L1",
+      "domain": "supply",
+      "endpoint_ids": [
+        "EP-041"
+      ],
+      "name": "Mint and Burn Activity",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-RESEARCH-SUPPLY",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "historical_window"
+      ],
+      "pricing_role": "MICRO",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "Which mint or burn events are indexed for this token?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "READY_ATOMIC",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-032",
+      "skill_type": "ATOMIC_QUERY",
+      "slug": "mint-burn-activity",
+      "stage": "RESEARCH",
+      "state": "HISTORICAL_QUERY",
+      "unapproved_endpoint_ids": [],
+      "wave": "B_ENDPOINT_EXPANSION",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/defi/v3/token/mint-burn-txs"
+      ]
+    },
+    {
+      "answer_status": "ATOMIC_EVALUATION_READY",
+      "capability_path": "validate_signal/early-participants/first-buyers",
+      "difficulty": "L1",
+      "domain": "early_participants",
+      "endpoint_ids": [
+        "EP-046"
+      ],
+      "name": "First Buyers",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-VALIDATE-SIGNAL-EARLY-PARTICIPANTS",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "historical_window"
+      ],
+      "pricing_role": "MICRO",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "Which wallets were the earliest indexed buyers of this token?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "READY_ATOMIC",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-033",
+      "skill_type": "ATOMIC_QUERY",
+      "slug": "first-buyers",
+      "stage": "VALIDATE_SIGNAL",
+      "state": "HISTORICAL_QUERY",
+      "unapproved_endpoint_ids": [],
+      "wave": "A_PUBLIC_ATOMIC",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/defi/txs/token/seek_by_time"
+      ]
+    },
+    {
+      "answer_status": "NOT_FORWARD_TESTED",
+      "capability_path": "validate_signal/early-participants/early-buyer-current-positions",
+      "difficulty": "L2",
+      "domain": "early_participants",
+      "endpoint_ids": [
+        "EP-046",
+        "EP-039"
+      ],
+      "name": "Early Buyer Follow On Activity",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-VALIDATE-SIGNAL-EARLY-PARTICIPANTS",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "multi_endpoint"
+      ],
+      "pricing_role": "LOW",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "What later buy and sell activity is indexed for the earliest observed buyers?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "EVIDENCE_ONLY_ANALYSIS",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-034",
+      "skill_type": "ATOMIC_ANALYSIS",
+      "slug": "early-buyer-current-positions",
+      "stage": "VALIDATE_SIGNAL",
+      "state": "HISTORICAL_QUERY",
+      "unapproved_endpoint_ids": [],
+      "wave": "C_DERIVED_INTELLIGENCE",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/defi/txs/token/seek_by_time",
+        "/x402/defi/v3/token/txs"
+      ]
+    },
+    {
+      "answer_status": "NOT_FORWARD_TESTED",
+      "capability_path": "validate_signal/early-participants/early-buyer-churn",
+      "difficulty": "L2",
+      "domain": "early_participants",
+      "endpoint_ids": [
+        "EP-046",
+        "EP-039"
+      ],
+      "name": "Early Buyer Churn",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-VALIDATE-SIGNAL-EARLY-PARTICIPANTS",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "multi_endpoint",
+        "historical_window"
+      ],
+      "pricing_role": "LOW",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "How many earliest observed buyers later sold this token?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "EVIDENCE_ONLY_ANALYSIS",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-035",
+      "skill_type": "ATOMIC_ANALYSIS",
+      "slug": "early-buyer-churn",
+      "stage": "VALIDATE_SIGNAL",
+      "state": "HISTORICAL_QUERY",
+      "unapproved_endpoint_ids": [],
+      "wave": "C_DERIVED_INTELLIGENCE",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/defi/txs/token/seek_by_time",
+        "/x402/defi/v3/token/txs"
+      ]
+    },
+    {
+      "answer_status": "NOT_FORWARD_TESTED",
+      "capability_path": "validate_signal/early-participants/early-buyer-performance",
+      "difficulty": "L3",
+      "domain": "early_participants",
+      "endpoint_ids": [
+        "EP-046",
+        "EP-020",
+        "EP-066"
+      ],
+      "name": "Early Buyer Price Outcome",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-VALIDATE-SIGNAL-EARLY-PARTICIPANTS",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "multi_endpoint",
+        "historical_window",
+        "entity_count",
+        "pagination"
+      ],
+      "pricing_role": "MEDIUM",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "What indexed price outcomes followed the earliest observed buys?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "EVIDENCE_ONLY_ANALYSIS",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-036",
+      "skill_type": "COMPOSITE_ANALYSIS",
+      "slug": "early-buyer-performance",
+      "stage": "VALIDATE_SIGNAL",
+      "state": "HISTORICAL_QUERY",
+      "unapproved_endpoint_ids": [],
+      "wave": "C_DERIVED_INTELLIGENCE",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/defi/txs/token/seek_by_time",
+        "/x402/defi/price",
+        "/x402/defi/historical_price_unix"
+      ]
+    },
+    {
+      "answer_status": "NOT_FORWARD_TESTED",
+      "capability_path": "validate_signal/early-participants/early-buyer-funding-overlap",
+      "difficulty": "L2",
+      "domain": "early_participants",
+      "endpoint_ids": [
+        "EP-046"
+      ],
+      "name": "Early Buyer Timing Clusters",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-VALIDATE-SIGNAL-EARLY-PARTICIPANTS",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "multi_endpoint",
+        "historical_window"
+      ],
+      "pricing_role": "LOW",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "Which earliest observed buyers entered within the same caller-defined time cluster?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "EVIDENCE_ONLY_ANALYSIS",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-037",
+      "skill_type": "ATOMIC_ANALYSIS",
+      "slug": "early-buyer-funding-overlap",
+      "stage": "VALIDATE_SIGNAL",
+      "state": "HISTORICAL_QUERY",
+      "unapproved_endpoint_ids": [],
+      "wave": "C_DERIVED_INTELLIGENCE",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/defi/txs/token/seek_by_time"
+      ]
+    },
+    {
+      "answer_status": "NOT_FORWARD_TESTED",
+      "capability_path": "validate_signal/holders/holder-concentration-analysis",
+      "difficulty": "L2",
+      "domain": "holders",
+      "endpoint_ids": [
+        "EP-031"
+      ],
+      "name": "Holder Concentration Analysis",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-VALIDATE-SIGNAL-HOLDERS",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "multi_endpoint"
+      ],
+      "pricing_role": "LOW",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "What percentage of observed supply is controlled by the top N eligible holders?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "EVIDENCE_ONLY_ANALYSIS",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-038",
+      "skill_type": "ATOMIC_ANALYSIS",
+      "slug": "holder-concentration-analysis",
+      "stage": "VALIDATE_SIGNAL",
+      "state": "STATELESS_CURRENT",
+      "unapproved_endpoint_ids": [],
+      "wave": "C_DERIVED_INTELLIGENCE",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/holder/v1/distribution"
+      ]
+    },
+    {
+      "answer_status": "NOT_FORWARD_TESTED",
+      "capability_path": "validate_signal/holders/holder-category-composition",
+      "difficulty": "L2",
+      "domain": "holders",
+      "endpoint_ids": [
+        "EP-031"
+      ],
+      "name": "Holder Concentration Bands",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-VALIDATE-SIGNAL-HOLDERS",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "multi_endpoint"
+      ],
+      "pricing_role": "LOW",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "What share of observed holdings falls into each caller-defined concentration band?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "EVIDENCE_ONLY_ANALYSIS",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-039",
+      "skill_type": "ATOMIC_ANALYSIS",
+      "slug": "holder-category-composition",
+      "stage": "VALIDATE_SIGNAL",
+      "state": "STATELESS_CURRENT",
+      "unapproved_endpoint_ids": [],
+      "wave": "C_DERIVED_INTELLIGENCE",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/holder/v1/distribution"
+      ]
+    },
+    {
+      "answer_status": "NOT_FORWARD_TESTED",
+      "capability_path": "validate_signal/holders/smart-money-holder-presence",
+      "difficulty": "L1",
+      "domain": "holders",
+      "endpoint_ids": [
+        "EP-008",
+        "EP-037"
+      ],
+      "name": "Smart Money Token Presence",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-VALIDATE-SIGNAL-HOLDERS",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "multi_endpoint"
+      ],
+      "pricing_role": "MICRO",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "Is this token present in the Birdeye smart-money feed and what top-trader evidence supports it?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "EVIDENCE_ONLY_ANALYSIS",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-040",
+      "skill_type": "ATOMIC_ANALYSIS",
+      "slug": "smart-money-holder-presence",
+      "stage": "VALIDATE_SIGNAL",
+      "state": "STATELESS_CURRENT",
+      "unapproved_endpoint_ids": [],
+      "wave": "A_PUBLIC_ATOMIC",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/smart-money/v1/token/list",
+        "/x402/defi/v2/tokens/top_traders"
+      ]
+    },
+    {
+      "answer_status": "ATOMIC_EVALUATION_READY",
+      "capability_path": "validate_signal/traders/top-trader-performance",
+      "difficulty": "L2",
+      "domain": "traders",
+      "endpoint_ids": [
+        "EP-037"
+      ],
+      "name": "Top Trader Performance",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-VALIDATE-SIGNAL-TRADERS",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "multi_endpoint",
+        "historical_window",
+        "entity_count",
+        "pagination"
+      ],
+      "pricing_role": "LOW",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "What indexed performance fields are reported for this token's top traders?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "READY_ATOMIC",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-041",
+      "skill_type": "ATOMIC_QUERY",
+      "slug": "top-trader-performance",
+      "stage": "VALIDATE_SIGNAL",
+      "state": "HISTORICAL_QUERY",
+      "unapproved_endpoint_ids": [],
+      "wave": "C_DERIVED_INTELLIGENCE",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/defi/v2/tokens/top_traders"
+      ]
+    },
+    {
+      "answer_status": "ATOMIC_EVALUATION_READY",
+      "capability_path": "validate_signal/wallet/wallet-current-holdings",
+      "difficulty": "L1",
+      "domain": "wallet",
+      "endpoint_ids": [
+        "EP-048"
+      ],
+      "name": "Wallet Traded Tokens",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-VALIDATE-SIGNAL-WALLET",
+      "pricing_drivers": [
+        "endpoint_calls"
+      ],
+      "pricing_role": "MICRO",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "Which tokens did this wallet trade in the requested window?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "READY_ATOMIC",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-042",
+      "skill_type": "ATOMIC_QUERY",
+      "slug": "wallet-current-holdings",
+      "stage": "VALIDATE_SIGNAL",
+      "state": "HISTORICAL_QUERY",
+      "unapproved_endpoint_ids": [],
+      "wave": "A_PUBLIC_ATOMIC",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/trader/txs/seek_by_time"
+      ]
+    },
+    {
+      "answer_status": "NOT_FORWARD_TESTED",
+      "capability_path": "validate_signal/wallet/wallet-pnl-stats",
+      "difficulty": "L1",
+      "domain": "wallet",
+      "endpoint_ids": [
+        "EP-048",
+        "EP-066"
+      ],
+      "name": "Wallet Reconstructed PnL",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-VALIDATE-SIGNAL-WALLET",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "historical_window"
+      ],
+      "pricing_role": "MICRO",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "What realized trade PnL can be reconstructed for this wallet and period?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "EVIDENCE_ONLY_ANALYSIS",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-043",
+      "skill_type": "COMPOSITE_ANALYSIS",
+      "slug": "wallet-pnl-stats",
+      "stage": "VALIDATE_SIGNAL",
+      "state": "HISTORICAL_QUERY",
+      "unapproved_endpoint_ids": [],
+      "wave": "A_PUBLIC_ATOMIC",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/trader/txs/seek_by_time",
+        "/x402/defi/historical_price_unix"
+      ]
+    },
+    {
+      "answer_status": "NOT_FORWARD_TESTED",
+      "capability_path": "validate_signal/wallet/wallet-token-pnl",
+      "difficulty": "L1",
+      "domain": "wallet",
+      "endpoint_ids": [
+        "EP-048",
+        "EP-066"
+      ],
+      "name": "Wallet Reconstructed Token PnL",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-VALIDATE-SIGNAL-WALLET",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "historical_window"
+      ],
+      "pricing_role": "MICRO",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "What per-token realized trade PnL can be reconstructed for this wallet and period?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "EVIDENCE_ONLY_ANALYSIS",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-044",
+      "skill_type": "COMPOSITE_ANALYSIS",
+      "slug": "wallet-token-pnl",
+      "stage": "VALIDATE_SIGNAL",
+      "state": "HISTORICAL_QUERY",
+      "unapproved_endpoint_ids": [],
+      "wave": "A_PUBLIC_ATOMIC",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/trader/txs/seek_by_time",
+        "/x402/defi/historical_price_unix"
+      ]
+    },
+    {
+      "answer_status": "NOT_FORWARD_TESTED",
+      "capability_path": "validate_signal/wallet/wallet-outcome-distribution",
+      "difficulty": "L2",
+      "domain": "wallet",
+      "endpoint_ids": [
+        "EP-048",
+        "EP-066"
+      ],
+      "name": "Wallet Outcome Distribution",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-VALIDATE-SIGNAL-WALLET",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "multi_endpoint",
+        "historical_window"
+      ],
+      "pricing_role": "LOW",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "How are reconstructed closed-trade outcomes distributed across wins losses and flat results?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "EVIDENCE_ONLY_ANALYSIS",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-045",
+      "skill_type": "ATOMIC_ANALYSIS",
+      "slug": "wallet-outcome-distribution",
+      "stage": "VALIDATE_SIGNAL",
+      "state": "HISTORICAL_QUERY",
+      "unapproved_endpoint_ids": [],
+      "wave": "C_DERIVED_INTELLIGENCE",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/trader/txs/seek_by_time",
+        "/x402/defi/historical_price_unix"
+      ]
+    },
+    {
+      "answer_status": "NOT_FORWARD_TESTED",
+      "capability_path": "validate_signal/relationships/participant-independence",
+      "difficulty": "L3",
+      "domain": "relationships",
+      "endpoint_ids": [
+        "EP-039",
+        "EP-048"
+      ],
+      "name": "Wallet Activity Overlap",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-VALIDATE-SIGNAL-RELATIONSHIPS",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "multi_endpoint",
+        "historical_window",
+        "entity_count",
+        "pagination"
+      ],
+      "pricing_role": "MEDIUM",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "How much same-token trading-time overlap is observed among these wallets?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "EVIDENCE_ONLY_ANALYSIS",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-046",
+      "skill_type": "COMPOSITE_ANALYSIS",
+      "slug": "participant-independence",
+      "stage": "VALIDATE_SIGNAL",
+      "state": "HISTORICAL_QUERY",
+      "unapproved_endpoint_ids": [],
+      "wave": "C_DERIVED_INTELLIGENCE",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/defi/v3/token/txs",
+        "/x402/trader/txs/seek_by_time"
+      ]
+    },
+    {
+      "answer_status": "NOT_FORWARD_TESTED",
+      "capability_path": "validate_signal/clusters/participant-signal-convergence",
+      "difficulty": "L2",
+      "domain": "clusters",
+      "endpoint_ids": [
+        "EP-037",
+        "EP-039"
+      ],
+      "name": "Participant Signal Convergence",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-VALIDATE-SIGNAL-CLUSTERS",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "multi_endpoint",
+        "historical_window"
+      ],
+      "pricing_role": "LOW",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "How many distinct observed wallets acted in the same direction on this token?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "EVIDENCE_ONLY_ANALYSIS",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-047",
+      "skill_type": "ATOMIC_ANALYSIS",
+      "slug": "participant-signal-convergence",
+      "stage": "VALIDATE_SIGNAL",
+      "state": "HISTORICAL_QUERY",
+      "unapproved_endpoint_ids": [],
+      "wave": "C_DERIVED_INTELLIGENCE",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/defi/v2/tokens/top_traders",
+        "/x402/defi/v3/token/txs"
+      ]
+    },
+    {
+      "answer_status": "NOT_FORWARD_TESTED",
+      "capability_path": "plan_entry/price/price-range-position",
+      "difficulty": "L2",
+      "domain": "price",
+      "endpoint_ids": [
+        "EP-020",
+        "EP-023"
+      ],
+      "name": "Price Range Position",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-PLAN-ENTRY-PRICE",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "multi_endpoint",
+        "historical_window"
+      ],
+      "pricing_role": "LOW",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "Where is the current price within the user-selected historical range?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "EVIDENCE_ONLY_ANALYSIS",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-048",
+      "skill_type": "ATOMIC_ANALYSIS",
+      "slug": "price-range-position",
+      "stage": "PLAN_ENTRY",
+      "state": "HISTORICAL_QUERY",
+      "unapproved_endpoint_ids": [],
+      "wave": "C_DERIVED_INTELLIGENCE",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/defi/price",
+        "/x402/defi/v3/ohlcv"
+      ]
+    },
+    {
+      "answer_status": "NOT_FORWARD_TESTED",
+      "capability_path": "plan_entry/volatility/volatility-context",
+      "difficulty": "L2",
+      "domain": "volatility",
+      "endpoint_ids": [
+        "EP-023"
+      ],
+      "name": "Volatility Context",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-PLAN-ENTRY-VOLATILITY",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "historical_window"
+      ],
+      "pricing_role": "LOW",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "How volatile was this token over the selected window and resolution?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "EVIDENCE_ONLY_ANALYSIS",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-049",
+      "skill_type": "ATOMIC_ANALYSIS",
+      "slug": "volatility-context",
+      "stage": "PLAN_ENTRY",
+      "state": "HISTORICAL_QUERY",
+      "unapproved_endpoint_ids": [],
+      "wave": "C_DERIVED_INTELLIGENCE",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/defi/v3/ohlcv"
+      ]
+    },
+    {
+      "answer_status": "NOT_FORWARD_TESTED",
+      "capability_path": "plan_entry/market-structure/volume-price-structure",
+      "difficulty": "L2",
+      "domain": "market_structure",
+      "endpoint_ids": [
+        "EP-023",
+        "EP-039"
+      ],
+      "name": "Volume and Price Structure",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-PLAN-ENTRY-MARKET-STRUCTURE",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "multi_endpoint",
+        "historical_window"
+      ],
+      "pricing_role": "LOW",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "How did volume behave alongside price over the selected period?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "EVIDENCE_ONLY_ANALYSIS",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-050",
+      "skill_type": "ATOMIC_ANALYSIS",
+      "slug": "volume-price-structure",
+      "stage": "PLAN_ENTRY",
+      "state": "HISTORICAL_QUERY",
+      "unapproved_endpoint_ids": [],
+      "wave": "C_DERIVED_INTELLIGENCE",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/defi/v3/ohlcv",
+        "/x402/defi/v3/token/txs"
+      ]
+    },
+    {
+      "answer_status": "NOT_FORWARD_TESTED",
+      "capability_path": "plan_entry/participants/observed-wallet-entry-price",
+      "difficulty": "L2",
+      "domain": "participants",
+      "endpoint_ids": [
+        "EP-048",
+        "EP-066"
+      ],
+      "name": "Observed Wallet Entry Price",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-PLAN-ENTRY-PARTICIPANTS",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "multi_endpoint",
+        "historical_window"
+      ],
+      "pricing_role": "LOW",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "At what indexed prices did the selected wallet enter this token?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "EVIDENCE_ONLY_ANALYSIS",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-051",
+      "skill_type": "ATOMIC_ANALYSIS",
+      "slug": "observed-wallet-entry-price",
+      "stage": "PLAN_ENTRY",
+      "state": "HISTORICAL_QUERY",
+      "unapproved_endpoint_ids": [],
+      "wave": "C_DERIVED_INTELLIGENCE",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/trader/txs/seek_by_time",
+        "/x402/defi/historical_price_unix"
+      ]
+    },
+    {
+      "answer_status": "NOT_FORWARD_TESTED",
+      "capability_path": "plan_entry/liquidity/size-to-liquidity-context",
+      "difficulty": "L2",
+      "domain": "liquidity",
+      "endpoint_ids": [
+        "EP-011"
+      ],
+      "name": "Size to Liquidity Context",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-PLAN-ENTRY-LIQUIDITY",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "scenario_count"
+      ],
+      "pricing_role": "LOW",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "How large is the proposed position relative to current indexed liquidity?",
+      "readiness": "CONDITIONAL_PROXY",
+      "runtime_status": "EVIDENCE_ONLY_CONDITIONAL",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-052",
+      "skill_type": "ATOMIC_ANALYSIS",
+      "slug": "size-to-liquidity-context",
+      "stage": "PLAN_ENTRY",
+      "state": "CALLER_SCENARIO",
+      "unapproved_endpoint_ids": [],
+      "wave": "C_DERIVED_INTELLIGENCE",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/defi/v3/token/market-data"
+      ]
+    },
+    {
+      "answer_status": "NOT_FORWARD_TESTED",
+      "capability_path": "plan_entry/latency/entry-delay-sensitivity",
+      "difficulty": "L3",
+      "domain": "latency",
+      "endpoint_ids": [
+        "EP-048",
+        "EP-066"
+      ],
+      "name": "Entry Delay Sensitivity",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-PLAN-ENTRY-LATENCY",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "multi_endpoint",
+        "entity_count",
+        "pagination",
+        "scenario_count"
+      ],
+      "pricing_role": "MEDIUM",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "How did observed price change under the supplied entry-delay assumptions?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "EVIDENCE_ONLY_ANALYSIS",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-053",
+      "skill_type": "COMPARATIVE",
+      "slug": "entry-delay-sensitivity",
+      "stage": "PLAN_ENTRY",
+      "state": "CALLER_SCENARIO",
+      "unapproved_endpoint_ids": [],
+      "wave": "C_DERIVED_INTELLIGENCE",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/trader/txs/seek_by_time",
+        "/x402/defi/historical_price_unix"
+      ]
+    },
+    {
+      "answer_status": "ATOMIC_EVALUATION_READY",
+      "capability_path": "support_external_execution/verification/token-pool-verification",
+      "difficulty": "L2",
+      "domain": "verification",
+      "endpoint_ids": [
+        "EP-009",
+        "EP-017"
+      ],
+      "name": "Token and Pool Verification",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-SUPPORT-EXTERNAL-EXECUTION-VERIFICATION",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "multi_endpoint"
+      ],
+      "pricing_role": "LOW",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "Does the supplied token chain and pool identity resolve consistently?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "READY_ATOMIC",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-054",
+      "skill_type": "UTILITY",
+      "slug": "token-pool-verification",
+      "stage": "SUPPORT_EXTERNAL_EXECUTION",
+      "state": "STATELESS_CURRENT",
+      "unapproved_endpoint_ids": [],
+      "wave": "B_ENDPOINT_EXPANSION",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/defi/v3/token/meta-data/single",
+        "/x402/defi/v3/pair/overview/single"
+      ]
+    },
+    {
+      "answer_status": "NOT_FORWARD_TESTED",
+      "capability_path": "support_external_execution/snapshot/fresh-pre-action-snapshot",
+      "difficulty": "L2",
+      "domain": "snapshot",
+      "endpoint_ids": [
+        "EP-009",
+        "EP-011"
+      ],
+      "name": "Fresh Pre Action Snapshot",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-SUPPORT-EXTERNAL-EXECUTION-SNAPSHOT",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "multi_endpoint",
+        "entity_count",
+        "pagination"
+      ],
+      "pricing_role": "LOW",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "What are the current timestamped token market and liquidity facts before an external action?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "EVIDENCE_ONLY_ANALYSIS",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-055",
+      "skill_type": "COMPOSITE_ANALYSIS",
+      "slug": "fresh-pre-action-snapshot",
+      "stage": "SUPPORT_EXTERNAL_EXECUTION",
+      "state": "STATELESS_CURRENT",
+      "unapproved_endpoint_ids": [],
+      "wave": "C_DERIVED_INTELLIGENCE",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/defi/v3/token/meta-data/single",
+        "/x402/defi/v3/token/market-data"
+      ]
+    },
+    {
+      "answer_status": "ATOMIC_EVALUATION_READY",
+      "capability_path": "support_external_execution/freshness/index-freshness",
+      "difficulty": "L1",
+      "domain": "freshness",
+      "endpoint_ids": [
+        "EP-045"
+      ],
+      "name": "Index Freshness",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-SUPPORT-EXTERNAL-EXECUTION-FRESHNESS",
+      "pricing_drivers": [
+        "endpoint_calls"
+      ],
+      "pricing_role": "MICRO",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "What is the latest indexed block or timestamp for this chain?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "READY_ATOMIC",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-056",
+      "skill_type": "UTILITY",
+      "slug": "index-freshness",
+      "stage": "SUPPORT_EXTERNAL_EXECUTION",
+      "state": "STATELESS_CURRENT",
+      "unapproved_endpoint_ids": [],
+      "wave": "B_ENDPOINT_EXPANSION",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/defi/v3/txs/latest-block"
+      ]
+    },
+    {
+      "answer_status": "ATOMIC_EVALUATION_READY",
+      "capability_path": "current_activity/wallet/wallet-trade-history",
+      "difficulty": "L1",
+      "domain": "wallet",
+      "endpoint_ids": [
+        "EP-048"
+      ],
+      "name": "Wallet Trade History",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-CURRENT-ACTIVITY-WALLET",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "historical_window"
+      ],
+      "pricing_role": "MICRO",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "What indexed trades did this wallet make in the requested window?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "READY_ATOMIC",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-057",
+      "skill_type": "ATOMIC_QUERY",
+      "slug": "wallet-trade-history",
+      "stage": "CURRENT_ACTIVITY",
+      "state": "HISTORICAL_QUERY",
+      "unapproved_endpoint_ids": [],
+      "wave": "A_PUBLIC_ATOMIC",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/trader/txs/seek_by_time"
+      ]
+    },
+    {
+      "answer_status": "ATOMIC_EVALUATION_READY",
+      "capability_path": "current_activity/token/token-activity-feed",
+      "difficulty": "L1",
+      "domain": "token",
+      "endpoint_ids": [
+        "EP-039"
+      ],
+      "name": "Token Activity Feed",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-CURRENT-ACTIVITY-TOKEN",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "historical_window"
+      ],
+      "pricing_role": "MICRO",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "What indexed buy and sell activity occurred for this token?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "READY_ATOMIC",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-058",
+      "skill_type": "ATOMIC_QUERY",
+      "slug": "token-activity-feed",
+      "stage": "CURRENT_ACTIVITY",
+      "state": "HISTORICAL_QUERY",
+      "unapproved_endpoint_ids": [],
+      "wave": "A_PUBLIC_ATOMIC",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/defi/v3/token/txs"
+      ]
+    },
+    {
+      "answer_status": "ATOMIC_EVALUATION_READY",
+      "capability_path": "current_activity/wallet/wallet-sell-feed",
+      "difficulty": "L1",
+      "domain": "wallet",
+      "endpoint_ids": [
+        "EP-048"
+      ],
+      "name": "Wallet Sell Feed",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-CURRENT-ACTIVITY-WALLET",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "historical_window"
+      ],
+      "pricing_role": "MICRO",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "Which sells did this wallet make in the requested window?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "READY_ATOMIC",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-059",
+      "skill_type": "ATOMIC_QUERY",
+      "slug": "wallet-sell-feed",
+      "stage": "CURRENT_ACTIVITY",
+      "state": "HISTORICAL_QUERY",
+      "unapproved_endpoint_ids": [],
+      "wave": "A_PUBLIC_ATOMIC",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/trader/txs/seek_by_time"
+      ]
+    },
+    {
+      "answer_status": "NOT_FORWARD_TESTED",
+      "capability_path": "current_activity/wallet/wallet-balance-changes",
+      "difficulty": "L1",
+      "domain": "wallet",
+      "endpoint_ids": [
+        "EP-048"
+      ],
+      "name": "Wallet Trade Net Flow",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-CURRENT-ACTIVITY-WALLET",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "historical_window"
+      ],
+      "pricing_role": "MICRO",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "Which token net-flow changes are observed in this wallet's indexed trades?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "EVIDENCE_ONLY_ANALYSIS",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-060",
+      "skill_type": "ATOMIC_ANALYSIS",
+      "slug": "wallet-balance-changes",
+      "stage": "CURRENT_ACTIVITY",
+      "state": "HISTORICAL_QUERY",
+      "unapproved_endpoint_ids": [],
+      "wave": "A_PUBLIC_ATOMIC",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/trader/txs/seek_by_time"
+      ]
+    },
+    {
+      "answer_status": "NOT_FORWARD_TESTED",
+      "capability_path": "current_activity/wallet/wallet-transfers",
+      "difficulty": "L1",
+      "domain": "wallet",
+      "endpoint_ids": [
+        "EP-061",
+        "EP-078"
+      ],
+      "name": "Wallet Token Transfers",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-CURRENT-ACTIVITY-WALLET",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "historical_window"
+      ],
+      "pricing_role": "MICRO",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "Which indexed transfers for the supplied token involve this wallet in the requested window?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "EVIDENCE_ONLY_ANALYSIS",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-061",
+      "skill_type": "ATOMIC_ANALYSIS",
+      "slug": "wallet-transfers",
+      "stage": "CURRENT_ACTIVITY",
+      "state": "HISTORICAL_QUERY",
+      "unapproved_endpoint_ids": [],
+      "wave": "A_PUBLIC_ATOMIC",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/token/v1/transfer",
+        "/x402/token/v1/transfer/total"
+      ]
+    },
+    {
+      "answer_status": "ATOMIC_EVALUATION_READY",
+      "capability_path": "current_activity/token/token-transfers",
+      "difficulty": "L1",
+      "domain": "token",
+      "endpoint_ids": [
+        "EP-061",
+        "EP-078"
+      ],
+      "name": "Token Transfers",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-CURRENT-ACTIVITY-TOKEN",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "historical_window"
+      ],
+      "pricing_role": "MICRO",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "Which transfers and transfer total are indexed for this token and window?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "READY_ATOMIC",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-062",
+      "skill_type": "ATOMIC_QUERY",
+      "slug": "token-transfers",
+      "stage": "CURRENT_ACTIVITY",
+      "state": "HISTORICAL_QUERY",
+      "unapproved_endpoint_ids": [],
+      "wave": "A_PUBLIC_ATOMIC",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/token/v1/transfer",
+        "/x402/token/v1/transfer/total"
+      ]
+    },
+    {
+      "answer_status": "NOT_FORWARD_TESTED",
+      "capability_path": "current_activity/smart-money/smart-money-trades",
+      "difficulty": "L2",
+      "domain": "smart_money",
+      "endpoint_ids": [
+        "EP-008",
+        "EP-037",
+        "EP-039"
+      ],
+      "name": "Smart Money Trades",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-CURRENT-ACTIVITY-SMART-MONEY",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "multi_endpoint",
+        "entity_count",
+        "pagination"
+      ],
+      "pricing_role": "LOW",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "What are supported smart-money wallets doing now?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "EVIDENCE_ONLY_ANALYSIS",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-063",
+      "skill_type": "COMPOSITE_ANALYSIS",
+      "slug": "smart-money-trades",
+      "stage": "CURRENT_ACTIVITY",
+      "state": "CURRENT_WINDOW",
+      "unapproved_endpoint_ids": [],
+      "wave": "B_ENDPOINT_EXPANSION",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/smart-money/v1/token/list",
+        "/x402/defi/v2/tokens/top_traders",
+        "/x402/defi/v3/token/txs"
+      ]
+    },
+    {
+      "answer_status": "ATOMIC_EVALUATION_READY",
+      "capability_path": "current_activity/kol/kol-trades",
+      "difficulty": "L1",
+      "domain": "kol",
+      "endpoint_ids": [
+        "EP-048"
+      ],
+      "name": "KOL Wallet Trades",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-CURRENT-ACTIVITY-KOL",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "data_gap"
+      ],
+      "pricing_role": "NOT_PRICED",
+      "public_surface": "DOCUMENTED_GAP",
+      "question": "What trades are indexed now for the caller-supplied KOL wallets?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "READY_ATOMIC",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-064",
+      "skill_type": "ATOMIC_QUERY",
+      "slug": "kol-trades",
+      "stage": "CURRENT_ACTIVITY",
+      "state": "CURRENT_WINDOW",
+      "unapproved_endpoint_ids": [],
+      "wave": "E_GAP_DEPENDENT",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/trader/txs/seek_by_time"
+      ]
+    },
+    {
+      "answer_status": "NOT_FORWARD_TESTED",
+      "capability_path": "monitor/wallet/wallet-position-delta",
+      "difficulty": "L3",
+      "domain": "wallet",
+      "endpoint_ids": [
+        "EP-048"
+      ],
+      "name": "Wallet Trade Exposure Delta",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-MONITOR-WALLET",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "multi_endpoint",
+        "baseline",
+        "poll_frequency",
+        "state_retention"
+      ],
+      "pricing_role": "MEDIUM",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "How did this wallet's observed trade net flow by token change from the supplied baseline?",
+      "readiness": "NEEDS_BASELINE",
+      "runtime_status": "EVIDENCE_ONLY_BASELINE",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-065",
+      "skill_type": "MONITOR",
+      "slug": "wallet-position-delta",
+      "stage": "MONITOR",
+      "state": "CALLER_BASELINE",
+      "unapproved_endpoint_ids": [],
+      "wave": "D_STATEFUL",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/trader/txs/seek_by_time"
+      ]
+    },
+    {
+      "answer_status": "NOT_FORWARD_TESTED",
+      "capability_path": "monitor/wallet/wallet-pnl-delta",
+      "difficulty": "L3",
+      "domain": "wallet",
+      "endpoint_ids": [
+        "EP-048"
+      ],
+      "name": "Reconstructed Wallet PnL Delta",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-MONITOR-WALLET",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "multi_endpoint",
+        "baseline",
+        "poll_frequency",
+        "state_retention"
+      ],
+      "pricing_role": "MEDIUM",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "How did this wallet's reconstructed realized trade PnL change from the supplied baseline?",
+      "readiness": "NEEDS_BASELINE",
+      "runtime_status": "EVIDENCE_ONLY_BASELINE",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-066",
+      "skill_type": "MONITOR",
+      "slug": "wallet-pnl-delta",
+      "stage": "MONITOR",
+      "state": "CALLER_BASELINE",
+      "unapproved_endpoint_ids": [],
+      "wave": "D_STATEFUL",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/trader/txs/seek_by_time"
+      ]
+    },
+    {
+      "answer_status": "NOT_FORWARD_TESTED",
+      "capability_path": "monitor/wallet/wallet-behavior-deviation",
+      "difficulty": "L4",
+      "domain": "wallet",
+      "endpoint_ids": [
+        "EP-048"
+      ],
+      "name": "Wallet Behavior Deviation",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-MONITOR-WALLET",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "multi_endpoint",
+        "baseline",
+        "poll_frequency",
+        "state_retention"
+      ],
+      "pricing_role": "HIGH",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "How did this wallet's recent indexed trading behavior differ from its supplied baseline?",
+      "readiness": "NEEDS_BASELINE",
+      "runtime_status": "EVIDENCE_ONLY_BASELINE",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-067",
+      "skill_type": "MONITOR",
+      "slug": "wallet-behavior-deviation",
+      "stage": "MONITOR",
+      "state": "CALLER_BASELINE",
+      "unapproved_endpoint_ids": [],
+      "wave": "D_STATEFUL",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/trader/txs/seek_by_time"
+      ]
+    },
+    {
+      "answer_status": "NOT_FORWARD_TESTED",
+      "capability_path": "monitor/cohort/wallet-cohort-exposure-delta",
+      "difficulty": "L4",
+      "domain": "cohort",
+      "endpoint_ids": [
+        "EP-048"
+      ],
+      "name": "Wallet Cohort Trade Flow Delta",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-MONITOR-COHORT",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "multi_endpoint",
+        "baseline",
+        "poll_frequency",
+        "state_retention"
+      ],
+      "pricing_role": "HIGH",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "Which wallets in the supplied cohort increased or reduced trade net flow for this token?",
+      "readiness": "NEEDS_BASELINE",
+      "runtime_status": "EVIDENCE_ONLY_BASELINE",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-068",
+      "skill_type": "MONITOR",
+      "slug": "wallet-cohort-exposure-delta",
+      "stage": "MONITOR",
+      "state": "CALLER_BASELINE",
+      "unapproved_endpoint_ids": [],
+      "wave": "D_STATEFUL",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/trader/txs/seek_by_time"
+      ]
+    },
+    {
+      "answer_status": "NOT_FORWARD_TESTED",
+      "capability_path": "monitor/token/token-security-delta",
+      "difficulty": "L3",
+      "domain": "token",
+      "endpoint_ids": [
+        "EP-010"
+      ],
+      "name": "Token Security Delta",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-MONITOR-TOKEN",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "baseline",
+        "poll_frequency",
+        "state_retention"
+      ],
+      "pricing_role": "MEDIUM",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "Which observable security fields changed since the baseline?",
+      "readiness": "NEEDS_BASELINE",
+      "runtime_status": "EVIDENCE_ONLY_BASELINE",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-069",
+      "skill_type": "MONITOR",
+      "slug": "token-security-delta",
+      "stage": "MONITOR",
+      "state": "CALLER_BASELINE",
+      "unapproved_endpoint_ids": [],
+      "wave": "D_STATEFUL",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/defi/token_security"
+      ]
+    },
+    {
+      "answer_status": "NOT_FORWARD_TESTED",
+      "capability_path": "monitor/token/token-liquidity-delta",
+      "difficulty": "L3",
+      "domain": "token",
+      "endpoint_ids": [
+        "EP-011"
+      ],
+      "name": "Token Liquidity Delta",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-MONITOR-TOKEN",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "baseline",
+        "poll_frequency",
+        "state_retention"
+      ],
+      "pricing_role": "MEDIUM",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "How did current indexed liquidity change since the baseline?",
+      "readiness": "NEEDS_BASELINE",
+      "runtime_status": "EVIDENCE_ONLY_BASELINE",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-070",
+      "skill_type": "MONITOR",
+      "slug": "token-liquidity-delta",
+      "stage": "MONITOR",
+      "state": "CALLER_BASELINE",
+      "unapproved_endpoint_ids": [],
+      "wave": "D_STATEFUL",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/defi/v3/token/market-data"
+      ]
+    },
+    {
+      "answer_status": "NOT_FORWARD_TESTED",
+      "capability_path": "monitor/holders/holder-concentration-delta",
+      "difficulty": "L3",
+      "domain": "holders",
+      "endpoint_ids": [
+        "EP-031"
+      ],
+      "name": "Holder Concentration Delta",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-MONITOR-HOLDERS",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "multi_endpoint",
+        "baseline",
+        "poll_frequency",
+        "state_retention"
+      ],
+      "pricing_role": "MEDIUM",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "How did observed holder concentration change from the supplied baseline?",
+      "readiness": "NEEDS_BASELINE",
+      "runtime_status": "EVIDENCE_ONLY_BASELINE",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-071",
+      "skill_type": "MONITOR",
+      "slug": "holder-concentration-delta",
+      "stage": "MONITOR",
+      "state": "CALLER_BASELINE",
+      "unapproved_endpoint_ids": [],
+      "wave": "D_STATEFUL",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/holder/v1/distribution"
+      ]
+    },
+    {
+      "answer_status": "NOT_FORWARD_TESTED",
+      "capability_path": "monitor/holders/holder-category-delta",
+      "difficulty": "L3",
+      "domain": "holders",
+      "endpoint_ids": [
+        "EP-031"
+      ],
+      "name": "Holder Concentration Band Delta",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-MONITOR-HOLDERS",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "multi_endpoint",
+        "baseline",
+        "poll_frequency",
+        "state_retention"
+      ],
+      "pricing_role": "MEDIUM",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "How did caller-defined holder concentration bands change from the supplied baseline?",
+      "readiness": "NEEDS_BASELINE",
+      "runtime_status": "EVIDENCE_ONLY_BASELINE",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-072",
+      "skill_type": "MONITOR",
+      "slug": "holder-category-delta",
+      "stage": "MONITOR",
+      "state": "CALLER_BASELINE",
+      "unapproved_endpoint_ids": [],
+      "wave": "D_STATEFUL",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/holder/v1/distribution"
+      ]
+    },
+    {
+      "answer_status": "NOT_FORWARD_TESTED",
+      "capability_path": "monitor/bonding-curve/bonding-curve-progress-delta",
+      "difficulty": "L3",
+      "domain": "bonding_curve",
+      "endpoint_ids": [
+        "EP-007"
+      ],
+      "name": "Bonding Curve Progress Delta",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-MONITOR-BONDING-CURVE",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "baseline",
+        "poll_frequency",
+        "state_retention"
+      ],
+      "pricing_role": "MEDIUM",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "How did the token's bonding-curve progress change since the baseline?",
+      "readiness": "NEEDS_BASELINE",
+      "runtime_status": "EVIDENCE_ONLY_BASELINE",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-073",
+      "skill_type": "MONITOR",
+      "slug": "bonding-curve-progress-delta",
+      "stage": "MONITOR",
+      "state": "CALLER_BASELINE",
+      "unapproved_endpoint_ids": [],
+      "wave": "D_STATEFUL",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/defi/v3/token/meme/detail/single"
+      ]
+    },
+    {
+      "answer_status": "NOT_FORWARD_TESTED",
+      "capability_path": "monitor/bonding-curve/graduation-status-delta",
+      "difficulty": "L3",
+      "domain": "bonding_curve",
+      "endpoint_ids": [
+        "EP-006",
+        "EP-007"
+      ],
+      "name": "Graduation Status Delta",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-MONITOR-BONDING-CURVE",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "multi_endpoint",
+        "baseline",
+        "poll_frequency",
+        "state_retention"
+      ],
+      "pricing_role": "MEDIUM",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "Did the token's observed launch or graduation status change?",
+      "readiness": "NEEDS_BASELINE",
+      "runtime_status": "EVIDENCE_ONLY_BASELINE",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-074",
+      "skill_type": "MONITOR",
+      "slug": "graduation-status-delta",
+      "stage": "MONITOR",
+      "state": "CALLER_BASELINE",
+      "unapproved_endpoint_ids": [],
+      "wave": "D_STATEFUL",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/defi/v3/token/meme/list",
+        "/x402/defi/v3/token/meme/detail/single"
+      ]
+    },
+    {
+      "answer_status": "NOT_FORWARD_TESTED",
+      "capability_path": "monitor/pool/pool-activity-delta",
+      "difficulty": "L3",
+      "domain": "pool",
+      "endpoint_ids": [
+        "EP-017",
+        "EP-047"
+      ],
+      "name": "Pool Activity Delta",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-MONITOR-POOL",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "multi_endpoint",
+        "baseline",
+        "poll_frequency",
+        "state_retention"
+      ],
+      "pricing_role": "MEDIUM",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "How did this pool's indexed liquidity and trade balance change from the supplied baseline?",
+      "readiness": "NEEDS_BASELINE",
+      "runtime_status": "EVIDENCE_ONLY_BASELINE",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-075",
+      "skill_type": "MONITOR",
+      "slug": "pool-activity-delta",
+      "stage": "MONITOR",
+      "state": "CALLER_BASELINE",
+      "unapproved_endpoint_ids": [],
+      "wave": "D_STATEFUL",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/defi/v3/pair/overview/single",
+        "/x402/defi/txs/pair/seek_by_time"
+      ]
+    },
+    {
+      "answer_status": "NOT_FORWARD_TESTED",
+      "capability_path": "monitor/watchlist/watchlist-material-change",
+      "difficulty": "L4",
+      "domain": "watchlist",
+      "endpoint_ids": [
+        "EP-010",
+        "EP-011",
+        "EP-031",
+        "EP-048"
+      ],
+      "name": "Watchlist Material Change",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-MONITOR-WATCHLIST",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "multi_endpoint",
+        "baseline",
+        "poll_frequency",
+        "state_retention"
+      ],
+      "pricing_role": "RECURRING",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "Which configured material changes are present between this watchlist snapshot and supplied baselines?",
+      "readiness": "NEEDS_BASELINE",
+      "runtime_status": "EVIDENCE_ONLY_BASELINE",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-076",
+      "skill_type": "MONITOR",
+      "slug": "watchlist-material-change",
+      "stage": "MONITOR",
+      "state": "CALLER_BASELINE",
+      "unapproved_endpoint_ids": [],
+      "wave": "D_STATEFUL",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/defi/token_security",
+        "/x402/defi/v3/token/market-data",
+        "/x402/holder/v1/distribution",
+        "/x402/trader/txs/seek_by_time"
+      ]
+    },
+    {
+      "answer_status": "NOT_FORWARD_TESTED",
+      "capability_path": "exit_intelligence/reduction/position-reduction-percentage",
+      "difficulty": "L2",
+      "domain": "reduction",
+      "endpoint_ids": [
+        "EP-048"
+      ],
+      "name": "Position Reduction Percentage",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-EXIT-INTELLIGENCE-REDUCTION",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "multi_endpoint",
+        "historical_window"
+      ],
+      "pricing_role": "LOW",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "What percentage of the reconstructed trade position did this wallet reduce?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "EVIDENCE_ONLY_ANALYSIS",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-077",
+      "skill_type": "ATOMIC_ANALYSIS",
+      "slug": "position-reduction-percentage",
+      "stage": "EXIT_INTELLIGENCE",
+      "state": "EVENT_ANCHORED",
+      "unapproved_endpoint_ids": [],
+      "wave": "C_DERIVED_INTELLIGENCE",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/trader/txs/seek_by_time"
+      ]
+    },
+    {
+      "answer_status": "NOT_FORWARD_TESTED",
+      "capability_path": "exit_intelligence/cluster/clustered-position-reductions",
+      "difficulty": "L3",
+      "domain": "cluster",
+      "endpoint_ids": [
+        "EP-037",
+        "EP-048"
+      ],
+      "name": "Clustered Position Reductions",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-EXIT-INTELLIGENCE-CLUSTER",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "multi_endpoint",
+        "historical_window",
+        "entity_count",
+        "pagination"
+      ],
+      "pricing_role": "MEDIUM",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "Did multiple selected wallets reduce reconstructed exposure within the same window?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "EVIDENCE_ONLY_ANALYSIS",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-078",
+      "skill_type": "COMPOSITE_ANALYSIS",
+      "slug": "clustered-position-reductions",
+      "stage": "EXIT_INTELLIGENCE",
+      "state": "EVENT_ANCHORED",
+      "unapproved_endpoint_ids": [],
+      "wave": "C_DERIVED_INTELLIGENCE",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/defi/v2/tokens/top_traders",
+        "/x402/trader/txs/seek_by_time"
+      ]
+    },
+    {
+      "answer_status": "NOT_FORWARD_TESTED",
+      "capability_path": "exit_intelligence/market/market-context-at-exit",
+      "difficulty": "L3",
+      "domain": "market",
+      "endpoint_ids": [
+        "EP-011",
+        "EP-048",
+        "EP-066"
+      ],
+      "name": "Market Context at Exit",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-EXIT-INTELLIGENCE-MARKET",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "multi_endpoint",
+        "historical_window",
+        "entity_count",
+        "pagination"
+      ],
+      "pricing_role": "MEDIUM",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "What were the indexed price and market facts around the observed reduction?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "EVIDENCE_ONLY_ANALYSIS",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-079",
+      "skill_type": "COMPOSITE_ANALYSIS",
+      "slug": "market-context-at-exit",
+      "stage": "EXIT_INTELLIGENCE",
+      "state": "EVENT_ANCHORED",
+      "unapproved_endpoint_ids": [],
+      "wave": "C_DERIVED_INTELLIGENCE",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/defi/v3/token/market-data",
+        "/x402/trader/txs/seek_by_time",
+        "/x402/defi/historical_price_unix"
+      ]
+    },
+    {
+      "answer_status": "NOT_FORWARD_TESTED",
+      "capability_path": "exit_intelligence/liquidity/liquidity-context-at-exit",
+      "difficulty": "L3",
+      "domain": "liquidity",
+      "endpoint_ids": [
+        "EP-011",
+        "EP-048"
+      ],
+      "name": "Current Liquidity Context at Exit",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-EXIT-INTELLIGENCE-LIQUIDITY",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "multi_endpoint",
+        "historical_window",
+        "entity_count",
+        "pagination"
+      ],
+      "pricing_role": "MEDIUM",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "What current indexed liquidity context is available for the observed historical reduction?",
+      "readiness": "CONDITIONAL_PROXY",
+      "runtime_status": "EVIDENCE_ONLY_CONDITIONAL",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-080",
+      "skill_type": "COMPOSITE_ANALYSIS",
+      "slug": "liquidity-context-at-exit",
+      "stage": "EXIT_INTELLIGENCE",
+      "state": "EVENT_ANCHORED",
+      "unapproved_endpoint_ids": [],
+      "wave": "C_DERIVED_INTELLIGENCE",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/defi/v3/token/market-data",
+        "/x402/trader/txs/seek_by_time"
+      ]
+    },
+    {
+      "answer_status": "NOT_FORWARD_TESTED",
+      "capability_path": "exit_intelligence/destination/exit-destination-trace",
+      "difficulty": "L4",
+      "domain": "destination",
+      "endpoint_ids": [
+        "EP-048",
+        "EP-061"
+      ],
+      "name": "Exit Destination Trace",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-EXIT-INTELLIGENCE-DESTINATION",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "multi_endpoint",
+        "historical_window",
+        "entity_count",
+        "pagination"
+      ],
+      "pricing_role": "HIGH",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "Which directly indexed token-transfer destinations followed this qualifying exit event?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "EVIDENCE_ONLY_ANALYSIS",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-081",
+      "skill_type": "COMPOSITE_ANALYSIS",
+      "slug": "exit-destination-trace",
+      "stage": "EXIT_INTELLIGENCE",
+      "state": "EVENT_ANCHORED",
+      "unapproved_endpoint_ids": [],
+      "wave": "C_DERIVED_INTELLIGENCE",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/trader/txs/seek_by_time",
+        "/x402/token/v1/transfer"
+      ]
+    },
+    {
+      "answer_status": "ATOMIC_EVALUATION_READY",
+      "capability_path": "rotation/activity/post-exit-activity",
+      "difficulty": "L2",
+      "domain": "activity",
+      "endpoint_ids": [
+        "EP-048"
+      ],
+      "name": "Post Exit Trading Activity",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-ROTATION-ACTIVITY",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "multi_endpoint",
+        "historical_window"
+      ],
+      "pricing_role": "LOW",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "What indexed trades did this wallet make after the selected exit event?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "READY_ATOMIC",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-082",
+      "skill_type": "ATOMIC_QUERY",
+      "slug": "post-exit-activity",
+      "stage": "ROTATION",
+      "state": "EVENT_ANCHORED",
+      "unapproved_endpoint_ids": [],
+      "wave": "C_DERIVED_INTELLIGENCE",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/trader/txs/seek_by_time"
+      ]
+    },
+    {
+      "answer_status": "NOT_FORWARD_TESTED",
+      "capability_path": "rotation/destination/destination-classification",
+      "difficulty": "L2",
+      "domain": "destination",
+      "endpoint_ids": [
+        "EP-009",
+        "EP-061"
+      ],
+      "name": "Exit Destination Classification",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-ROTATION-DESTINATION",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "multi_endpoint",
+        "historical_window"
+      ],
+      "pricing_role": "LOW",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "How should directly observed post-exit token-transfer destinations be classified from available evidence?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "EVIDENCE_ONLY_ANALYSIS",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-083",
+      "skill_type": "ATOMIC_ANALYSIS",
+      "slug": "destination-classification",
+      "stage": "ROTATION",
+      "state": "EVENT_ANCHORED",
+      "unapproved_endpoint_ids": [],
+      "wave": "C_DERIVED_INTELLIGENCE",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/defi/v3/token/meta-data/single",
+        "/x402/token/v1/transfer"
+      ]
+    },
+    {
+      "answer_status": "NOT_FORWARD_TESTED",
+      "capability_path": "rotation/wallet/same-wallet-rotation",
+      "difficulty": "L3",
+      "domain": "wallet",
+      "endpoint_ids": [
+        "EP-011",
+        "EP-048"
+      ],
+      "name": "Same Wallet Rotation",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-ROTATION-WALLET",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "multi_endpoint",
+        "historical_window",
+        "entity_count",
+        "pagination"
+      ],
+      "pricing_role": "MEDIUM",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "Which new tokens did this wallet buy after the selected exit?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "EVIDENCE_ONLY_ANALYSIS",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-084",
+      "skill_type": "COMPOSITE_ANALYSIS",
+      "slug": "same-wallet-rotation",
+      "stage": "ROTATION",
+      "state": "EVENT_ANCHORED",
+      "unapproved_endpoint_ids": [],
+      "wave": "C_DERIVED_INTELLIGENCE",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/defi/v3/token/market-data",
+        "/x402/trader/txs/seek_by_time"
+      ]
+    },
+    {
+      "answer_status": "NOT_FORWARD_TESTED",
+      "capability_path": "rotation/cohort/multi-wallet-rotation-convergence",
+      "difficulty": "L4",
+      "domain": "cohort",
+      "endpoint_ids": [
+        "EP-037",
+        "EP-048"
+      ],
+      "name": "Multi Wallet Rotation Convergence",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-ROTATION-COHORT",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "multi_endpoint",
+        "historical_window",
+        "entity_count",
+        "pagination"
+      ],
+      "pricing_role": "HIGH",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "Which new tokens were bought by multiple selected sellers after their exits?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "EVIDENCE_ONLY_ANALYSIS",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-085",
+      "skill_type": "COMPARATIVE",
+      "slug": "multi-wallet-rotation-convergence",
+      "stage": "ROTATION",
+      "state": "EVENT_ANCHORED",
+      "unapproved_endpoint_ids": [],
+      "wave": "C_DERIVED_INTELLIGENCE",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/defi/v2/tokens/top_traders",
+        "/x402/trader/txs/seek_by_time"
+      ]
+    },
+    {
+      "answer_status": "NOT_FORWARD_TESTED",
+      "capability_path": "review_and_learn/wallet/wallet-observation-fit",
+      "difficulty": "L3",
+      "domain": "wallet",
+      "endpoint_ids": [
+        "EP-048",
+        "EP-066"
+      ],
+      "name": "Wallet Observation Fit",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-REVIEW-AND-LEARN-WALLET",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "multi_endpoint",
+        "historical_window",
+        "entity_count",
+        "pagination"
+      ],
+      "pricing_role": "MEDIUM",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "How well does this wallet's indexed trading activity fit the user's stated observation criteria?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "EVIDENCE_ONLY_ANALYSIS",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-086",
+      "skill_type": "COMPOSITE_ANALYSIS",
+      "slug": "wallet-observation-fit",
+      "stage": "REVIEW_AND_LEARN",
+      "state": "HISTORICAL_QUERY",
+      "unapproved_endpoint_ids": [],
+      "wave": "C_DERIVED_INTELLIGENCE",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/trader/txs/seek_by_time",
+        "/x402/defi/historical_price_unix"
+      ]
+    },
+    {
+      "answer_status": "NOT_FORWARD_TESTED",
+      "capability_path": "review_and_learn/wallet/wallet-trading-style",
+      "difficulty": "L2",
+      "domain": "wallet",
+      "endpoint_ids": [
+        "EP-048"
+      ],
+      "name": "Wallet Trading Style",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-REVIEW-AND-LEARN-WALLET",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "multi_endpoint",
+        "historical_window"
+      ],
+      "pricing_role": "LOW",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "What trading style is supported by this wallet's indexed trade activity?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "EVIDENCE_ONLY_ANALYSIS",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-087",
+      "skill_type": "ATOMIC_ANALYSIS",
+      "slug": "wallet-trading-style",
+      "stage": "REVIEW_AND_LEARN",
+      "state": "HISTORICAL_QUERY",
+      "unapproved_endpoint_ids": [],
+      "wave": "C_DERIVED_INTELLIGENCE",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/trader/txs/seek_by_time"
+      ]
+    },
+    {
+      "answer_status": "NOT_FORWARD_TESTED",
+      "capability_path": "review_and_learn/wallet/wallet-holding-duration",
+      "difficulty": "L2",
+      "domain": "wallet",
+      "endpoint_ids": [
+        "EP-048"
+      ],
+      "name": "Wallet Holding Duration",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-REVIEW-AND-LEARN-WALLET",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "historical_window"
+      ],
+      "pricing_role": "LOW",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "What are this wallet's observed holding-duration statistics?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "EVIDENCE_ONLY_ANALYSIS",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-088",
+      "skill_type": "ATOMIC_ANALYSIS",
+      "slug": "wallet-holding-duration",
+      "stage": "REVIEW_AND_LEARN",
+      "state": "HISTORICAL_QUERY",
+      "unapproved_endpoint_ids": [],
+      "wave": "C_DERIVED_INTELLIGENCE",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/trader/txs/seek_by_time"
+      ]
+    },
+    {
+      "answer_status": "NOT_FORWARD_TESTED",
+      "capability_path": "review_and_learn/wallet/take-profit-pattern",
+      "difficulty": "L3",
+      "domain": "wallet",
+      "endpoint_ids": [
+        "EP-048",
+        "EP-066"
+      ],
+      "name": "Take Profit Pattern",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-REVIEW-AND-LEARN-WALLET",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "multi_endpoint",
+        "historical_window"
+      ],
+      "pricing_role": "MEDIUM",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "At what reconstructed return levels does this wallet tend to reduce profitable trade positions?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "EVIDENCE_ONLY_ANALYSIS",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-089",
+      "skill_type": "ATOMIC_ANALYSIS",
+      "slug": "take-profit-pattern",
+      "stage": "REVIEW_AND_LEARN",
+      "state": "HISTORICAL_QUERY",
+      "unapproved_endpoint_ids": [],
+      "wave": "C_DERIVED_INTELLIGENCE",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/trader/txs/seek_by_time",
+        "/x402/defi/historical_price_unix"
+      ]
+    },
+    {
+      "answer_status": "NOT_FORWARD_TESTED",
+      "capability_path": "review_and_learn/wallet/loss-cut-pattern",
+      "difficulty": "L3",
+      "domain": "wallet",
+      "endpoint_ids": [
+        "EP-048",
+        "EP-066"
+      ],
+      "name": "Loss Cut Pattern",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-REVIEW-AND-LEARN-WALLET",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "multi_endpoint",
+        "historical_window"
+      ],
+      "pricing_role": "MEDIUM",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "At what reconstructed loss levels does this wallet tend to reduce losing trade positions?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "EVIDENCE_ONLY_ANALYSIS",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-090",
+      "skill_type": "ATOMIC_ANALYSIS",
+      "slug": "loss-cut-pattern",
+      "stage": "REVIEW_AND_LEARN",
+      "state": "HISTORICAL_QUERY",
+      "unapproved_endpoint_ids": [],
+      "wave": "C_DERIVED_INTELLIGENCE",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/trader/txs/seek_by_time",
+        "/x402/defi/historical_price_unix"
+      ]
+    },
+    {
+      "answer_status": "NOT_FORWARD_TESTED",
+      "capability_path": "review_and_learn/wallet/wallet-repeatability",
+      "difficulty": "L3",
+      "domain": "wallet",
+      "endpoint_ids": [
+        "EP-048",
+        "EP-066"
+      ],
+      "name": "Wallet Repeatability",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-REVIEW-AND-LEARN-WALLET",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "multi_endpoint",
+        "historical_window"
+      ],
+      "pricing_role": "MEDIUM",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "How repeatable are this wallet's reconstructed profitable closed-trade outcomes?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "EVIDENCE_ONLY_ANALYSIS",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-091",
+      "skill_type": "ATOMIC_ANALYSIS",
+      "slug": "wallet-repeatability",
+      "stage": "REVIEW_AND_LEARN",
+      "state": "HISTORICAL_QUERY",
+      "unapproved_endpoint_ids": [],
+      "wave": "C_DERIVED_INTELLIGENCE",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/trader/txs/seek_by_time",
+        "/x402/defi/historical_price_unix"
+      ]
+    },
+    {
+      "answer_status": "NOT_FORWARD_TESTED",
+      "capability_path": "review_and_learn/wallet/wallet-performance-trend",
+      "difficulty": "L3",
+      "domain": "wallet",
+      "endpoint_ids": [
+        "EP-048",
+        "EP-066"
+      ],
+      "name": "Wallet Performance Trend",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-REVIEW-AND-LEARN-WALLET",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "multi_endpoint",
+        "historical_window",
+        "entity_count",
+        "pagination"
+      ],
+      "pricing_role": "MEDIUM",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "Is this wallet's reconstructed closed-trade performance improving declining or stable across selected windows?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "EVIDENCE_ONLY_ANALYSIS",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-092",
+      "skill_type": "COMPARATIVE",
+      "slug": "wallet-performance-trend",
+      "stage": "REVIEW_AND_LEARN",
+      "state": "HISTORICAL_QUERY",
+      "unapproved_endpoint_ids": [],
+      "wave": "C_DERIVED_INTELLIGENCE",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/trader/txs/seek_by_time",
+        "/x402/defi/historical_price_unix"
+      ]
+    },
+    {
+      "answer_status": "NOT_FORWARD_TESTED",
+      "capability_path": "review_and_learn/copyability/liquidity-adjusted-copyability",
+      "difficulty": "L4",
+      "domain": "copyability",
+      "endpoint_ids": [
+        "EP-011",
+        "EP-048",
+        "EP-066"
+      ],
+      "name": "Liquidity Adjusted Copyability",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-REVIEW-AND-LEARN-COPYABILITY",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "multi_endpoint",
+        "entity_count",
+        "pagination",
+        "scenario_count"
+      ],
+      "pricing_role": "HIGH",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "How would current liquidity assumptions change the wallet's reconstructed trade outcomes?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "EVIDENCE_ONLY_ANALYSIS",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-093",
+      "skill_type": "COMPARATIVE",
+      "slug": "liquidity-adjusted-copyability",
+      "stage": "REVIEW_AND_LEARN",
+      "state": "CALLER_SCENARIO",
+      "unapproved_endpoint_ids": [],
+      "wave": "C_DERIVED_INTELLIGENCE",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/defi/v3/token/market-data",
+        "/x402/trader/txs/seek_by_time",
+        "/x402/defi/historical_price_unix"
+      ]
+    },
+    {
+      "answer_status": "NOT_FORWARD_TESTED",
+      "capability_path": "review_and_learn/copyability/latency-adjusted-copyability",
+      "difficulty": "L4",
+      "domain": "copyability",
+      "endpoint_ids": [
+        "EP-023",
+        "EP-048",
+        "EP-066"
+      ],
+      "name": "Latency Adjusted Copyability",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-REVIEW-AND-LEARN-COPYABILITY",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "multi_endpoint",
+        "entity_count",
+        "pagination",
+        "scenario_count"
+      ],
+      "pricing_role": "HIGH",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "How would the supplied copy delay change the wallet's reconstructed trade outcomes?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "EVIDENCE_ONLY_ANALYSIS",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-094",
+      "skill_type": "COMPARATIVE",
+      "slug": "latency-adjusted-copyability",
+      "stage": "REVIEW_AND_LEARN",
+      "state": "CALLER_SCENARIO",
+      "unapproved_endpoint_ids": [],
+      "wave": "C_DERIVED_INTELLIGENCE",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/defi/v3/ohlcv",
+        "/x402/trader/txs/seek_by_time",
+        "/x402/defi/historical_price_unix"
+      ]
+    },
+    {
+      "answer_status": "NOT_FORWARD_TESTED",
+      "capability_path": "review_and_learn/wallet/wallet-comparison",
+      "difficulty": "L4",
+      "domain": "wallet",
+      "endpoint_ids": [
+        "EP-048",
+        "EP-066"
+      ],
+      "name": "Wallet Comparison",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-REVIEW-AND-LEARN-WALLET",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "multi_endpoint",
+        "historical_window",
+        "entity_count",
+        "pagination"
+      ],
+      "pricing_role": "HIGH",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "How do the supplied wallets compare on the selected reconstructed trade metrics?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "EVIDENCE_ONLY_ANALYSIS",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-095",
+      "skill_type": "COMPARATIVE",
+      "slug": "wallet-comparison",
+      "stage": "REVIEW_AND_LEARN",
+      "state": "HISTORICAL_QUERY",
+      "unapproved_endpoint_ids": [],
+      "wave": "B_ENDPOINT_EXPANSION",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/trader/txs/seek_by_time",
+        "/x402/defi/historical_price_unix"
+      ]
+    },
+    {
+      "answer_status": "ATOMIC_EVALUATION_READY",
+      "capability_path": "review_and_learn/developer/developer-created-tokens",
+      "difficulty": "L1",
+      "domain": "developer",
+      "endpoint_ids": [
+        "EP-006"
+      ],
+      "name": "Developer Launchpad Tokens",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-REVIEW-AND-LEARN-DEVELOPER",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "historical_window",
+        "data_gap"
+      ],
+      "pricing_role": "NOT_PRICED",
+      "public_surface": "DOCUMENTED_GAP",
+      "question": "Which Birdeye-indexed launchpad tokens were created by this developer wallet?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "READY_ATOMIC",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-096",
+      "skill_type": "ATOMIC_QUERY",
+      "slug": "developer-created-tokens",
+      "stage": "REVIEW_AND_LEARN",
+      "state": "HISTORICAL_QUERY",
+      "unapproved_endpoint_ids": [],
+      "wave": "E_GAP_DEPENDENT",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/defi/v3/token/meme/list"
+      ]
+    },
+    {
+      "answer_status": "NOT_FORWARD_TESTED",
+      "capability_path": "review_and_learn/developer/developer-launch-track-record",
+      "difficulty": "L3",
+      "domain": "developer",
+      "endpoint_ids": [
+        "EP-006"
+      ],
+      "name": "Developer Launchpad Track Record",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-REVIEW-AND-LEARN-DEVELOPER",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "historical_window",
+        "entity_count",
+        "pagination",
+        "data_gap"
+      ],
+      "pricing_role": "NOT_PRICED",
+      "public_surface": "DOCUMENTED_GAP",
+      "question": "What current market outcomes are shown for Birdeye-indexed launchpad tokens created by this developer?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "EVIDENCE_ONLY_ANALYSIS",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-097",
+      "skill_type": "COMPOSITE_ANALYSIS",
+      "slug": "developer-launch-track-record",
+      "stage": "REVIEW_AND_LEARN",
+      "state": "HISTORICAL_QUERY",
+      "unapproved_endpoint_ids": [],
+      "wave": "E_GAP_DEPENDENT",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/defi/v3/token/meme/list"
+      ]
+    },
+    {
+      "answer_status": "NOT_FORWARD_TESTED",
+      "capability_path": "review_and_learn/source/source-track-record",
+      "difficulty": "L3",
+      "domain": "source",
+      "endpoint_ids": [
+        "EP-023",
+        "EP-066"
+      ],
+      "name": "Source Track Record",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-REVIEW-AND-LEARN-SOURCE",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "multi_endpoint",
+        "entity_count",
+        "pagination"
+      ],
+      "pricing_role": "MEDIUM",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "How did the caller-supplied token calls from this source perform under the selected observation method?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "EVIDENCE_ONLY_ANALYSIS",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-098",
+      "skill_type": "COMPOSITE_ANALYSIS",
+      "slug": "source-track-record",
+      "stage": "REVIEW_AND_LEARN",
+      "state": "CALLER_DATASET",
+      "unapproved_endpoint_ids": [],
+      "wave": "C_DERIVED_INTELLIGENCE",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/defi/v3/ohlcv",
+        "/x402/defi/historical_price_unix"
+      ]
+    },
+    {
+      "answer_status": "NOT_FORWARD_TESTED",
+      "capability_path": "review_and_learn/strategy/strategy-threshold-review",
+      "difficulty": "L4",
+      "domain": "strategy",
+      "endpoint_ids": [
+        "EP-011",
+        "EP-023",
+        "EP-031"
+      ],
+      "name": "Strategy Threshold Review",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-REVIEW-AND-LEARN-STRATEGY",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "multi_endpoint",
+        "entity_count",
+        "pagination"
+      ],
+      "pricing_role": "HIGH",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "Which supplied thresholds were associated with the caller-selected observable outcomes?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "EVIDENCE_ONLY_ANALYSIS",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-099",
+      "skill_type": "COMPOSITE_ANALYSIS",
+      "slug": "strategy-threshold-review",
+      "stage": "REVIEW_AND_LEARN",
+      "state": "CALLER_DATASET",
+      "unapproved_endpoint_ids": [],
+      "wave": "C_DERIVED_INTELLIGENCE",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/defi/v3/token/market-data",
+        "/x402/defi/v3/ohlcv",
+        "/x402/holder/v1/distribution"
+      ]
+    },
+    {
+      "answer_status": "NOT_FORWARD_TESTED",
+      "capability_path": "review_and_learn/cohort/wallet-cohort-comparison",
+      "difficulty": "L4",
+      "domain": "cohort",
+      "endpoint_ids": [
+        "EP-048",
+        "EP-066"
+      ],
+      "name": "Wallet Cohort Comparison",
+      "non_x402_endpoint_ids": [],
+      "parent_capability_id": "CAP-REVIEW-AND-LEARN-COHORT",
+      "pricing_drivers": [
+        "endpoint_calls",
+        "multi_endpoint",
+        "historical_window",
+        "entity_count",
+        "pagination"
+      ],
+      "pricing_role": "HIGH",
+      "public_surface": "CANDIDATE_SKILL",
+      "question": "How do supplied wallet cohorts compare on the same reconstructed trade metrics?",
+      "readiness": "BUILDABLE_FROM_APPROVED_CORE",
+      "runtime_status": "EVIDENCE_ONLY_ANALYSIS",
+      "scope_excluded_endpoint_ids": [],
+      "skill_id": "V2-100",
+      "skill_type": "COMPARATIVE",
+      "slug": "wallet-cohort-comparison",
+      "stage": "REVIEW_AND_LEARN",
+      "state": "HISTORICAL_QUERY",
+      "unapproved_endpoint_ids": [],
+      "wave": "C_DERIVED_INTELLIGENCE",
+      "x402_eligible": true,
+      "x402_endpoint_paths": [
+        "/x402/trader/txs/seek_by_time",
+        "/x402/defi/historical_price_unix"
+      ]
+    }
+  ],
+  "x402_documented_endpoint_count": 46,
+  "x402_eligible_skill_count": 100,
+  "x402_mapped_endpoint_count": 30,
+  "x402_scope_excluded_endpoint_count": 18,
+  "x402_scope_excluded_mapped_endpoint_count": 0
+}
