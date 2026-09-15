@@ -1,6 +1,6 @@
 ---
 name: birdeye-compare-smart-money-wallets
-description: "Compare two or more wallets over the same period, coverage and reconstructed performance method. Use when the trader asks: Which of these wallets looks stronger on the same observed metrics?"
+description: "Compare two or more wallets over the same period using consistent activity, reconstructed performance and trading-style evidence. Use when the user asks “Which wallet is better?”, “Who has the stronger track record?” or wants a smart-money leaderboard. Choose birdeye-wallet-trading-style for one wallet’s habits and birdeye-wallet-copy-trade-assessment when realistic copy execution is the main question."
 ---
 
 # 🏁 Compare Smart-Money Wallets

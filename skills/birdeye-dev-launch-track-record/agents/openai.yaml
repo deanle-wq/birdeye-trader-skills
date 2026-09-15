@@ -1,4 +1,4 @@
 interface:
   display_name: "🧐 Dev Launch Track Record"
-  short_description: "Review a developer's indexed launch history and compare curre..."
+  short_description: "Review a developer’s launch track record"
   default_prompt: "Use $birdeye-dev-launch-track-record to answer: How did this developer's indexed token launches perform?"

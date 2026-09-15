@@ -1,6 +1,6 @@
 ---
 name: birdeye-token-security-check
-description: "Inspect Birdeye token-security fields and clearly separate observed, missing and unknown conditions. Use when the trader asks: What security and authority risks are observable for this token?"
+description: "Check observable token-security and authority fields, clearly separating identified risks, negative observations and missing data. Use when the user asks “Is this token safe?”, “Could this be a rug?”, “Are mint or freeze authorities active?” or wants a focused security check. Choose birdeye-token-due-diligence for liquidity, holders and trader context. Missing data is reported as unknown, never safe."
 ---
 
 # 🛡️ Token Security Check

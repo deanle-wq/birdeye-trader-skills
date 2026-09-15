@@ -1,6 +1,6 @@
 ---
 name: birdeye-holder-distribution-analysis
-description: "Analyze holder distribution, concentration bands, smart-money presence and top-trader context with disclosed coverage. Use when the trader asks: How concentrated is this token's observable holder distribution?"
+description: "Analyze a token’s current holder structure through concentration bands, smart-money presence and top-trader context, with coverage clearly stated. Use when the user asks “Who holds this token?”, “Is supply concentrated?” or wants holder or chip-distribution analysis. Choose birdeye-top-holders for a raw balance ranking and birdeye-holder-concentration-change for comparison with an earlier snapshot."
 ---
 
 # 👥 Holder Distribution Analysis

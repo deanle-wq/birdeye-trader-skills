@@ -1,4 +1,4 @@
 interface:
   display_name: "🌱 Pump.fun New Tokens"
-  short_description: "Scan Pump.fun tokens created in the last 24 hours, newest fir..."
+  short_description: "Find new Pump.fun tokens from the last day"
   default_prompt: "Use $birdeye-pumpfun-new-tokens to answer: What Pump.fun tokens were created in the last 24 hours?"

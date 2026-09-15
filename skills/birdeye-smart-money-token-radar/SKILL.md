@@ -1,6 +1,6 @@
 ---
 name: birdeye-smart-money-token-radar
-description: "Rank tokens in Birdeye's smart-money feed by smart-trader participation, market cap or net flow. Use when the trader asks: What tokens are attracting the most Birdeye smart-money wallets?"
+description: "Rank tokens in Birdeye’s smart-money feed by participating traders, market cap or observed net flow. Use when the user asks “What is smart money buying?”, “Where are strong wallets moving?” or wants a cross-token smart-money leaderboard. Choose birdeye-token-smart-money-trades to investigate one token and birdeye-compare-smart-money-wallets to compare named wallets."
 ---
 
 # 🧠 Smart-Money Token Radar

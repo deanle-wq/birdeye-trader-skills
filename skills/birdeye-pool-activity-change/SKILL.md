@@ -1,6 +1,6 @@
 ---
 name: birdeye-pool-activity-change
-description: "Compare current indexed pool activity with a compatible baseline over the same observation window. Use when the trader asks: How has this pool's trading activity changed?"
+description: "Compare a pool’s current indexed trading activity with a compatible earlier snapshot over the same observation window. Use when the user asks “Is this pool getting busier?”, “Did pool volume or trade count change?” or wants pair-level monitoring. Choose birdeye-liquidity-pool-analysis for a current liquidity and venue snapshot rather than a change calculation."
 ---
 
 # 🌊 Pool Activity Change

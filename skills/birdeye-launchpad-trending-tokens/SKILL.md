@@ -1,6 +1,6 @@
 ---
 name: birdeye-launchpad-trending-tokens
-description: "Rank tokens by one-hour volume across all supported Solana launchpads or filter to Pump.fun, Moonshot, Raydium LaunchLab or Meteora DBC. Use when the trader asks: What tokens are trending on a launchpad right now?"
+description: "Rank tokens by one-hour trading volume across supported Solana launchpads or within Pump.fun, Moonshot, Raydium LaunchLab or Meteora DBC. Use when the user asks “What is trending on this launchpad?”, “Which Moonshot tokens are hot?” or wants platform-specific momentum. Choose birdeye-pumpfun-trending-tokens for the dedicated Pump.fun card and birdeye-5-minute-trending-tokens for a faster market-wide window."
 ---
 
 # 🚀 Launchpad Trending Tokens

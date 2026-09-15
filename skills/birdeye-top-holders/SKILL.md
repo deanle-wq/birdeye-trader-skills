@@ -1,6 +1,6 @@
 ---
 name: birdeye-top-holders
-description: "Return the highest-balance indexed token holders with pagination and denominator limitations kept visible. Use when the trader asks: Who are the largest indexed holders of this token?"
+description: "Rank the largest indexed token holders by balance while keeping pagination and coverage limitations visible. Use when the user asks “Who are the biggest holders?”, “Show the top wallets” or wants the raw holder leaderboard. Choose birdeye-holder-distribution-analysis for concentration interpretation and birdeye-holder-concentration-change for comparison over time."
 ---
 
 # 🐋 Top Token Holders

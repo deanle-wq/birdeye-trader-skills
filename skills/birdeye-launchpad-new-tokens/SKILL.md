@@ -1,6 +1,6 @@
 ---
 name: birdeye-launchpad-new-tokens
-description: "Scan the newest launches across all supported Solana launchpads or filter to Pump.fun, Moonshot, Raydium LaunchLab or Meteora DBC. Use when the trader asks: What new tokens launched on a specific launchpad in the last 24 hours?"
+description: "Find the newest tokens across supported Solana launchpads or filter to Pump.fun, Moonshot, Raydium LaunchLab or Meteora DBC. Use when the user asks “What just launched?”, “Show new Moonshot tokens” or wants new launches from a named platform. Choose birdeye-pumpfun-new-tokens for the dedicated Pump.fun view and birdeye-newly-listed-tokens for listings not limited to launchpads."
 ---
 
 # 🛫 Launchpad New Tokens

@@ -1,6 +1,6 @@
 ---
 name: birdeye-graduation-status-change
-description: "Compare indexed launch and graduation status against a caller-supplied baseline. Use when the trader asks: Did this launchpad token graduate since my last snapshot?"
+description: "Compare a launchpad token’s current graduation status with a compatible earlier snapshot and report whether it graduated. Use when the user asks “Did this token graduate?”, “Has it migrated to a DEX since my last check?” or wants a binary lifecycle change. Choose birdeye-bonding-curve-progress for incremental progress and birdeye-recently-migrated-tokens to scan recent graduations."
 ---
 
 # 🎓 Graduation Status Change

@@ -1,4 +1,4 @@
 interface:
   display_name: "📶 Bonding-Curve Progress"
-  short_description: "Compare current bonding-curve progress with a compatible base..."
+  short_description: "Track bonding-curve progress from a baseline"
   default_prompt: "Use $birdeye-bonding-curve-progress to answer: How has this token's bonding-curve progress changed?"

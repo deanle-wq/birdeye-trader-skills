@@ -1,6 +1,6 @@
 ---
 name: birdeye-token-due-diligence
-description: "Build one evidence-linked dossier across identity, price, security, liquidity, holder concentration and top-trader observations. Use when the trader asks: Does this token deserve deeper investigation?"
+description: "Combine token identity, price, security, liquidity, holder concentration and top-trader evidence into one research dossier. Use when the user asks “Is this token worth researching?”, “Give me token due diligence” or wants a broad risk-and-market review. Choose birdeye-token-basic-info for simple facts and birdeye-token-security-check when only authority or security conditions matter. It returns evidence, not a buy recommendation."
 ---
 
 # 🧪 Token Due Diligence

@@ -1,6 +1,6 @@
 ---
 name: birdeye-token-kline-chart
-description: "Fetch bounded token candlesticks for the requested resolution and time window. Use when the trader asks: What does this token's recent OHLCV history look like?"
+description: "Fetch token OHLCV candles at the requested resolution and time window for charting or price-action review. Use when the user asks “Show me the chart”, “Get the last day of candles” or requests OHLCV data for a token. This skill returns historical market data and does not predict future price or replace a broader token due-diligence workflow."
 ---
 
 # 📊 Token Kline Data

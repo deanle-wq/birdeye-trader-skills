@@ -1,6 +1,6 @@
 ---
 name: birdeye-token-trade-activity
-description: "Return recent indexed token trades for a bounded window with direction and pagination evidence. Use when the trader asks: What buys and sells happened for this token recently?"
+description: "Show a token’s recent indexed buys and sells over a chosen time window with direction, value, timestamp and pagination evidence when available. Use when the user asks “What trades just happened?”, “Show recent buys and sells” or wants a token activity feed. Choose birdeye-large-trade-scanner for only the biggest trades and birdeye-token-transfer-activity for non-trade token movements."
 ---
 
 # 🔄 Token Trade Activity

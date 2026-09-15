@@ -1,6 +1,6 @@
 ---
 name: birdeye-5-minute-trending-tokens
-description: "Scan liquid Solana tokens ranked by five-minute trading volume with practical market-cap, liquidity, holder and activity filters. Use when the trader asks: What tokens are trading most actively in the last five minutes?"
+description: "Rank active Solana tokens by five-minute trading volume and show price, market cap, liquidity, holders, volume and trade count with practical filters. Use when the user asks for “5-minute trending tokens”, “the hottest Solana tokens now” or a high-volume shortlist. Choose birdeye-5-minute-most-traded when transaction count matters more than volume, and the surge skills when the user asks about change rather than absolute activity."
 ---
 
 # 🔥 5-Min Trending Tokens

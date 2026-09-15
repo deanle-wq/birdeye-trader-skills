@@ -1,6 +1,6 @@
 ---
 name: birdeye-bonding-curve-progress
-description: "Compare current bonding-curve progress with a compatible baseline for the same launchpad token. Use when the trader asks: How has this token's bonding-curve progress changed?"
+description: "Compare a launchpad token’s current bonding-curve progress with a compatible earlier snapshot and report its level and change. Use when the user asks “How much has the curve moved?”, “Is this token progressing toward graduation?” or wants to monitor one token over time. Choose birdeye-near-graduation-tokens to scan the market and birdeye-graduation-status-change for a simple graduated-or-not change."
 ---
 
 # 📶 Bonding-Curve Progress

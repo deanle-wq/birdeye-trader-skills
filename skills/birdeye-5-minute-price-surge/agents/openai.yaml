@@ -1,4 +1,4 @@
 interface:
   display_name: "💹 5-Min Price Surge"
-  short_description: "Rank liquid Solana tokens by five-minute price change with mi..."
+  short_description: "Find liquid tokens surging over five minutes"
   default_prompt: "Use $birdeye-5-minute-price-surge to answer: What liquid tokens are surging most over five minutes?"

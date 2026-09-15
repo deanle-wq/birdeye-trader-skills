@@ -1,6 +1,6 @@
 ---
 name: birdeye-wallet-pnl-analysis
-description: "Reconstruct covered wallet performance over a disclosed window without claiming complete provider P&L. Use when the trader asks: What P&L can be reconstructed from this wallet's indexed trades?"
+description: "Reconstruct wallet performance from the indexed trades covered in a selected window and show observed wins, losses, trade counts and assumptions. Use when the user asks “Is this wallet profitable?”, “What is its PnL or win rate?” or wants a performance review. Choose birdeye-wallet-copy-trade-assessment for realistic follower outcomes. This is a bounded reconstruction, not guaranteed complete wallet PnL."
 ---
 
 # 💵 Wallet P&L Analysis

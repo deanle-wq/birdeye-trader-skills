@@ -1,6 +1,6 @@
 ---
 name: birdeye-newly-listed-tokens
-description: "Return Birdeye's latest indexed Solana token listings so a trader can inspect fresh market arrivals. Use when the trader asks: What tokens were listed most recently?"
+description: "Show the latest Solana tokens indexed as new listings by Birdeye Data. Use when the user asks “What tokens were listed recently?”, “Show new market arrivals” or wants a general new-listing feed. Choose birdeye-launchpad-new-tokens when the request is specifically about launchpad creation and birdeye-pumpfun-new-tokens for Pump.fun only."
 ---
 
 # 🐣 Newly Listed Tokens

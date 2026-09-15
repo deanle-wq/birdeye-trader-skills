@@ -1,4 +1,4 @@
 interface:
   display_name: "🧪 Token Due Diligence"
-  short_description: "Build one evidence-linked dossier across identity, price, sec..."
+  short_description: "Build a practical token due-diligence report"
   default_prompt: "Use $birdeye-token-due-diligence to answer: Does this token deserve deeper investigation?"

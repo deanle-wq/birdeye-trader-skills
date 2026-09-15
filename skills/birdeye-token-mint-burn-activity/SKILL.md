@@ -1,6 +1,6 @@
 ---
 name: birdeye-token-mint-burn-activity
-description: "Inspect indexed mint and burn transactions for a token over the selected period. Use when the trader asks: Was this token minted or burned recently?"
+description: "Inspect indexed mint and burn transactions for a token over a selected period and summarize their amount and timing when available. Use when the user asks “Was more supply minted?”, “Were tokens burned?” or wants recent supply-event evidence. Do not infer total or circulating supply changes beyond the returned events; use birdeye-token-security-check for authority risk."
 ---
 
 # 🔥 Token Mint & Burn Activity

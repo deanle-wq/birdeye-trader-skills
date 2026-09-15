@@ -1,6 +1,6 @@
 ---
 name: birdeye-pumpfun-trending-tokens
-description: "Rank Pump.fun tokens by one-hour trading volume with configurable liquidity, market-cap, holder and volume filters. Use when the trader asks: What are the hottest Pump.fun tokens right now?"
+description: "Rank Pump.fun tokens by one-hour trading volume with configurable liquidity, market-cap, holder and activity filters. Use when the user asks “What is trending on Pump.fun?”, “Which Pump.fun tokens are hot?” or wants an active Pump.fun leaderboard. Choose birdeye-pumpfun-new-tokens for newly created tokens and birdeye-launchpad-trending-tokens when another launchpad or all platforms are required."
 ---
 
 # 🏆 Pump.fun Trending Tokens

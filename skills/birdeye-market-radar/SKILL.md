@@ -1,6 +1,6 @@
 ---
 name: birdeye-market-radar
-description: "Sweep several Birdeye time windows, require minimum market quality, and return only candidates that clear a transparent deterministic score. Use when the trader asks: Which hot Solana tokens are actually worth researching right now?"
+description: "Sweep several Birdeye activity windows, apply market-quality gates and return a transparently scored shortlist for further research. Use when the user asks “What hot Solana tokens are worth researching?”, “Find quality momentum candidates” or wants curation rather than a raw ranking. Choose a five-minute or launchpad trending skill when the user wants an unscored leaderboard. This skill does not provide a trade recommendation."
 ---
 
 # 🔥 Curated Hot Token Radar

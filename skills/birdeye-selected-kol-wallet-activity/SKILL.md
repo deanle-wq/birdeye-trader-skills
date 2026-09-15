@@ -1,6 +1,6 @@
 ---
 name: birdeye-selected-kol-wallet-activity
-description: "Track recent trades for caller-supplied KOL wallet addresses without inventing a provider KOL directory. Use when the trader asks: What did these selected KOL wallets trade recently?"
+description: "Show recent trades for KOL wallet addresses supplied by the user, including direction, token, value and time when available. Use when the user asks “What are these KOL wallets buying?”, “Did these influencers sell?” or provides a KOL watchlist. This skill does not discover or invent a KOL directory; choose birdeye-wallet-activity-feed for a regular single wallet."
 ---
 
 # 📡 Selected KOL Wallet Activity

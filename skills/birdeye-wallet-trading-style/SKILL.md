@@ -1,6 +1,6 @@
 ---
 name: birdeye-wallet-trading-style
-description: "Profile observable holding duration, trade cadence, outcomes, repeatability and recent performance trend. Use when the trader asks: How does this wallet trade?"
+description: "Profile a wallet’s holding time, trading frequency, repeat behavior, outcomes and recent performance trend. Use when the user asks “How does this wallet trade?”, “Does it scalp or hold?”, “When does it take profit?” or wants a smart-money style profile. Choose birdeye-wallet-activity-feed for raw recent trades, birdeye-wallet-pnl-analysis for performance, and birdeye-wallet-copy-trade-assessment for realistic copyability."
 ---
 
 # 🎯 Wallet Trading Style

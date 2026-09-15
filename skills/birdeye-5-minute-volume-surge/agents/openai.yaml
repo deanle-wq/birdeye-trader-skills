@@ -1,4 +1,4 @@
 interface:
   display_name: "📈 5-Min Volume Surge"
-  short_description: "Rank liquid Solana tokens by five-minute volume growth while..."
+  short_description: "Spot tokens with accelerating five-minute volume"
   default_prompt: "Use $birdeye-5-minute-volume-surge to answer: What liquid tokens have the strongest five-minute volume acceleration?"

@@ -1,6 +1,6 @@
 ---
 name: birdeye-wallet-copy-trade-assessment
-description: "Assess track-record quality and copyability under explicit position-size, liquidity and execution-delay assumptions. Use when the trader asks: Would this wallet's observed results survive my copy-trading constraints?"
+description: "Assess whether a wallet’s observed track record could survive the user’s position size, liquidity and execution-delay constraints. Use when the user asks “Is this wallet worth copying?”, “What would happen if I followed it?” or wants realistic copy-tradeability. Choose birdeye-wallet-trading-style for behavior profiling and birdeye-wallet-pnl-analysis for reconstructed performance without execution assumptions. This skill never places trades."
 ---
 
 # ⚖️ Wallet Copy-Trade Assessment

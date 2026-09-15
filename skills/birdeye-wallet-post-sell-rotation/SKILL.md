@@ -1,6 +1,6 @@
 ---
 name: birdeye-wallet-post-sell-rotation
-description: "Identify the same wallet's observable buys after a named-token sale within a bounded window. Use when the trader asks: What did this wallet buy after selling the token?"
+description: "Identify tokens a wallet bought after selling a named token within a bounded follow-up window. Use when the user asks “What did this wallet rotate into?”, “What did it buy after selling?” or wants the next-buy sequence after a specific exit. Choose birdeye-wallet-exit-destination for a broader post-exit activity trace that is not limited to subsequent purchases."
 ---
 
 # 🔁 Wallet Post-Sell Rotation

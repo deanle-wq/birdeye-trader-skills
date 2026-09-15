@@ -1,4 +1,4 @@
 interface:
   display_name: "🏆 Pump.fun Trending Tokens"
-  short_description: "Rank Pump.fun tokens by one-hour trading volume with configur..."
+  short_description: "Rank the hottest Pump.fun tokens by volume"
   default_prompt: "Use $birdeye-pumpfun-trending-tokens to answer: What are the hottest Pump.fun tokens right now?"

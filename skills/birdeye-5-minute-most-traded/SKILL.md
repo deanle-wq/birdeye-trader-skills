@@ -1,6 +1,6 @@
 ---
 name: birdeye-5-minute-most-traded
-description: "Rank liquid Solana tokens by five-minute trade count to surface immediate on-chain attention. Use when the trader asks: What tokens have the most trades in the last five minutes?"
+description: "Rank liquid Solana tokens by trade count over the last five minutes and return price, volume, liquidity and holder context. Use when the user asks “What is being traded most?”, “Where are traders most active?” or wants a five-minute transaction-count leaderboard. Choose birdeye-5-minute-trending-tokens for volume ranking, birdeye-5-minute-volume-surge for volume acceleration, and birdeye-5-minute-price-surge for price momentum."
 ---
 
 # ⚡ 5-Min Most-Traded Tokens

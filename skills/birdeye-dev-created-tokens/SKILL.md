@@ -1,6 +1,6 @@
 ---
 name: birdeye-dev-created-tokens
-description: "List indexed launchpad tokens associated with a supplied developer wallet. Use when the trader asks: What Birdeye-indexed launchpad tokens did this developer create?"
+description: "List Birdeye-indexed launchpad tokens associated with a developer wallet and return available launch dates, token addresses and graduation status. Use when the user asks “What tokens did this developer create?”, “What has this dev launched?” or wants a creator history list. Choose birdeye-dev-launch-track-record when the user wants performance or reputation analysis rather than the raw launch record."
 ---
 
 # 👩🏻‍🍳 Dev Created Tokens

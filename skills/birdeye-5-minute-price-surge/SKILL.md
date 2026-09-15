@@ -1,6 +1,6 @@
 ---
 name: birdeye-5-minute-price-surge
-description: "Rank liquid Solana tokens by five-minute price change with minimum liquidity and volume safeguards. Use when the trader asks: What liquid tokens are surging most over five minutes?"
+description: "Rank liquid Solana tokens by five-minute price gain while applying volume and liquidity safeguards. Use when the user asks “What is pumping right now?”, “Which tokens are surging?” or wants short-window price momentum. Choose birdeye-5-minute-trending-tokens for total traded volume, birdeye-5-minute-most-traded for transaction count, and birdeye-5-minute-volume-surge for accelerating volume."
 ---
 
 # 💹 5-Min Price Surge

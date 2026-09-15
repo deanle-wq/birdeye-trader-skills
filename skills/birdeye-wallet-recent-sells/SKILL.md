@@ -1,6 +1,6 @@
 ---
 name: birdeye-wallet-recent-sells
-description: "Show a wallet's recent observable sells while excluding ambiguous transactions rather than guessing direction. Use when the trader asks: What has this wallet sold recently?"
+description: "Show a wallet’s recent observable token sells while excluding transactions whose direction cannot be determined. Use when the user asks “What has this wallet sold?”, “Did it dump anything recently?” or wants an exits-only feed. Choose birdeye-wallet-activity-feed for both buys and sells and birdeye-wallet-post-sell-rotation to see what it bought afterward."
 ---
 
 # 📤 Wallet Recent Sells

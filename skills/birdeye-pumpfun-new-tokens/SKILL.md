@@ -1,6 +1,6 @@
 ---
 name: birdeye-pumpfun-new-tokens
-description: "Scan Pump.fun tokens created in the last 24 hours, newest first, with configurable market and activity filters. Use when the trader asks: What Pump.fun tokens were created in the last 24 hours?"
+description: "Find Pump.fun tokens created in the last 24 hours, newest first, with available market and activity filters. Use when the user asks “What just launched on Pump.fun?”, “Show today’s new Pump.fun tokens” or wants fresh Pump.fun creation data. Choose birdeye-pumpfun-trending-tokens for active established launches and birdeye-launchpad-new-tokens when multiple launchpads are in scope."
 ---
 
 # 🌱 Pump.fun New Tokens

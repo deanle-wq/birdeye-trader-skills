@@ -1,4 +1,4 @@
 interface:
   display_name: "🚨 Token Security Change"
-  short_description: "Compare current observable token security fields with a compa..."
+  short_description: "Track changes in observable token security"
   default_prompt: "Use $birdeye-token-security-change to answer: What token security fields changed since my last snapshot?"

@@ -1,4 +1,4 @@
 interface:
   display_name: "💧 Token Liquidity Change"
-  short_description: "Compare current indexed token liquidity with a compatible cal..."
+  short_description: "Track token liquidity changes from a baseline"
   default_prompt: "Use $birdeye-token-liquidity-change to answer: How has this token's indexed liquidity changed since my last snapshot?"

@@ -1,4 +1,4 @@
 interface:
   display_name: "🐋 Top Token Holders"
-  short_description: "Return the highest-balance indexed token holders with paginat..."
+  short_description: "Rank the largest indexed token holders"
   default_prompt: "Use $birdeye-top-holders to answer: Who are the largest indexed holders of this token?"

@@ -1,6 +1,6 @@
 ---
 name: birdeye-large-trade-scanner
-description: "Scan recent token transactions ordered by USD volume and preserve the requested observation window. Use when the trader asks: What unusually large trades hit this token recently?"
+description: "Find the largest recent token trades and return their value, direction and timestamp when available. Use when the user asks “Any whale buys?”, “What large sells just happened?” or wants unusual-size activity for one token. Choose birdeye-token-trade-activity for the broader recent trade feed and birdeye-token-smart-money-trades when wallet classification matters."
 ---
 
 # 🐳 Large Token Trades

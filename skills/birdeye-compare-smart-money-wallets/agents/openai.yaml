@@ -1,4 +1,4 @@
 interface:
   display_name: "🏁 Compare Smart-Money Wallets"
-  short_description: "Compare two or more wallets over the same period, coverage an..."
+  short_description: "Compare smart-money wallets on equal terms"
   default_prompt: "Use $birdeye-compare-smart-money-wallets to answer: Which of these wallets looks stronger on the same observed metrics?"

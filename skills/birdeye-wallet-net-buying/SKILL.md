@@ -1,6 +1,6 @@
 ---
 name: birdeye-wallet-net-buying
-description: "Compare indexed buys and sells to identify positive observed token flow for one wallet. Use when the trader asks: What tokens is this wallet buying more than selling?"
+description: "Compare a wallet’s indexed buys and sells over the selected window to identify tokens with positive observed net buying. Use when the user asks “What is this wallet accumulating?”, “What is it buying more than selling?” or wants net-flow direction by token. Choose birdeye-wallet-activity-feed for the complete recent sequence and birdeye-wallet-recent-sells for exits only."
 ---
 
 # 💸 Wallet Net Buying

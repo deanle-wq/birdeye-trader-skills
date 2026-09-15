@@ -1,4 +1,4 @@
 interface:
   display_name: "🔄 Token Trade Activity"
-  short_description: "Return recent indexed token trades for a bounded window with..."
+  short_description: "Show recent buys and sells for one token"
   default_prompt: "Use $birdeye-token-trade-activity to answer: What buys and sells happened for this token recently?"

@@ -1,6 +1,6 @@
 ---
 name: birdeye-recently-migrated-tokens
-description: "Scan launchpad tokens that graduated during the last 24 hours, newest migrations first. Use when the trader asks: What launchpad tokens graduated to a DEX in the last 24 hours?"
+description: "Find launchpad tokens that graduated to a DEX during the last 24 hours, ordered by migration time. Use when the user asks “What just graduated?”, “Show recent token migrations” or wants the latest post-curve launches. Choose birdeye-migrated-token-screener when liquidity and market-cap quality filters should determine the result."
 ---
 
 # 🎓 Recently Migrated Tokens

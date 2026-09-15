@@ -1,4 +1,4 @@
 interface:
   display_name: "🔁 Wallet Post-Sell Rotation"
-  short_description: "Identify the same wallet's observable buys after a named-toke..."
+  short_description: "Find what a wallet bought after selling"
   default_prompt: "Use $birdeye-wallet-post-sell-rotation to answer: What did this wallet buy after selling the token?"

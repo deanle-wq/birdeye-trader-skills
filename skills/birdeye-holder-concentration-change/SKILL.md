@@ -1,6 +1,6 @@
 ---
 name: birdeye-holder-concentration-change
-description: "Compare current observable holder concentration with a compatible prior snapshot and denominator policy. Use when the trader asks: Has this token's holder concentration changed materially?"
+description: "Compare current holder concentration with a compatible earlier snapshot using the same ranking and denominator policy. Use when the user asks “Are whales accumulating?”, “Did top-holder concentration increase?” or wants to monitor ownership concentration over time. Choose birdeye-holder-distribution-analysis for a current structural analysis and birdeye-top-holders for the raw holder ranking."
 ---
 
 # 🐋 Holder Concentration Change

@@ -1,4 +1,4 @@
 interface:
   display_name: "🌊 Pool Activity Change"
-  short_description: "Compare current indexed pool activity with a compatible basel..."
+  short_description: "Compare pool activity with an earlier snapshot"
   default_prompt: "Use $birdeye-pool-activity-change to answer: How has this pool's trading activity changed?"

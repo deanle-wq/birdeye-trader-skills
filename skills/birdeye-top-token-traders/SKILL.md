@@ -1,6 +1,6 @@
 ---
 name: birdeye-top-token-traders
-description: "Rank indexed token traders by the selected Birdeye metric and time frame. Use when the trader asks: Who are the top traders for this token over the selected period?"
+description: "Rank a token’s indexed traders by the selected Birdeye metric and time frame. Use when the user asks “Who trades this token most?”, “Who are the top traders?” or wants a token-specific trader leaderboard. Choose birdeye-top-holders for balance ownership and birdeye-token-smart-money-trades when smart-money classification and recent direction are the priority."
 ---
 
 # 🏅 Top Token Traders

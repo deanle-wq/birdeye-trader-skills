@@ -1,6 +1,6 @@
 ---
 name: birdeye-token-liquidity-change
-description: "Compare current indexed token liquidity with a compatible caller-supplied baseline. Use when the trader asks: How has this token's indexed liquidity changed since my last snapshot?"
+description: "Compare a token’s current indexed liquidity with a compatible earlier snapshot and report the amount and percentage change. Use when the user asks “Was liquidity added or removed?”, “Did liquidity drop since yesterday?” or wants token-level liquidity monitoring. Choose birdeye-liquidity-pool-analysis for current liquidity venues without a baseline."
 ---
 
 # 💧 Token Liquidity Change

@@ -1,6 +1,6 @@
 ---
 name: birdeye-wallet-activity-feed
-description: "Fetch a wallet's latest indexed trading activity over a practical default one-day window. Use when the trader asks: What did this wallet trade in the last 24 hours?"
+description: "Show a wallet’s latest indexed trading activity over a practical default 24-hour window. Use when the user asks “What did this wallet do today?”, “What is this wallet buying now?” or wants a quick recent-activity feed. Choose birdeye-wallet-trade-history for a custom historical period, birdeye-wallet-recent-sells for sells only, and birdeye-wallet-net-buying for accumulated net flow."
 ---
 
 # ❤️ Wallet Activity Feed

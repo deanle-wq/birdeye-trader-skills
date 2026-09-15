@@ -1,6 +1,6 @@
 ---
 name: birdeye-near-graduation-tokens
-description: "Find ungraduated launchpad tokens at 80% or more bonding-curve progress, ranked closest to completion. Use when the trader asks: What launchpad tokens are closest to graduating?"
+description: "Find ungraduated launchpad tokens closest to completing their bonding curve and rank them by progress. Use when the user asks “What is about to graduate?”, “Which tokens are near migration?” or wants a market-wide near-graduation scan. Choose birdeye-bonding-curve-progress to monitor one token against a baseline and birdeye-graduation-status-change to check whether graduation already occurred."
 ---
 
 # 🌗 Near-Graduation Tokens

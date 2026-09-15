@@ -1,6 +1,6 @@
 ---
 name: birdeye-token-wallet-watchlist
-description: "Run a bounded token-and-wallet change check against the caller's compatible watchlist baseline. Use when the trader asks: What materially changed for this watched token and wallet?"
+description: "Compare a watched token and wallet with a compatible earlier snapshot and summarize material changes across both entities. Use when the user asks “What changed in my watchlist?”, “Did this wallet or token move materially?” or wants a bounded follow-up check. This skill requires a caller-owned baseline and does not create a hosted watchlist, background scheduler or push alert."
 ---
 
 # 👀 Token & Wallet Watchlist Check

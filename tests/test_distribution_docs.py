@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import csv
+import json
 import re
 import unittest
 from pathlib import Path
@@ -10,6 +12,41 @@ TEXT_SUFFIXES = {".md", ".json", ".yaml", ".yml", ".csv", ".py", ".toml", ".exam
 
 
 class DistributionDocumentationTests(unittest.TestCase):
+    def test_discovery_copy_is_complete_and_ui_safe(self) -> None:
+        failures: list[str] = []
+        for skill in sorted(path for path in (ROOT / "skills").iterdir() if path.is_dir()):
+            frontmatter_line = next(
+                line for line in (skill / "SKILL.md").read_text().splitlines()
+                if line.startswith("description: ")
+            )
+            description = json.loads(frontmatter_line.split(": ", 1)[1])
+            metadata_line = next(
+                line for line in (skill / "agents/openai.yaml").read_text().splitlines()
+                if line.strip().startswith("short_description: ")
+            )
+            short_description = json.loads(metadata_line.split(": ", 1)[1])
+            has_boundary = any(marker in description for marker in ("Choose ", "This skill", "Do not "))
+            if not 40 <= len(description.split()) <= 100:
+                failures.append(f"{skill.name}: frontmatter description length")
+            if "Use when the user asks" not in description or description.count("“") < 2:
+                failures.append(f"{skill.name}: natural-language triggers")
+            if not has_boundary:
+                failures.append(f"{skill.name}: routing boundary")
+            if not 25 <= len(short_description) <= 64 or short_description.endswith("..."):
+                failures.append(f"{skill.name}: short description")
+        self.assertEqual(failures, [])
+
+    def test_marketplace_descriptions_are_human_scannable(self) -> None:
+        with (ROOT / "marketplace-catalog.csv").open(newline="") as handle:
+            rows = list(csv.DictReader(handle))
+        failures = [
+            row["skill_name"]
+            for row in rows
+            if not 10 <= len(row["description"].split()) <= 30
+            or row["description"].endswith("...")
+        ]
+        self.assertEqual(failures, [])
+
     def test_public_repository_excludes_internal_release_artifacts(self) -> None:
         forbidden = ("qa", "core-skills", "core-manifest.json", "scripts")
         present = []

@@ -1,6 +1,6 @@
 ---
 name: birdeye-token-smart-money-trades
-description: "Inspect token-specific smart-money evidence over a bounded recent window. Use when the trader asks: What smart-money activity is visible for this token?"
+description: "Inspect recent smart-money buys and sells associated with one token and return wallet, direction, value and time when available. Use when the user asks “Is smart money buying this token?”, “Which smart wallets sold?” or wants token-specific smart-money activity. Choose birdeye-smart-money-token-radar to discover tokens across the feed and birdeye-large-trade-scanner when size matters more than wallet classification."
 ---
 
 # 🧠 Smart-Money Trades for a Token

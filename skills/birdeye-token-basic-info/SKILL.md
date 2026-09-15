@@ -1,6 +1,6 @@
 ---
 name: birdeye-token-basic-info
-description: "Resolve a Solana token and return its current identity, price and valuation evidence in one card. Use when the trader asks: What are this token's identity, price, market cap and valuation?"
+description: "Resolve a Solana token and return its identity, current price, market cap and valuation context. Use when the user asks “What is this token?”, “What is its price or market cap?” or pastes an address for basic information. Choose birdeye-token-security-check for security fields and birdeye-token-due-diligence for a broader research dossier."
 ---
 
 # 🪪 Token Basic Info

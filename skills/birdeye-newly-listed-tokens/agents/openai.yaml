@@ -1,4 +1,4 @@
 interface:
   display_name: "🐣 Newly Listed Tokens"
-  short_description: "Return Birdeye's latest indexed Solana token listings so a tr..."
+  short_description: "Show the latest indexed token listings"
   default_prompt: "Use $birdeye-newly-listed-tokens to answer: What tokens were listed most recently?"

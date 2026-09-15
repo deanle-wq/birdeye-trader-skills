@@ -1,6 +1,6 @@
 ---
 name: birdeye-dev-launch-track-record
-description: "Review a developer's indexed launch history and compare current observable market outcomes consistently. Use when the trader asks: How did this developer's indexed token launches perform?"
+description: "Review a developer wallet’s indexed token launches and summarize observable market outcomes, liquidity, valuation and graduation history. Use when the user asks “Is this developer any good?”, “How did this dev’s previous launches perform?” or wants creator due diligence. Choose birdeye-dev-created-tokens when the user only needs the list of tokens the wallet created."
 ---
 
 # 🧐 Dev Launch Track Record

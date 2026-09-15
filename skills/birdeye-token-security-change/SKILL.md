@@ -1,6 +1,6 @@
 ---
 name: birdeye-token-security-change
-description: "Compare current observable token security fields with a compatible caller-supplied baseline. Use when the trader asks: What token security fields changed since my last snapshot?"
+description: "Compare observable token-security fields with a compatible earlier snapshot and report what changed, appeared or became unknown. Use when the user asks “Did this token’s permissions change?”, “Is there a new security risk?” or wants ongoing security monitoring. Choose birdeye-token-security-check for a current snapshot and birdeye-token-due-diligence for a broader token review."
 ---
 
 # 🚨 Token Security Change

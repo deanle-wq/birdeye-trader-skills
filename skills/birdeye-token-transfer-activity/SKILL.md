@@ -1,6 +1,6 @@
 ---
 name: birdeye-token-transfer-activity
-description: "Inspect a token's indexed transfer events and total transfer coverage for a bounded window. Use when the trader asks: What token transfers occurred during the selected window?"
+description: "Inspect indexed token transfers over a selected time window and report event and coverage totals when available. Use when the user asks “Where did tokens move?”, “Show recent transfers” or wants token movement rather than DEX trading activity. Choose birdeye-token-trade-activity for buys and sells. Transfers alone do not prove ownership, intent or a trade."
 ---
 
 # 📨 Token Transfer Activity

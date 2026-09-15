@@ -1,4 +1,4 @@
 interface:
   display_name: "🛫 Launchpad New Tokens"
-  short_description: "Scan the newest launches across all supported Solana launchpa..."
+  short_description: "Find new tokens across Solana launchpads"
   default_prompt: "Use $birdeye-launchpad-new-tokens to answer: What new tokens launched on a specific launchpad in the last 24 hours?"

@@ -1,6 +1,6 @@
 ---
 name: birdeye-liquidity-pool-analysis
-description: "Combine current indexed token liquidity with the markets and pools where the token trades. Use when the trader asks: How liquid is this token and where is that liquidity?"
+description: "Show a token’s current indexed liquidity and the pools or markets where it trades. Use when the user asks “How liquid is this token?”, “Where can it be traded?” or wants to inspect pool depth and market venues. Choose birdeye-token-liquidity-change when the question is whether liquidity increased or was removed since an earlier snapshot."
 ---
 
 # 💧 Liquidity Pool Analysis

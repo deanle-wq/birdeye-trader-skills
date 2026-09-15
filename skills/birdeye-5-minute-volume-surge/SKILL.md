@@ -1,6 +1,6 @@
 ---
 name: birdeye-5-minute-volume-surge
-description: "Rank liquid Solana tokens by five-minute volume growth while filtering out low-volume noise. Use when the trader asks: What liquid tokens have the strongest five-minute volume acceleration?"
+description: "Rank liquid Solana tokens by five-minute volume acceleration while filtering out low-volume noise. Use when the user asks “Where is volume exploding?”, “Which tokens are gaining activity fastest?” or wants early volume expansion. Choose birdeye-5-minute-trending-tokens for absolute volume, birdeye-5-minute-most-traded for transaction count, and birdeye-5-minute-price-surge for price movement."
 ---
 
 # 📈 5-Min Volume Surge

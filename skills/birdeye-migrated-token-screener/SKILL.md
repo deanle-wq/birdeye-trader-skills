@@ -1,6 +1,6 @@
 ---
 name: birdeye-migrated-token-screener
-description: "Screen recently migrated tokens with default market cap of $50K–$200K and at least $10K indexed liquidity. Use when the trader asks: What recently migrated tokens meet practical liquidity and market-cap thresholds?"
+description: "Screen recently graduated launchpad tokens using practical market-cap and liquidity thresholds, then return the candidates that pass. Use when the user asks “Which recent migrations have decent liquidity?”, “Find stronger graduated tokens” or wants a quality-filtered migration list. Choose birdeye-recently-migrated-tokens for a chronological feed without the quality screen."
 ---
 
 # 🔍 Migrated Token Quality Screener

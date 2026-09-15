@@ -1,4 +1,4 @@
 interface:
   display_name: "👩🏻‍🍳 Dev Created Tokens"
-  short_description: "List indexed launchpad tokens associated with a supplied deve..."
+  short_description: "List tokens launched by a developer wallet"
   default_prompt: "Use $birdeye-dev-created-tokens to answer: What Birdeye-indexed launchpad tokens did this developer create?"

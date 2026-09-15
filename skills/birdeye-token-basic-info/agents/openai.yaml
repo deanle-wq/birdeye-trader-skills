@@ -1,4 +1,4 @@
 interface:
   display_name: "🪪 Token Basic Info"
-  short_description: "Resolve a Solana token and return its current identity, price..."
+  short_description: "Show token identity, price, and valuation"
   default_prompt: "Use $birdeye-token-basic-info to answer: What are this token's identity, price, market cap and valuation?"

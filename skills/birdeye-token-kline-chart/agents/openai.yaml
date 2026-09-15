@@ -1,4 +1,4 @@
 interface:
   display_name: "📊 Token Kline Data"
-  short_description: "Fetch bounded token candlesticks for the requested resolution..."
+  short_description: "Fetch token OHLCV candles for a chosen window"
   default_prompt: "Use $birdeye-token-kline-chart to answer: What does this token's recent OHLCV history look like?"

@@ -1,6 +1,6 @@
 ---
 name: birdeye-wallet-exit-destination
-description: "Trace observable activity following a wallet's reduction of a named token without making unsupported causal fund-flow claims. Use when the trader asks: Where did this wallet's observable activity go after reducing a token?"
+description: "Trace observable wallet activity after it reduces a named token and summarize subsequent destinations or actions without claiming unsupported fund-flow causality. Use when the user asks “Where did this wallet go after exiting?”, “What happened after it sold?” or wants a broader exit trace. Choose birdeye-wallet-post-sell-rotation when the question is specifically which tokens it bought next."
 ---
 
 # 🚪 Wallet Exit Destination

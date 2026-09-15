@@ -1,4 +1,4 @@
 interface:
   display_name: "🚪 Wallet Exit Destination"
-  short_description: "Trace observable activity following a wallet's reduction of a..."
+  short_description: "Trace activity after a wallet reduces a token"
   default_prompt: "Use $birdeye-wallet-exit-destination to answer: Where did this wallet's observable activity go after reducing a token?"

@@ -1,6 +1,6 @@
 ---
 name: birdeye-wallet-trade-history
-description: "Query a wallet's indexed trade history for a bounded period without mislabeling it as current holdings. Use when the trader asks: What has this wallet traded recently?"
+description: "Review a wallet’s indexed trades over a selected historical period without presenting them as current holdings. Use when the user asks “What did this wallet trade last week?”, “Show its transaction history” or requests a custom window. Choose birdeye-wallet-activity-feed for a quick latest-day view and birdeye-wallet-pnl-analysis when performance calculations are required."
 ---
 
 # 📝 Wallet Trade History
