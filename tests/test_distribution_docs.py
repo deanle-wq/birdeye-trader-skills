@@ -10,6 +10,15 @@ TEXT_SUFFIXES = {".md", ".json", ".yaml", ".yml", ".csv", ".py", ".toml", ".exam
 
 
 class DistributionDocumentationTests(unittest.TestCase):
+    def test_public_repository_excludes_internal_release_artifacts(self) -> None:
+        forbidden = ("qa", "core-skills", "core-manifest.json", "scripts")
+        present = []
+        for name in forbidden:
+            path = ROOT / name
+            if path.is_file() or (path.is_dir() and any(item.is_file() for item in path.rglob("*"))):
+                present.append(name)
+        self.assertEqual(present, [])
+
     def test_installation_surface_is_complete(self) -> None:
         required = (
             "README.md",

@@ -2,7 +2,6 @@ from __future__ import annotations
 
 import csv
 import json
-import re
 import unittest
 from pathlib import Path
 from unittest.mock import patch
@@ -10,10 +9,14 @@ from unittest.mock import patch
 from birdeye_intel.core import AuthenticationError, RateLimited
 from birdeye_intel.v3.catalog import CoreCatalog
 from birdeye_intel.v3.cli import execute, parser
-from birdeye_intel.v3.direct import SOLANA_LAUNCHPAD_SOURCE_ALIASES
 
 ROOT = Path(__file__).resolve().parents[1]
 ADDRESS = "11111111111111111111111111111111"
+EXCLUDED_ENDPOINT_IDS = {
+    "EP-012", "EP-014", "EP-016", "EP-018", "EP-022", "EP-025",
+    "EP-026", "EP-027", "EP-032", "EP-033", "EP-034", "EP-035",
+    "EP-036", "EP-043", "EP-052", "EP-055", "EP-057", "EP-080",
+}
 
 
 class FakeRuntime:
@@ -165,25 +168,7 @@ class V3CoreSkillTests(unittest.TestCase):
                     self.assertEqual(len(leaf.endpoint_ids), len(leaf.x402_endpoint_paths))
         self.assertEqual(len(unique_leaves), 62)
         self.assertEqual(len(unique_endpoints), 27)
-        audit = json.loads((ROOT / "qa/v2/x402-eligibility-audit.json").read_text())
-        excluded = {item["endpoint_id"] for item in audit["scope_exclusions"]}
-        self.assertFalse(unique_endpoints & excluded)
-
-    def test_generated_packages_match_catalog_and_have_agent_metadata(self) -> None:
-        root = ROOT / "core-skills"
-        folders = {path.name for path in root.iterdir() if path.is_dir()}
-        self.assertEqual(folders, {skill.name for skill in self.catalog.list()})
-        for skill in self.catalog.list():
-            skill_md = (root / skill.name / "SKILL.md").read_text()
-            metadata = (root / skill.name / "agents" / "openai.yaml").read_text()
-            self.assertRegex(skill_md, rf"(?m)^name: {re.escape(skill.name)}$")
-            self.assertIn("birdeye-cli doctor", skill_md)
-            self.assertIn("audited Solana Birdeye x402 allowlist", skill_md)
-            self.assertIn("must not sign, swap, launch, submit a transaction", skill_md)
-            self.assertIn(f"${skill.name}", metadata)
-            for command in skill.commands:
-                self.assertIn(f"`{command.name}`", skill_md)
-                self.assertIn(command.question, skill_md)
+        self.assertFalse(unique_endpoints & EXCLUDED_ENDPOINT_IDS)
 
     def test_marketplace_has_forty_seven_specific_daily_job_packages(self) -> None:
         marketplace = json.loads((ROOT / "src/birdeye_intel/v3/marketplace.json").read_text())
@@ -268,9 +253,6 @@ class V3CoreSkillTests(unittest.TestCase):
             self.assertEqual(document["skills"], expected)
         manifest = json.loads((ROOT / "manifest.json").read_text())
         self.assertEqual(manifest["skill_count"], 47)
-        core_manifest = json.loads((ROOT / "core-manifest.json").read_text())
-        self.assertEqual(core_manifest["skill_count"], 12)
-        self.assertEqual(core_manifest["command_count"], 65)
         with (ROOT / "marketplace-catalog.csv").open(newline="") as handle:
             rows = list(csv.DictReader(handle))
         self.assertEqual(len(rows), 47)
@@ -435,14 +417,13 @@ class V3CoreSkillTests(unittest.TestCase):
         self.assertEqual(result["answer"]["changes"]["dropped"], ["3" * 32, "5" * 32])
 
     def test_market_radar_reference_is_packaged_for_agent_execution(self) -> None:
-        for root in (ROOT / "core-skills", ROOT / "skills"):
-            skill = root / "birdeye-market-radar"
-            self.assertTrue((skill / "references/flow.md").is_file())
-            text = (skill / "SKILL.md").read_text()
-            self.assertIn("references/flow.md", text)
-            flow = (skill / "references/flow.md").read_text()
-            self.assertIn("sweep", flow.lower())
-            self.assertIn("never pad", flow.lower())
+        skill = ROOT / "skills" / "birdeye-market-radar"
+        self.assertTrue((skill / "references/flow.md").is_file())
+        text = (skill / "SKILL.md").read_text()
+        self.assertIn("references/flow.md", text)
+        flow = (skill / "references/flow.md").read_text()
+        self.assertIn("sweep", flow.lower())
+        self.assertIn("never pad", flow.lower())
 
     def test_pumpfun_new_tokens_maps_default_window_to_creation_time(self) -> None:
         runtime = FakeDirectRuntime(self.catalog.endpoint_specs)
@@ -485,15 +466,6 @@ class V3CoreSkillTests(unittest.TestCase):
         with self.assertRaisesRegex(Exception, "Unsupported Solana launchpad source"):
             execute(args, catalog=self.catalog, runtime=runtime)
         self.assertEqual(runtime.client.calls, [])
-
-    def test_launchpad_live_qa_and_runtime_allowlist_stay_aligned(self) -> None:
-        qa = json.loads((ROOT / "qa/v3/launchpad-source-qa.json").read_text())
-        accepted = {row["source"] for row in qa["accepted_sources"]}
-        rejected = {row["source"] for row in qa["rejected_sources"]}
-        self.assertEqual(qa["gate"], "PASS")
-        self.assertEqual(accepted, set(SOLANA_LAUNCHPAD_SOURCE_ALIASES.values()))
-        self.assertFalse(accepted & rejected)
-        self.assertTrue(all(row["runtime_policy"] == "REJECT_BEFORE_NETWORK" for row in qa["rejected_sources"]))
 
     def test_focused_launchpad_cards_keep_identity_defining_filters_locked(self) -> None:
         runtime = FakeDirectRuntime(self.catalog.endpoint_specs)

@@ -1,4 +1,0 @@
-interface:
-  display_name: "Birdeye Market Radar"
-  short_description: "Birdeye Market Radar workflows"
-  default_prompt: "Use $birdeye-market-radar to show which hot Solana tokens are worth researching right now and why each one made the cut."

@@ -7,10 +7,9 @@ Installable, read-only Solana research skills powered by Birdeye Data. Ask a nat
 ```text
 .
 ├── skills/                 # Installable, question-specific marketplace skills
-├── core-skills/            # Broader composition packages used internally
 ├── docs/workflows/         # Cross-skill research flows
 ├── src/birdeye_intel/      # Shared Birdeye CLI runtime
-├── qa/                     # Sanitized QA reports and endpoint audits
+├── tests/                  # Runtime and distribution checks used by CI
 ├── manifest.json           # Machine-readable public skill catalog
 └── marketplace-catalog.csv # Human-reviewable catalog export
 ```
@@ -188,14 +187,13 @@ See [docs/TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md) for diagnostic steps that
 
 ## Release status and QA
 
-This repository is a release candidate, not an unqualified production release. Typed atomic and deterministic paths are available now; some analytical paths still require fresh live QA and trader acceptance. Review [the current QA report](qa/v3/QA_REPORT.md) before a production integration.
+This repository is a release candidate, not an unqualified production release. Typed atomic and deterministic paths are available now; production integrations should still run their own live acceptance tests with the intended account plan, inputs and operating limits.
 
 For local development:
 
 ```bash
 python3 -m pip install -e .
 npx --yes skills@latest add . --list
-python3 scripts/audit_v3_core.py
 python3 -m unittest discover -s tests -p 'test_*.py'
 ```
 
@@ -204,7 +202,6 @@ python3 -m unittest discover -s tests -p 'test_*.py'
 - [Birdeye Data documentation](https://docs.birdeye.so/)
 - [Birdeye Data API reference](https://docs.birdeye.so/reference/)
 - [Birdeye x402 reference](https://docs.birdeye.so/reference/x402)
-- [Packaging model](docs/PACKAGING.md)
 - [Marketplace catalog](marketplace-catalog.csv)
 
 ## License

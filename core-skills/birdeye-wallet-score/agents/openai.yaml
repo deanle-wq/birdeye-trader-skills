@@ -1,4 +1,0 @@
-interface:
-  display_name: "Birdeye Wallet Copyability"
-  short_description: "Birdeye Wallet Copyability workflows"
-  default_prompt: "Use $birdeye-wallet-score to assess this wallet under a $100 position and 30-second delay scenario."

@@ -1,4 +1,0 @@
-interface:
-  display_name: "Birdeye Wallet"
-  short_description: "Birdeye Wallet workflows for Solana traders"
-  default_prompt: "Use $birdeye-wallet to inspect this Solana wallet's relevant trading activity."

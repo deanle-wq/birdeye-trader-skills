@@ -149,7 +149,6 @@ git clone https://github.com/deanle-wq/birdeye-trader-skills.git
 cd birdeye-trader-skills
 python3 -m pip install -e .
 npx --yes skills@latest add . --list
-python3 scripts/audit_v3_core.py
 python3 -m unittest discover -s tests -p 'test_*.py'
 ```
 

@@ -1,4 +1,0 @@
-interface:
-  display_name: "Birdeye Track"
-  short_description: "Birdeye Track workflows for Solana traders"
-  default_prompt: "Use $birdeye-track to show the relevant current smart-money or wallet activity."

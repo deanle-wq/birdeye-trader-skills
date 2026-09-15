@@ -1,4 +1,0 @@
-interface:
-  display_name: "Birdeye Market"
-  short_description: "Birdeye Market workflows for Solana traders"
-  default_prompt: "Use $birdeye-market to show the most relevant current Solana market data for my request."

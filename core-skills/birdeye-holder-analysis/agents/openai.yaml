@@ -1,4 +1,0 @@
-interface:
-  display_name: "Birdeye Holder Analysis"
-  short_description: "Birdeye Holder Analysis workflows"
-  default_prompt: "Use $birdeye-holder-analysis to explain this token's observable holder structure."

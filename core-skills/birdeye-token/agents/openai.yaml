@@ -1,4 +1,0 @@
-interface:
-  display_name: "Birdeye Token"
-  short_description: "Birdeye Token workflows for Solana traders"
-  default_prompt: "Use $birdeye-token to inspect the requested facts for this Solana token address."

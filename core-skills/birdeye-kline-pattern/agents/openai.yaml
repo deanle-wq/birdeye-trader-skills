@@ -1,4 +1,0 @@
-interface:
-  display_name: "Birdeye Kline Pattern"
-  short_description: "Birdeye Kline Pattern workflows"
-  default_prompt: "Use $birdeye-kline-pattern to explain this token's recent price action from Birdeye candles."

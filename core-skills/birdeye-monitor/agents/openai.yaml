@@ -1,4 +1,0 @@
-interface:
-  display_name: "Birdeye Monitor"
-  short_description: "Birdeye Monitor workflows"
-  default_prompt: "Use $birdeye-monitor to compare the current observation with my supplied baseline."

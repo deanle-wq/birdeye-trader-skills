@@ -1,4 +1,0 @@
-interface:
-  display_name: "Birdeye Token Due Diligence"
-  short_description: "Birdeye Token Due Diligence workflows"
-  default_prompt: "Use $birdeye-token-dd to produce an evidence-linked due-diligence dossier for this token."
